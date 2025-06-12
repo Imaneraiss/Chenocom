@@ -57,12 +57,14 @@
     font-size: 16px;
     display: flex;
     align-items: center;
+    position: relative;
   }
   
   /* Icône flèche */
   .icon-arrow {
     width: 20px;
     height: 20px;
+    transition: 0.3s ease;
   }
   
   /* Survol du lien */
@@ -89,8 +91,50 @@
     font-size: 20px;
   }
   
-  .pointeur {
+  .icon-pointer {
     width: 19px;
     height: 17px;
   }
+
+  .has-submenu {
+    position: relative;
+  }
   
+
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    min-width: 200px;
+    background-color: #0E0E0E;
+    list-style: none;
+    z-index: 1000;
+  }
+  .submenu li {
+    display: flex;
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+    
+  .submenu li a {
+    display: block;
+    padding: 10px 15px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* AFFICHAGE AU SURVOL*/
+  .has-submenu .submenu li a:hover {
+    color: #F5B400;
+    ;
+  }
+  
+  .has-submenu:hover .submenu {
+    display: block;
+  }
+  
+  .has-submenu:hover .icon-arrow {
+    transform: rotate(180deg);
+  }
