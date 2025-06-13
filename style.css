@@ -17,49 +17,42 @@
     background: #0E0E0E;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content:center;
     align-items: center;
   }
   
-  .container {
-    width: 100%;
-    max-width: 1216px;
+  header .container {
+    
+    padding: 0 32px;
     margin: 13px auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 50.72px;
   }
   
-  /*LOGO */
-  .logo img {
+  /*---- LOGO ---- */
+  .logo .logo-img {
     width: 144.84px;
     height: 54px;
   }
 
-  /* NAVIGATION*/
-  .nav_flag{
+  /* ---- NAVIGATION ----*/
+  
+  .container .navbar{
     display: flex;
-    gap: 50.72px;
-  }
-  .flags{
-    padding: 17px 0;
   }
   
-  nav {
+  .navbar .nav-menu {
     display: flex;
-    flex-grow: 1;
     justify-content: center;
-  }
-  
-  nav .nav-list {
-    display: flex;
     gap: 20px;
     list-style: none;
     padding: 15px 0;
 
   }
   
-  nav li a {
+  .navbar .nav-link {
     color: white;
     text-decoration: none;
     font-weight: 500;
@@ -67,9 +60,11 @@
     display: flex;
     align-items: center;
     position: relative;
+    white-space: nowrap;
   }
   
-  /* Icône flèche */
+
+  /* Icon`s traitement */
   .icon-arrow {
     width: 20px;
     height: 20px;
@@ -77,19 +72,44 @@
   .icon-flag{
     width: 21px;
     height: 15px;
-
   }
-  /* Survol du lien */
-  nav li a:hover {
+  .icon-pointer {
+    width: 19px;
+    height: 17px;
+  }
+  /* ---- Hover NAV ----*/
+  .navbar .nav-link:hover{
     color: #F5B400;
   }
   
-  nav li a:hover .icon-arrow {
+  
+  .navbar .has-submenu .nav-link:hover .icon-arrow {
     content: url("images/flèche_jaune.svg");
   }
+  /* ---- FLAGS ----*/
+.flags {
+  display: flex;
+  align-items: center;       
+  justify-content: center;  
+  gap: 2.5px;          
+  position: relative;
   
-  /* BOUTON CONTACT*/
-  .Btn_Contact {
+}
+
+/* ---- Hover FLAGS ----*/
+.flags:hover .submenu {
+  display: block;
+}
+.icon-arrow:hover  {
+    content: url("images/flèche_jaune.svg");
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+
+
+  /* ---- CONTACT BOTTON ----*/
+  .contact-botton-link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -101,12 +121,11 @@
     border-radius: 6px;
     font-weight: 600;
     font-size: 20px;
+    white-space: nowrap;
+    font-family: 'Inter', sans-serif;
   }
   
-  .icon-pointer {
-    width: 19px;
-    height: 17px;
-  }
+  
 
   .has-submenu {
     position: relative;
@@ -116,13 +135,10 @@
     position: absolute;
     display: none;
     top: 100%;
+    margin-top: 25px;
     background-color: #000000;
     list-style: none;
     border-radius: 8px;
-    margin-top: 5px ;
-    
-    
-    
     
   }
   .submenu ul{
@@ -158,7 +174,7 @@
     
   }
   
-  .submenu-columns a {
+  .submenu-link {
     text-decoration: none;
     color: #ffffff;
     font-weight: 500;
@@ -170,32 +186,33 @@
     border-radius: 2px;
 
   }
-  .first-column{
+  .submenu-columns .first-column{
     padding-right: 20px;
     border-right: 0.6px solid #2D2D2D ;
   }
+  
+  
+  /* Survol général */
   .submenu-columns a:hover {
     color: #F5B400;
     
   }
-  
-  /* Survol général */
   .has-submenu:hover .submenu {
     display: block;
   }
   
-  
-  /* Flèche qui pivote au survol */
   .has-submenu:hover .icon-arrow {
     transform: rotate(180deg);
     transition: transform 0.3s ease;
   }
   
   /* Hover couleur */
-  .has-submenu .submenu li:hover,
-  .has-submenu .submenu li a:hover {
+  .has-submenu .submenu li:hover,.has-submenu .submenu li a:hover {
     color: #F5B400;
     cursor: pointer;
+  }
+  #menu-close-button,#menu-open-button{
+    display: none;
   }
   
   /* Supprimer le marker du parent */
@@ -212,17 +229,38 @@
     padding: 10px;
   }
   
-  .flags .has-submenu:hover .submenu {
-    display: block;
+  
+  /*======== RESPONSIVE VERSION ========*/
+@media (max-width:768px) {
 
+  .navbar #menu-close-button{
+    display: block;
+    position: absolute;
+    right: 30px;
+    top: 30px;
   }
-  .flags .has-submenu:hover .icon-arrow {
-    content: url("images/flèche_jaune.svg");
+
+  .navbar #menu-open-button{
+    display: block;
+  }
+  .navbar .nav-menu{
+    display:block;
+    position:fixed;
+    left:0;
+    top:0 ;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0px;
+    background: rgb(62, 62, 62);
   }
   
-  
-  .icon-flag, .submenu img {
-    width: 21px;
-    height: 15px;
-    cursor: pointer;
+  .nav-link {
+    color: rgb(255, 255, 255);
+    display: block;
+    margin-top: 17px;
+    /*font-size: ;*/
   }
+}
