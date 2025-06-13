@@ -8,6 +8,17 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 </head>
+<script>
+  function setLang(lang) {
+    let newFlag = 'images/flags.svg'; // anglais par défaut
+    if (lang === 'fr') {
+      newFlag = 'images/fr.svg';
+    }
+    document.getElementById('current-flag').src = newFlag;
+  }
+</script>
+
+
 <body>
   <header>
     <div class="container">
@@ -18,55 +29,74 @@
       </a>
 
       <!-- Navigation -->
-      <nav>
-        <ul class="nav-list">
-          <!-- Qui sommes-nous avec sous-menu -->
-          <li class="has-submenu">
-            <a href="#" class="nav-item">
-              Qui sommes-nous
-              <img src="images/flèche.svg" alt="Flèche vers le bas" class="icon-arrow" />
-            </a>
-            <!-- Sous-menu  -->
-            <ul class="submenu">
-                <li><a href="#">Agence Web Maroc</a></li>
-                <li><a href="#">Agence Web Offshore</a></li>
+      <div class="nav_flag"> <!-- For both nav and flag -->
+        
+        <nav>  
+          <ul class="nav-list">
+            <!-- Qui sommes-nous avec sous-menu -->
+            <li class="has-submenu">
+              <a href="#" class="nav-item">
+                Qui sommes-nous
+                <img src="images/flèche.svg" alt="Flèche vers le bas" class="icon-arrow" />
+              </a>
+              <!-- Sous-menu  -->
+              <ul class="submenu">
+                  <li><a href="#">Agence Web Maroc</a></li>
+                  <li><a href="#">Agence Web Offshore</a></li>
               </ul>
-          </li>
-           
+            </li>
+            <!-- Expertises avec sous-menu -->
+            <li class="has-submenu">
+              <a href="#" class="nav-item">
+                Expertises
+                <img src="images/flèche.svg" alt="Flèche vers le bas" class="icon-arrow" />
+              </a>
+              <ul class="submenu">
+                <li>
+                  <div class="parts">
+                    
+                      <ul class="part_1">
+                        <li><img src="images/dev_web.svg" alt="Développement Web"> <a href="#">Développement Web</a> </li>
+                        <li><img src="images/dev_mob.svg" alt="Développement Mobile"> <a href="#">Développement Mobile</a> </li>
+                        <li><img src="images/design.svg" alt="Design & Expérience utilisateur"> <a href="#">Design & Expérience utilisateur</a> </li>
+                        <li><img src="images/ref.svg" alt="Référencement SEO"> <a href="#">Référencement SEO</a> </li>
+                      </ul>
+                    
+                      <ul>
+                      <li><img src="images/control.svg" alt="Contrôle qualité & tests"> <a href="#">Contrôle qualité & tests</a> </li>
+                      <li><img src="images/maint.svg" alt="Maintenance & Évolutions (TMA)"> <a href="#">Maintenance & Évolutions (TMA)</a> </li>
+                      <li><img src="images/e-learn.svg" alt="E-learning"> <a href="#">E-learning </a> </li>
+                      </ul>
+                    
+                  </div>
+                </li>
+              </ul>
+            <!-- Others -->
+            <li><a href="#" class="nav-item">Réalisations</a></li>
+            <li><a href="#" class="nav-item">Blogs</a></li>
+            <li><a href="#" class="nav-item">FAQ</a></li>
+            <li><a href="#" class="nav-item">Demande de devis</a></li>
+          </ul>
+        </nav>
+        <!-- Flags avec sous-menu -->
+        <ul class="flags">
           <li class="has-submenu">
             <a href="#" class="nav-item">
-              Expertises
+              <img id="current-flag" src="images/flags.svg" alt="Langue En Cours" class="icon-flag" />
               <img src="images/flèche.svg" alt="Flèche vers le bas" class="icon-arrow" />
             </a>
             <ul class="submenu">
-                <li><img src="images/dev_web.svg" alt="Développement Web"> <a href="#">Développement Web</a> </li>
-                <li><img src="images/dev_mob.svg" alt="Développement Mobile"> <a href="#">Développement Mobile</a> </li>
-                <li><img src="images/design.svg" alt="Design & Expérience utilisateur"> <a href="#">Design & Expérience utilisateur</a> </li>
-                <li><img src="images/ref.svg" alt="Référencement SEO"> <a href="#">Référencement SEO</a> </li>
-                <li><img src="images/control.svg" alt="Contrôle qualité & tests"> <a href="#">Contrôle qualité & tests</a> </li>
-                <li><img src="images/maint.svg" alt="Maintenance & Évolutions (TMA)"> <a href="#">Maintenance & Évolutions (TMA)</a> </li>
-                <li><img src="images/e-learn.svg" alt="E-learning"> <a href="#">E-learning </a> </li>
-
+                <li><img src="images/fr.svg" alt="Français" onclick="setLang('fr')"></li>
+                <li><img src="images/flags.svg" alt="Anglais" onclick="setLang('en')"></li>
             </ul>
           </li>
-
-          <li><a href="#" class="nav-item">Réalisations</a></li>
-          <li><a href="#" class="nav-item">Blogs</a></li>
-          <li><a href="#" class="nav-item">FAQ</a></li>
-          <li><a href="#" class="nav-item">Demande de devis</a></li>
-
-          <li>
-            <a href="#" class="nav-item">
-              <img src="images/flags.svg" alt="Langue" class="icon-flag" />
-              <img src="images/flèche.svg" alt="Flèche vers le bas" class="icon-arrow" />
-            </a>
-          </li>
         </ul>
-      </nav>
+      </div>
+      
 
       <!-- Bouton Contact -->
       <a href="#" class="Btn_Contact">
-        Contact Us
+        <span>Contact Us</span>
         <img src="images/pointer.svg" alt="Icône de pointeur" class="icon-pointer" />
       </a>
 
