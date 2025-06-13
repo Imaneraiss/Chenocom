@@ -7,16 +7,10 @@
 
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="script.js" defer></script>
 </head>
-<script>
-  function setLang(lang) {
-    let newFlag = 'images/flags.svg'; // anglais par défaut
-    if (lang === 'fr') {
-      newFlag = 'images/fr.svg';
-    }
-    document.getElementById('current-flag').src = newFlag;
-  }
-</script>
+
+
 
 
 <body>
@@ -40,37 +34,39 @@
                 <img src="images/flèche.svg" alt="Flèche vers le bas" class="icon-arrow" />
               </a>
               <!-- Sous-menu  -->
-              <ul class="submenu">
+              <div class="submenu">
+                <ul>
                   <li><a href="#">Agence Web Maroc</a></li>
                   <li><a href="#">Agence Web Offshore</a></li>
-              </ul>
+                </ul>
+              </div>
             </li>
-            <!-- Expertises avec sous-menu -->
+            <!-- Expertises avec sous-menu colonnes -->
             <li class="has-submenu">
               <a href="#" class="nav-item">
                 Expertises
                 <img src="images/flèche.svg" alt="Flèche vers le bas" class="icon-arrow" />
               </a>
-              <ul class="submenu">
-                <li>
-                  <div class="parts">
-                    
-                      <ul class="part_1">
-                        <li><img src="images/dev_web.svg" alt="Développement Web"> <a href="#">Développement Web</a> </li>
-                        <li><img src="images/dev_mob.svg" alt="Développement Mobile"> <a href="#">Développement Mobile</a> </li>
-                        <li><img src="images/design.svg" alt="Design & Expérience utilisateur"> <a href="#">Design & Expérience utilisateur</a> </li>
-                        <li><img src="images/ref.svg" alt="Référencement SEO"> <a href="#">Référencement SEO</a> </li>
-                      </ul>
-                    
-                      <ul>
-                      <li><img src="images/control.svg" alt="Contrôle qualité & tests"> <a href="#">Contrôle qualité & tests</a> </li>
-                      <li><img src="images/maint.svg" alt="Maintenance & Évolutions (TMA)"> <a href="#">Maintenance & Évolutions (TMA)</a> </li>
-                      <li><img src="images/e-learn.svg" alt="E-learning"> <a href="#">E-learning </a> </li>
-                      </ul>
-                    
-                  </div>
-                </li>
-              </ul>
+              <div class="submenu">
+               
+                    <div class="submenu-columns">
+                      
+                        <ul class="first-column">
+                          <li><img src="images/dev_web.svg" alt="Développement Web"> <a href="#">Développement Web</a> </li>
+                          <li><img src="images/dev_mob.svg" alt="Développement Mobile"> <a href="#">Développement Mobile</a> </li>
+                          <li><img src="images/design.svg" alt="Design & Expérience utilisateur"> <a href="#">Design & Expérience utilisateur</a> </li>
+                          <li><img src="images/ref.svg" alt="Référencement SEO"> <a href="#">Référencement SEO</a> </li>
+                        </ul>
+                      
+                        <ul>
+                        <li><img src="images/control.svg" alt="Contrôle qualité & tests"> <a href="#">Contrôle qualité & tests</a> </li>
+                        <li><img src="images/maint.svg" alt="Maintenance & Évolutions (TMA)"> <a href="#">Maintenance & Évolutions (TMA)</a> </li>
+                        <li><img src="images/e-learn.svg" alt="E-learning"> <a href="#">E-learning </a> </li>
+                        </ul>
+                      
+                    </div>
+          
+              </div>
             <!-- Others -->
             <li><a href="#" class="nav-item">Réalisations</a></li>
             <li><a href="#" class="nav-item">Blogs</a></li>
