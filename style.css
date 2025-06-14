@@ -87,7 +87,7 @@
     content: url("images/flèche_jaune.svg");
   }
   /* ---- FLAGS ----*/
-.flags {
+.flag-selector {
   display: flex;
   align-items: center;       
   justify-content: center;  
@@ -97,7 +97,7 @@
 }
 
 /* ---- Hover FLAGS ----*/
-.flags:hover .submenu {
+.flag-selector:hover .submenu {
   display: block;
 }
 .icon-arrow:hover  {
@@ -221,39 +221,51 @@
     padding: 0;
     margin: 0;
   }
-  .flags .submenu {
+  .flag-selector .submenu {
     display: none;
     position: absolute;
     background-color: #000000;
     border-radius: 5px;
     padding: 10px;
   }
-  
-  
+.menu-btn{
+  display: none;
+}
+.menu-img{
+  display: none;
+}
   /*======== RESPONSIVE VERSION ========*/
 @media (max-width:768px) {
-
-  .navbar #menu-close-button{
-    display: block;
+  header .container{
+    display: flex;
+    justify-content: space-between;
+    margin: 13px 0;
+    padding: 0;
+    width: 100vw;
+  }
+  
+  .menu-btn{
     position: absolute;
-    right: 30px;
-    top: 30px;
+    
+    
+  }
+  .navbar .contact-botton-link{
+    font-size: 16px;
+    font-weight: 500;
+    background: none;
+    color: white;
+    padding: 0;
   }
 
-  .navbar #menu-open-button{
-    display: block;
-  }
   .navbar .nav-menu{
     display:block;
     position:fixed;
     left:0;
-    top:0 ;
-    width: 300px;
-    height: 100%;
+    top:84px ; 
+    width: 100vw;/*Take all the screen*/
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 0px;
     background: rgb(62, 62, 62);
   }
   
@@ -261,6 +273,5 @@
     color: rgb(255, 255, 255);
     display: block;
     margin-top: 17px;
-    /*font-size: ;*/
   }
 }
