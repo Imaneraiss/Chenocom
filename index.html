@@ -22,7 +22,8 @@
       <!-- Navigation -->
 
       <!-- Mobile-Version -->
-      
+        
+        <img src="images/btn-menu.svg" alt="Bouton Menu" class="burger-menu" >
         <nav class="navbar__mobile">
           <ul class="nav-menu">
 
@@ -63,21 +64,18 @@
             <li class="nav-item"><a href="#" class="nav-link">Blogs</a></li>
           
             <li class="has-submenu">
-              <a href="#" class="nav-link">
-                <span class="flag-selector">
-                  <img src="images/flags.svg" alt="Langue en cours" class="icon-flag" />
-                  <img src="images/flèche.svg" alt="Flèche vers le bas" class="icon-arrow" />
-                </span>
-              </a>
-              <div class="submenu">
-                <ul>
-
-                  <li><a href="#" class="langue"><img src="images/fr.svg" alt="Français"></a></li>
-                  
-                  <!-- <li><a href="#" class="langue"><img src="images/flags.svg" alt="Anglais"></a></li> -->
-                </ul>
-              </div>
-            </li>
+              
+                <a href="#" class="nav-link">
+                  <span class="flag-selector" >
+                    <img id="current-flag-mobile" src="images/en.svg" data-lang="en" alt="Langue actuelle"  />
+                    <img src="images/flèche.svg" alt="Flèche vers le bas"  class="icon-arrow"/>
+                  </span>
+                </a>
+            <div class="submenu">
+              <ul>
+                <a href="#"><img id="alt-flag-mobile" src="images/fr.svg" data-lang="fr" alt="Changer la langue"  /></a>
+              </ul>
+            </div>
             
             <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
           </ul>
@@ -135,17 +133,13 @@
               
                 <a href="#" class="nav-link">
                   <span class="flag-selector" >
-                    <img src="images/flags.svg" alt="Langue en cours" class="icon-flag" />
+                    <img id="current-flag" src="images/en.svg" data-lang="en" alt="Langue actuelle"  />
                     <img src="images/flèche.svg" alt="Flèche vers le bas"  class="icon-arrow"/>
                   </span>
                 </a>
-              
-            
-
             <div class="submenu">
               <ul>
-                <li><img src="images/fr.svg" alt="Français"></li>
-                <!-- <li><img src="images/flags.svg" alt="Anglais"></li> -->
+                <a href="#"><img id="alt-flag" src="images/fr.svg" data-lang="fr" alt="Changer la langue"  /></a>
               </ul>
             </div>
           </li>
@@ -153,7 +147,6 @@
         </ul> 
       </nav>
 
-      <img src="images/btn-menu.svg" alt="Bouton Menu" class="burger-menu" >
     
 
       <!-- Bouton Contact -->

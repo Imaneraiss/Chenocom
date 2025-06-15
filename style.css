@@ -111,7 +111,9 @@
     font-family: 'Inter', sans-serif;
   }
   
-  
+  .contact-botton-link:hover{
+    background: #f7d371;
+  }
 
   .has-submenu {
     position: relative;
@@ -205,6 +207,7 @@
     cursor: pointer;
   }
   
+  
   /* Supprimer le marker du parent */
   li .has-submenu::marker {
     display: none;
@@ -224,8 +227,8 @@
     font-size: 14px;
   }
   .contact-botton-link{
-    font-size: 18px;
-    padding:15px 14px ;
+    font-size: 16px;
+    padding:13px 12px ;
   }
 }
 @media (max-width:768px) {
@@ -257,16 +260,25 @@
     
     background: #2d2d2d;
     width: 100vw;
-    height: 100vh;
     position: absolute;
     top: 100%;
+    left: 0;
     list-style: none;
-    padding: 20px;
+    padding: 20px 0 20px 20px;
     display: flex;
     flex-direction: column;
     gap: 30px;
-    
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
   }
+  .navbar__mobile .nav-menu.active{
+    max-height: 1000px;
+    overflow: visible;
+    opacity: 1;
+  }
+
   .has-submenu .submenu{
     position:static;
     background: none ;
@@ -296,6 +308,13 @@
     display: flex;
     align-items: center;
     height: 100%;
+    cursor: pointer;
+    transition: 0.3s ease;
+    cursor: pointer;
   }
-
+  
+  .burger-menu.active {
+    content: url("images/close-menu.svg");
+    transition:  0.3s ease;
+  }
 }
