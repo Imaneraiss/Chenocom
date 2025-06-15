@@ -22,13 +22,15 @@
   }
   
   header .container {
-    
+    max-width: 1216px;
+    width: 100%;
     padding: 0 32px;
     margin: 13px auto;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    gap: 50.72px;
+    align-content: center;
+    gap: 10px;
+
   }
   
   /*---- LOGO ---- */
@@ -39,17 +41,13 @@
 
   /* ---- NAVIGATION ----*/
   
-  .container .navbar{
-    display: flex;
-  }
-  
   .navbar .nav-menu {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     gap: 20px;
     list-style: none;
-    padding: 15px 0;
-
+    height: 100%;
   }
   
   .navbar .nav-link {
@@ -70,6 +68,8 @@
     height: 20px;
   }
   .icon-flag{
+    display: block;
+    margin: auto 0;
     width: 21px;
     height: 15px;
   }
@@ -83,29 +83,15 @@
   }
   
   
-  .navbar .has-submenu .nav-link:hover .icon-arrow {
+  .link-icon:hover .icon-arrow, .flag-selector:hover .icon-arrow {
     content: url("images/flèche_jaune.svg");
-  }
-  /* ---- FLAGS ----*/
-.flag-selector {
-  display: flex;
-  align-items: center;       
-  justify-content: center;  
-  gap: 2.5px;          
-  position: relative;
-  
-}
-
-/* ---- Hover FLAGS ----*/
-.flag-selector:hover .submenu {
-  display: block;
-}
-.icon-arrow:hover  {
-    content: url("images/flèche_jaune.svg");
-    transform: rotate(180deg);
-    transition: transform 0.3s ease;
     cursor: pointer;
   }
+  .link-icon,.flag-selector{
+    display: flex;
+    color: white;
+  }
+  
 
 
   /* ---- CONTACT BOTTON ----*/
@@ -114,7 +100,7 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 19px 18px 19px 18px;
+    padding: 19px 18px;
     background: #F5B400;
     color: #1C1A1A;
     text-decoration: none;
@@ -133,22 +119,26 @@
 
   .submenu {
     position: absolute;
-    display: none;
+    
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+
     top: 100%;
     margin-top: 25px;
     background-color: #000000;
     list-style: none;
     border-radius: 8px;
     
+    transition: .5s all ease;
   }
   .submenu ul{
-    /*To make a gap vertically*/
     display: flex;
     flex-direction: column;
     gap: 20px;
     list-style: none;
     
-    padding: 20px 30px 40px 20px;
+    padding: 20px 30px 20px 20px;
   }
   .submenu li {
     gap: 11.5px;
@@ -197,13 +187,16 @@
     color: #F5B400;
     
   }
-  .has-submenu:hover .submenu {
-    display: block;
+  .has-submenu:hover .submenu,.has-submenu .submenu:hover {
+    max-height: 1000px;
+    opacity: 1;
+    overflow: visible;
   }
+
   
   .has-submenu:hover .icon-arrow {
     transform: rotate(180deg);
-    transition: transform 0.3s ease;
+    transition: 0.3s ease;
   }
   
   /* Hover couleur */
@@ -211,67 +204,98 @@
     color: #F5B400;
     cursor: pointer;
   }
-  #menu-close-button,#menu-open-button{
-    display: none;
-  }
   
   /* Supprimer le marker du parent */
-  .li.has-submenu::marker {
+  li .has-submenu::marker {
     display: none;
     padding: 0;
     margin: 0;
   }
-  .flag-selector .submenu {
+  
+.navbar__mobile{
     display: none;
-    position: absolute;
-    background-color: #000000;
-    border-radius: 5px;
-    padding: 10px;
   }
-.menu-btn{
-  display: none;
-}
-.menu-img{
+.burger-menu{
   display: none;
 }
   /*======== RESPONSIVE VERSION ========*/
+@media (max-width:900px){
+  .navbar .nav-menu .nav-link{
+    font-size: 14px;
+  }
+  .contact-botton-link{
+    font-size: 18px;
+    padding:15px 14px ;
+  }
+}
 @media (max-width:768px) {
-  header .container{
+ 
+  .navbar{
+    display: none;
+  }
+  .contact-botton-link{
+    display: none;
+  }
+  header{
+    position: relative;
+  }
+  .container{
     display: flex;
-    justify-content: space-between;
-    margin: 13px 0;
+    align-items: center;
     padding: 0;
+  }
+  .navbar__mobile{
+    display: flex;
+    position:absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    
+    
+  }
+  .navbar__mobile .nav-menu{
+    
+    background: #2d2d2d;
     width: 100vw;
-  }
-  
-  .menu-btn{
+    height: 100vh;
     position: absolute;
-    
-    
-  }
-  .navbar .contact-botton-link{
-    font-size: 16px;
-    font-weight: 500;
-    background: none;
-    color: white;
-    padding: 0;
-  }
-
-  .navbar .nav-menu{
-    display:block;
-    position:fixed;
-    left:0;
-    top:84px ; 
-    width: 100vw;/*Take all the screen*/
+    top: 100%;
+    list-style: none;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background: rgb(62, 62, 62);
+    gap: 30px;
+    
+  }
+  .has-submenu .submenu{
+    position:static;
+    background: none ;
+    margin-top: 0;
+    
+   }
+  
+
+  .navbar__mobile .nav-menu .has-submenu,.nav-item{
+    
+    margin-left: 10px ;
+  }
+  .navbar__mobile .nav-menu .nav-link {
+    text-decoration: none;
+    color: #ffffff;
+  }
+   .navbar__mobile .nav-link:hover{
+    color: #F5B400;
   }
   
-  .nav-link {
-    color: rgb(255, 255, 255);
-    display: block;
-    margin-top: 17px;
+  
+  .navbar__mobile .has-submenu .nav-link:hover .icon-arrow {
+    content: url("images/flèche_jaune.svg");
   }
+  
+  .burger-menu{
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
 }
