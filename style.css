@@ -22,16 +22,23 @@
     align-items: center;
   }
   
-  header .container {
+  .container {
     max-width: 1216px;
     width: 100%;
+    margin: auto;
+
+  }
+  .header-container{
+    
     margin: 13px auto;
     display: flex;
     justify-content: space-between;
-
   }
   
   /*---- LOGO ---- */
+  .logo{
+    margin: auto 0;
+  }
   .logo .logo-img {
     width: 144.84px;
     height: 54px;
@@ -219,6 +226,100 @@
 .burger-menu{
   display: none;
 }
+/*=============MAIN==============*/
+.section-container{
+    text-align: center;
+    padding: 100px 0;
+  }
+
+.hero-section__hero-content{
+  max-width: 1197px ;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+}
+.hero-section__hero-content__brand__logo{
+  width: 156px;
+  height: 25px;
+}
+.hero-section__hero-content__title{
+  max-width: 1050px;
+  width: 100%;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 100px;
+  margin: 0 auto;
+  line-height: 1.2;
+  letter-spacing: -4px;
+
+}
+.hero-section__hero-content__title__text{
+  background: linear-gradient(90deg, #F5B400 4.81%, #FFFFFF 100%);
+  background-clip:text ;
+  color: transparent;
+}
+
+.hero-section__hero-content__description{
+  max-width: 779px;
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: white;
+  margin: 0 auto;
+}
+.hero-section__hero-content__description__chenocom{
+  font-weight: 700;
+}
+
+.hero-section__hero-content__description__get-in-touch{
+  font-weight: 700;
+  color: #FFD400;
+  text-decoration: none;
+}
+
+.hero-section__hero-content__badge{
+  display: flex;
+  align-content: center;
+  color: rgb(0, 0, 0);
+  border-radius: 6px;
+  white-space: nowrap;
+  position: absolute;
+  padding: 5px 10px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  gap: 8px;
+}
+
+.badge1{
+  background-color: #FF9A26;
+  top: -1%;
+  left: 16%;
+}
+.badge2{
+  background-color: #FFDE6A;
+  top: 1%;
+  right: 16%;
+
+}
+.badge3{
+  background-color: #FF8C78;
+  bottom: 2%;
+  left: 0;
+
+}
+.badge4{
+  background-color: #D9D9D9;
+  bottom: 0;
+  right: 0;
+}
+
   /*======== RESPONSIVE VERSION ========*/
 @media (max-width:900px){
   .navbar .nav-menu .nav-link{
@@ -240,12 +341,7 @@
   header{
     position: relative;
   }
-  .container{
-    display: flex;
-    align-items: center;
-    padding: 0;
-    text-align: center;
-  }
+  
   .navbar__mobile{
     display: flex;
     position:absolute;

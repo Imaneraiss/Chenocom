@@ -7,31 +7,91 @@
   <title>Chenocom</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <script src="script.js" defer></script>
 </head>
 
 <body>
   <header>
     <div class="container">
+      <div class="header-container">
+        <!-- Logo -->
+        <a href="#" class="logo">
+          <img src="images/cheno.svg" alt="Logo de Chenocom" class="logo-img"/>
+        </a>
+
+        <!-- Navigation -->
+
+        <!-- Mobile-Version -->
+          
+          <img src="images/btn-menu.svg" alt="Bouton Menu" class="burger-menu" >
+          <nav class="navbar__mobile">
+            <ul class="nav-menu">
+
+              <li class="has-submenu">
+                <span class="link-icon">
+                  <a href="#" class="nav-link"> About Us</a>
+                  <img src="images/flèche.svg" alt="Flèche vers le bas" class="icon-arrow" />
+                  
+                </span>
+                <!-- Sous-menu  -->
+                <div class="submenu">
+                  <ul>
+                    <li><a href="#" class="submenu-link">Agence Web Maroc</a></li>
+                    <li><a href="#" class="submenu-link">Agence Web Offshore</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="has-submenu">
+                <span class="link-icon" >
+                  <a href="#" class="nav-link">Expertises</a>
+                  <img src="images/flèche.svg" alt="Flèche vers le bas" class="icon-arrow"/>
+                  
+                </span>
+                
+                <div class="submenu">
+                  <ul>
+                    <li> <a href="#" class="submenu-link">Développement Web</a> </li>
+                    <li> <a href="#" class="submenu-link">Développement Mobile</a> </li>
+                    <li> <a href="#" class="submenu-link">Design & Expérience utilisateur</a> </li>
+                    <li> <a href="#" class="submenu-link">Référencement SEO</a> </li>
+                    <li> <a href="#" class="submenu-link">Contrôle qualité & tests</a> </li>
+                    <li> <a href="#" class="submenu-link">Maintenance & Évolutions (TMA)</a> </li>
+                    <li> <a href="#" class="submenu-link">E-learning </a> </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item"><a href="#" class="nav-link">Réalisations</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Blogs</a></li>
+            
+              <li class="has-submenu">
+                
+                  <a href="#" class="nav-link">
+                    <span class="flag-selector" >
+                      <img id="current-flag-mobile" src="images/en.svg" data-lang="en" alt="Langue actuelle"  />
+                      <img src="images/flèche.svg" alt="Flèche vers le bas"  class="icon-arrow"/>
+                    </span>
+                  </a>
+              <div class="submenu">
+                <ul>
+                  <a href="#"><img id="alt-flag-mobile" src="images/fr.svg" data-lang="fr" alt="Changer la langue"  /></a>
+                </ul>
+              </div>
+              
+              <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
+            </ul>
+          </nav>
       
-      <!-- Logo -->
-      <a href="#" class="logo">
-        <img src="images/cheno.svg" alt="Logo de Chenocom" class="logo-img"/>
-      </a>
 
-      <!-- Navigation -->
 
-      <!-- Mobile-Version -->
-        
-        <img src="images/btn-menu.svg" alt="Bouton Menu" class="burger-menu" >
-        <nav class="navbar__mobile">
+        <nav class="navbar">  
           <ul class="nav-menu">
-
             <li class="has-submenu">
               <span class="link-icon">
-                <a href="#" class="nav-link"> About Us</a>
-                <img src="images/flèche.svg" alt="Flèche vers le bas" class="icon-arrow" />
-                
+                  <a href="#" class="nav-link"> About Us</a>
+                  <img src="images/flèche.svg" alt="Flèche vers le bas" class="icon-arrow" />
+                  
               </span>
               <!-- Sous-menu  -->
               <div class="submenu">
@@ -41,122 +101,114 @@
                 </ul>
               </div>
             </li>
+            <!-- Expertises avec sous-menu colonnes -->
             <li class="has-submenu">
-              <span class="link-icon" >
+              <span class="link-icon">
                 <a href="#" class="nav-link">Expertises</a>
-                <img src="images/flèche.svg" alt="Flèche vers le bas" class="icon-arrow"/>
                 
-              </span>
-              
+                <img src="images/flèche.svg" alt="Flèche vers le bas" class="icon-arrow" />
+              </span> 
               <div class="submenu">
-                <ul>
-                  <li> <a href="#" class="submenu-link">Développement Web</a> </li>
-                  <li> <a href="#" class="submenu-link">Développement Mobile</a> </li>
-                  <li> <a href="#" class="submenu-link">Design & Expérience utilisateur</a> </li>
-                  <li> <a href="#" class="submenu-link">Référencement SEO</a> </li>
-                  <li> <a href="#" class="submenu-link">Contrôle qualité & tests</a> </li>
-                  <li> <a href="#" class="submenu-link">Maintenance & Évolutions (TMA)</a> </li>
-                  <li> <a href="#" class="submenu-link">E-learning </a> </li>
-                </ul>
+                
+                    <div class="submenu-columns">
+                      
+                      <ul class="first-column">
+                        <li><img src="images/dev_web.svg" alt="Développement Web"> <a href="#" class="submenu-link">Développement Web</a> </li>
+                        <li><img src="images/dev_mob.svg" alt="Développement Mobile"> <a href="#" class="submenu-link">Développement Mobile</a> </li>
+                        <li><img src="images/design.svg" alt="Design & Expérience utilisateur"> <a href="#" class="submenu-link">Design & Expérience utilisateur</a> </li>
+                        <li><img src="images/ref.svg" alt="Référencement SEO"> <a href="#" class="submenu-link">Référencement SEO</a> </li>
+                      </ul>
+                      
+                      <ul>
+                        <li><img src="images/control.svg" alt="Contrôle qualité & tests"> <a href="#" class="submenu-link">Contrôle qualité & tests</a> </li>
+                        <li><img src="images/maint.svg" alt="Maintenance & Évolutions (TMA)"> <a href="#" class="submenu-link">Maintenance & Évolutions (TMA)</a> </li>
+                        <li><img src="images/e-learn.svg" alt="E-learning"> <a href="#" class="submenu-link">E-learning </a> </li>
+                      </ul>
+                    </div>
               </div>
             </li>
+            <!-- The Rest -->
             <li class="nav-item"><a href="#" class="nav-link">Réalisations</a></li>
             <li class="nav-item"><a href="#" class="nav-link">Blogs</a></li>
           
             <li class="has-submenu">
-              
-                <a href="#" class="nav-link">
-                  <span class="flag-selector" >
-                    <img id="current-flag-mobile" src="images/en.svg" data-lang="en" alt="Langue actuelle"  />
-                    <img src="images/flèche.svg" alt="Flèche vers le bas"  class="icon-arrow"/>
-                  </span>
-                </a>
-            <div class="submenu">
-              <ul>
-                <a href="#"><img id="alt-flag-mobile" src="images/fr.svg" data-lang="fr" alt="Changer la langue"  /></a>
-              </ul>
-            </div>
-            
-            <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
-          </ul>
-        </nav>
-     
-
-
-      <nav class="navbar">  
-        <ul class="nav-menu">
-          <li class="has-submenu">
-            <span class="link-icon">
-                <a href="#" class="nav-link"> About Us</a>
-                <img src="images/flèche.svg" alt="Flèche vers le bas" class="icon-arrow" />
                 
-            </span>
-            <!-- Sous-menu  -->
-            <div class="submenu">
-              <ul>
-                <li><a href="#" class="submenu-link">Agence Web Maroc</a></li>
-                <li><a href="#" class="submenu-link">Agence Web Offshore</a></li>
-              </ul>
-            </div>
-          </li>
-          <!-- Expertises avec sous-menu colonnes -->
-          <li class="has-submenu">
-            <span class="link-icon">
-              <a href="#" class="nav-link">Expertises</a>
-              
-              <img src="images/flèche.svg" alt="Flèche vers le bas" class="icon-arrow" />
-            </span> 
-            <div class="submenu">
-              
-                  <div class="submenu-columns">
-                    
-                    <ul class="first-column">
-                      <li><img src="images/dev_web.svg" alt="Développement Web"> <a href="#" class="submenu-link">Développement Web</a> </li>
-                      <li><img src="images/dev_mob.svg" alt="Développement Mobile"> <a href="#" class="submenu-link">Développement Mobile</a> </li>
-                      <li><img src="images/design.svg" alt="Design & Expérience utilisateur"> <a href="#" class="submenu-link">Design & Expérience utilisateur</a> </li>
-                      <li><img src="images/ref.svg" alt="Référencement SEO"> <a href="#" class="submenu-link">Référencement SEO</a> </li>
-                    </ul>
-                    
-                    <ul>
-                      <li><img src="images/control.svg" alt="Contrôle qualité & tests"> <a href="#" class="submenu-link">Contrôle qualité & tests</a> </li>
-                      <li><img src="images/maint.svg" alt="Maintenance & Évolutions (TMA)"> <a href="#" class="submenu-link">Maintenance & Évolutions (TMA)</a> </li>
-                      <li><img src="images/e-learn.svg" alt="E-learning"> <a href="#" class="submenu-link">E-learning </a> </li>
-                    </ul>
-                  </div>
-            </div>
-          </li>
-          <!-- The Rest -->
-          <li class="nav-item"><a href="#" class="nav-link">Réalisations</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Blogs</a></li>
-        
-          <li class="has-submenu">
-              
-                <a href="#" class="nav-link">
-                  <span class="flag-selector" >
-                    <img class="current-flag" src="images/en.svg" data-lang="en" alt="Langue actuelle"  />
-                    <img src="images/flèche.svg" alt="Flèche vers le bas"  class="icon-arrow"/>
-                  </span>
-                </a>
-            <div class="submenu">
-              <ul>
-                <a href="#"><img class="alt-flag" src="images/fr.svg" data-lang="fr" alt="Changer la langue"  /></a>
-              </ul>
-            </div>
-          </li>
+                  <a href="#" class="nav-link">
+                    <span class="flag-selector" >
+                      <img class="current-flag" src="images/en.svg" data-lang="en" alt="Langue actuelle"  />
+                      <img src="images/flèche.svg" alt="Flèche vers le bas"  class="icon-arrow"/>
+                    </span>
+                  </a>
+              <div class="submenu">
+                <ul>
+                  <a href="#"><img class="alt-flag" src="images/fr.svg" data-lang="fr" alt="Changer la langue"  /></a>
+                </ul>
+              </div>
+            </li>
 
-        </ul> 
-      </nav>
+          </ul> 
+        </nav>
 
-    
+      
 
-      <!-- Bouton Contact -->
-      <a href="#" class="contact-botton-link">
-        <span>Contact Us</span>
-        <img src="images/pointer.svg" alt="Icône de pointeur" class="icon-pointer" />
-      </a>
+        <!-- Bouton Contact -->
+        <a href="#" class="contact-botton-link">
+          <span>Contact Us</span>
+          <img src="images/pointer.svg" alt="Icône de pointeur" class="icon-pointer" />
+        </a>
+      </div>
     </div>
   </header>
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <div class="section-container">
 
-  
+          <div class="hero-section__hero-content">
+            <div class="hero-section__hero-content__badge badge1"  >
+                <span>SEO Team</span>
+                <img src="images/pointer.svg" alt="icon-pointer">
+
+              </div>
+              
+              <div class="hero-section__hero-content__badge badge2" >
+                <img src="images/pointer.svg" alt="icon-pointer">
+                <span>Design Team</span>
+              </div>
+              <div class="hero-section__hero-content__badge badge3" >
+                <span>DevOps Team</span>
+                <img src="images/pointer.svg" alt="icon-pointer" >
+              </div>
+              <div class="hero-section__hero-content__badge badge4">
+                <img src="images/pointer.svg" alt="icon-pointer" >
+                <span>Developers</span>
+              </div>
+            <div class="hero-section__hero-content__brand">
+              <img src="images/hero-brand.svg" alt="CHENOCOM" class="hero-section__hero-content__brand__logo">
+            </div>
+            
+            <div class="hero-section__hero-content__title">
+              <p> <span class="hero-section__hero-content__title__text">Websites</span> that get your business rolling</p>
+            </div>
+            <div class="hero-section__hero-content__description">
+              <p>
+                <span class="hero-section__hero-content__description__chenocom">Chenocom</span>
+                 – Your trusted Moroccan web agency, designing powerful, tailor-made websites that attract and convert. Let’s make your project shine!
+                
+                <a href="#" class="hero-section__hero-content__description__get-in-touch">Get in touch</a>
+                <img src="images/arrow-up.svg" alt="Flèche ver le haut">
+                
+              </p>
+            </div>
+          </div>
+        
+
+          <div class="hero-section__project-carousel"></div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
 </body>
 </html>
