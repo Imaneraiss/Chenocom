@@ -34,8 +34,8 @@ function setupLanguageSelector(currentFlagSelector, altFlagSelector) {
 }
 
 
-setupLanguageSelector('#current-flag-mobile', '#alt-flag-mobile');
-setupLanguageSelector('.current-flag', '.alt-flag');
+setupLanguageSelector('#current-flag-mobile','#alt-flag-mobile');
+setupLanguageSelector('.current-flag','.alt-flag');
 
 
 

@@ -287,10 +287,7 @@
    }
   
 
-  .navbar__mobile .nav-menu .has-submenu,.nav-item{
-    
-    margin-left: 10px ;
-  }
+
   .navbar__mobile .nav-menu .nav-link {
     text-decoration: none;
     color: #ffffff;
