@@ -17,9 +17,8 @@
   header {
     
     width: 100%;
-    display: flex;
-    justify-content:center;
-    align-items: center;
+    position: relative;
+    z-index: 1000;
   }
   
   .container {
@@ -29,10 +28,10 @@
 
   }
   .header-container{
-    
-    margin: 13px auto;
     display: flex;
     justify-content: space-between;
+    margin: 13px auto;
+    
   }
   
   /*---- LOGO ---- */
@@ -144,7 +143,6 @@
     flex-direction: column;
     gap: 20px;
     list-style: none;
-    
     padding: 20px 30px 20px 20px;
   }
   .submenu li {
@@ -175,6 +173,7 @@
     text-decoration: none;
     color: #ffffff;
     font-weight: 500;
+    font-size: 14px;
   }
   
   .submenu-columns li img{
@@ -205,6 +204,7 @@
     transform: rotate(180deg);
     transition: 0.3s ease;
   }
+  
   
   /* Hover couleur */
   .has-submenu .submenu li:hover,.has-submenu .submenu li a:hover {
@@ -255,7 +255,7 @@
   font-size: 100px;
   margin: 0 auto;
   line-height: 1.2;
-  letter-spacing: -4px;
+  letter-spacing: -2px;
 
 }
 .hero-section__hero-content__title__text{
@@ -270,7 +270,7 @@
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 20px;
-  color: white;
+  color: rgb(255, 255, 255);
   margin: 0 auto;
 }
 .hero-section__hero-content__description__chenocom{
@@ -282,7 +282,14 @@
   color: #FFD400;
   text-decoration: none;
 }
-
+@keyframes floatUpandDown{
+  0%, 100%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-10px);
+  }
+}
 .hero-section__hero-content__badge{
   display: flex;
   align-content: center;
@@ -295,40 +302,78 @@
   font-weight: 500;
   font-size: 14px;
   gap: 8px;
+  animation: floatUpandDown 2s ease-in-out infinite;
 }
 
 .badge1{
   background-color: #FF9A26;
   top: -1%;
   left: 16%;
+ 
 }
 .badge2{
   background-color: #FFDE6A;
   top: 1%;
   right: 16%;
+  
+  animation-delay: .5s;
 
 }
 .badge3{
   background-color: #FF8C78;
   bottom: 2%;
   left: 0;
+  animation-delay: 1s;
 
 }
 .badge4{
   background-color: #D9D9D9;
   bottom: 0;
   right: 0;
+  animation-delay: 1.5s ;
 }
 
   /*======== RESPONSIVE VERSION ========*/
-@media (max-width:900px){
+@media (max-width:1286px){
+  .container{
+    padding: 0 32px;
+  }
+  
   .navbar .nav-menu .nav-link{
     font-size: 14px;
+  }
+  .submenu ul{
+    padding: 20px 30px 0 20px;
+  }
+  .submenu-link{
+    font-weight: 300;
+    font-size: 12px;
   }
   .contact-botton-link{
     font-size: 16px;
     padding:13px 12px ;
   }
+  .submenu-columns ul li img{
+    width: 15px;
+    height: 15px;
+  }
+  .hero-section__hero-content__title{
+    
+    font-weight: 500;
+    font-size: 46px;
+  }
+  .hero-section__hero-content__brand__logo{
+    width: 90px;
+    height: 16px;
+
+  }
+    
+  .hero-section__hero-content__description {
+    font-size: 14px;
+    max-width: 440px;
+    width: 100%;
+  }
+  
 }
 @media (max-width:768px) {
  
@@ -338,17 +383,17 @@
   .contact-botton-link{
     display: none;
   }
-  header{
-    position: relative;
+  .hero-section__hero-content__badge{
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
   }
-  
   .navbar__mobile{
     display: flex;
     position:absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    
     
   }
   .navbar__mobile .nav-menu{
@@ -358,15 +403,16 @@
     position: absolute;
     top: 100%;
     left: 0;
+    padding: 0;
     list-style: none;
     padding: 20px 0 20px 20px;
     display: flex;
     flex-direction: column;
     gap: 30px;
-    max-height: 0;
     overflow: hidden;
-    opacity: 0;
-    transition: max-height 0.3s ease, opacity 0.3s ease;
+    opacity: 0;   
+   transition: opacity .4s ease;
+
   }
   .navbar__mobile .nav-menu.active{
     max-height: 1000px;
@@ -381,8 +427,6 @@
     
    }
   
-
-
   .navbar__mobile .nav-menu .nav-link {
     text-decoration: none;
     color: #ffffff;
@@ -400,8 +444,7 @@
     display: flex;
     align-items: center;
     height: 100%;
-    cursor: pointer;
-    transition: 0.3s ease;
+    margin: auto 0;
     cursor: pointer;
   }
   
@@ -409,4 +452,14 @@
     content: url("images/close-menu.svg");
     transition:  0.3s ease;
   }
+  
+  .section-container{
+    padding: 0;
+    margin: 50px auto;
+  }
+  .hero-section__hero-content{
+    gap: 20px;
+  }
+  
+  
 }
