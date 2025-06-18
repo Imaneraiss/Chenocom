@@ -5,11 +5,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chenocom</title>
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <script src="script.js" defer></script>
+  
+  
 </head>
 
 <body>
@@ -203,12 +206,27 @@
           </div>
         
 
-          <div class="hero-section__project-carousel"></div>
+          <div class="hero-section__project-carousel">
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                
+                <div class="swiper-slide"><img src="images/slide2.png" alt="Slide 1"></div>
+                <div class="swiper-slide"><img src="images/slide3.png" alt="Slide 3"></div>  
+                <div class="swiper-slide"><img src="images/slide1.jpg" alt="Slide 2"></div>         
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
         </div>
       </div>
     </section>
 
 
   </main>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
