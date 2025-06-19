@@ -229,10 +229,7 @@
 /*=============MAIN==============*/
 .section-container{
     text-align: center;
-    padding: 100px 0;
-    display: flex;
-    flex-direction: column;
-    gap: 80px;
+    margin: 100px auto;
   }
 
 .hero-section__hero-content{
@@ -261,7 +258,7 @@
   letter-spacing: -2px;
 
 }
-.hero-section__hero-content__title__text{
+.linear-gradient{
   background: linear-gradient(90deg, #F5B400 4.81%, #FFFFFF 100%);
   background-clip:text ;
   color: transparent;
@@ -347,12 +344,17 @@
   object-position: top;
 
 }
+.hero-section__project-carousel{
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
 .hero-section__project-carousel .swiper {
   display: flex;
   justify-content: center;
-  flex-direction: column;
   width: 100%;
-  
+  overflow: hidden;
 }
 
 .hero-section__project-carousel .swiper-slide {
@@ -361,15 +363,17 @@
   transition: all .3s ease;
   width: 50%;
 }
-.swiper-slide-active{
-  width: 100%;
-}
+
 .swiper-pagination-bullet {
   width: 18px;
   height: 10px;
   border-radius: 10px;
-  background-color: #FFFFFF99;
+  background-color:rgba(255, 255, 255, 0.6);
+  opacity: 1;
 
+}
+.swiper-pagination{
+  position:relative;
 }
 
 .swiper-pagination-bullet-active {
@@ -379,8 +383,58 @@
   background-color: rgb(255, 255, 255);
 }
 
+/* ------------ CLIENTS SECTION  */
+.clients-section__description{
+  font-family: 'Inter',sans-serif;
+  color: #CBCBCB;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
 
-    
+@keyframes scroll {
+  from{
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-250px * 9));
+  }
+}
+.clients-section__logos{
+  overflow:hidden;
+  margin-top: 33px;
+  
+  white-space: nowrap;
+}
+.clients-section__logos__slide{
+  display: inline-block;
+  animation: 25s scroll infinite linear;
+ 
+} 
+.clients-section__logos img{
+  width: 110px;
+  margin-right: 24px;
+}
+
+/* ---------------STATISTIC SECTION */
+.statistic-section__description{
+  color: #FFFFFF;
+}
+.statistic-section__description__title{
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 64px;
+  text-align: left;
+  max-width: 920px;
+}
+.statistic-section__description__body{
+  display: flex;
+  justify-content: space-between;
+}
+
+
   /*======== RESPONSIVE VERSION ========*/
 @media (max-width:1286px){
   .container{
@@ -427,7 +481,7 @@
     transition: 0.3s;
     margin: auto;
 }
-}
+
 @media (max-width:768px) {
  
   .navbar{
@@ -517,6 +571,7 @@
   /* Project caroussel */
   .hero-section__project-carousel {
     gap: 20px;
+    margin-top: 30px;
 }
 .hero-section__project-carousel .swiper-slide {
   max-width: 333px;
@@ -525,4 +580,14 @@
   margin: auto;
   width: 100%;
   border-radius: 10px;
+}
+
+/* ---------CLIENTS SECTION ------------ */
+.clients-section__description{
+  font-size: 12px;
+  letter-spacing: 0.14px;
+}
+.clients-section__logos{
+  margin-top: 20px;
+}
 }
