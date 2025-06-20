@@ -290,7 +290,7 @@
     transform: translateY(-10px);
   }
 }
-.hero-section__hero-content__badge{
+.badge{
   display: flex;
   align-content: center;
   color: rgb(0, 0, 0);
@@ -418,6 +418,9 @@
 }
 
 /* ---------------STATISTIC SECTION */
+.statistic-section{
+  position: relative;
+}
 .statistic-section__description{
   color: #FFFFFF;
 }
@@ -425,21 +428,102 @@
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 56px;
-  line-height: 64px;
   text-align: left;
   max-width: 920px;
+  margin-bottom: 92px;
+}
+.badge-about-us{
+  background-color: #B3FD9D;
+  top: 34%;
+  right: 29%;
+ 
 }
 .statistic-section__description__body{
   display: flex;
   justify-content: space-between;
+  font-family: 'Inter',sans-serif;
+  font-weight: 400;
+  font-size: 24px;
 }
-
-
-  /*======== RESPONSIVE VERSION ========*/
-@media (max-width:1286px){
-  .container{
-    padding: 0 22px;
+.statistic-section__description__body__right{
+  max-width: 729px;
+  text-align: left;
+  color: rgb(255, 255, 255, 0.7);
+}
+.statistic-section__description__body__right__yellow{
+  color: #FFD400;
+  font-weight: 700;
+  text-align: left;
+}
+.statistic-section__description__body__left{
+  margin-top: auto;
+  display: flex;
+  gap: 12px;
+  font-weight: 700;
+}
+.statistic-section__values{
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+.statistic-section__value{
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.statistic-section__value span{
+  font-family: "Poppins",sans-serif;
+  font-weight: 400;
+  font-size: 146px;
+  margin: 0;
+  padding: 0;
+}
+.statistic-section__value p{
+  text-align: left;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.7);
+}
+/* --------- SLOGON SECTION ------------ */
+@keyframes slogonscroll {
+  from{
+    transform: translateX(0);
   }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.slogon-section{
+  overflow: hidden;
+  display:flex;
+  gap: 35px;
+
+}
+.slogon-section__list{
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 800;
+  font-size: 121.11px;  
+  text-transform: uppercase;
+  white-space:nowrap;
+  animation: 15s slogonscroll infinite linear;
+  display: inline-block;
+}
+.slogon-section__white{
+  letter-spacing: 6px;
+  color: transparent;
+  -webkit-text-stroke: 2.2px white;
+ 
+}
+.slogon-section__yellow{
+  color: #F5B400;
+
+}
+/*======== RESPONSIVE VERSION ========*/
+@media (max-width:1286px){
+.container{
+  padding: 0 22px;
+}
   
   .navbar .nav-menu .nav-link{
     font-size: 14px;
@@ -469,19 +553,32 @@
     height: 16px;
 
   }
-    
-  .hero-section__hero-content__description {
-    font-size: 14px;
-    max-width: 440px;
-    width: 100%;
+  .statistic-section__description__body{
+    font-size: 20px;
   }
-  .hero-section__project-carousel .swiper-slide {
-    max-width: 400px;
-    height: 340px;
-    transition: 0.3s;
-    margin: auto;
+  .statistic-section__description__body__right{
+    max-width: 500px;
+ }
+  .statistic-section__description__body__left{
+    font-weight: 600;
+    margin-right: 20px;
+    white-space: nowrap;
+  }
+  .statistic-section__value span{
+  font-weight: 300;
+  font-size: 100px;
+ 
 }
-
+.statistic-section__value p{
+  font-weight: 300;
+  font-size: 18px;
+}
+.badge-about-us{
+  background-color: #B3FD9D;
+  top: 40%;
+  right: 10%;
+ 
+}
 @media (max-width:768px) {
  
   .navbar{
@@ -490,7 +587,7 @@
   .contact-botton-link{
     display: none;
   }
-  .hero-section__hero-content__badge{
+  .badge{
     max-height: 0;
     overflow: hidden;
     opacity: 0;
@@ -561,7 +658,7 @@
   }
   
   .section-container{
-    padding: 0;
+    text-align: center;
     margin: 50px auto;
   }
   .hero-section__hero-content{
@@ -580,6 +677,7 @@
   margin: auto;
   width: 100%;
   border-radius: 10px;
+  max-height: 264.7px;
 }
 
 /* ---------CLIENTS SECTION ------------ */
@@ -589,5 +687,57 @@
 }
 .clients-section__logos{
   margin-top: 20px;
+}
+    
+  .hero-section__hero-content__description {
+    font-size: 14px;
+    max-width: 440px;
+    width: 100%;
+  }
+  .hero-section__project-carousel .swiper-slide {
+    max-width: 400px;
+    height: 340px;
+    transition: 0.3s;
+    margin: auto;
+}
+.statistic-section__description__title{
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.statistic-section__description__body{
+  font-size: 14px; ;
+  display: block;
+}
+.statistic-section__description__body__left{
+  margin-bottom: 20px;
+}
+.statistic-section__description{
+  margin-bottom: 40px;
+}
+.statistic-section__values{
+  display: block;
+  margin-bottom: 40px;
+
+}
+.statistic-section__value{
+  gap: 14px;
+}
+.statistic-section__value span{
+  font-weight: 300;
+  font-size: 100px;
+ 
+}
+.statistic-section__value p{
+  font-weight: 300;
+  font-size: 18px;
+  text-align: center;
+}
+/* --------- SLOGON SECTION--------- */
+.slogon-section__list{
+  font-size: 55.56px;
+}
+.slogon-section__white{
+  -webkit-text-stroke: 1.01px white;
 }
 }
