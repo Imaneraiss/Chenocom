@@ -519,6 +519,91 @@
   color: #F5B400;
 
 }
+/* ------------ EXPERTISES SECTION ----------------*/
+.expertises{
+  color: white;  
+  text-align: left;
+}
+.expertises__part1{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 60px;
+}
+.expertises__intro{
+  font-family: "Poppins",sans-serif;
+  max-width: 560px;
+  text-align: left;
+  margin-right: 96px;
+}
+.expertises__why-chenocom{
+  color: #DDD7D7;
+  max-width: 560px;
+  font-family: 'Inter',sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  text-align: left;
+}
+.expertises__why-chenocom__yellow{
+  color:#FFD400;
+  font-weight: 700;
+  font-size: 24px;
+  margin-left: 70px;
+}
+.badge-our-specialities{
+  background-color: #FF9A26;
+  position: absolute;
+  bottom: -15%;
+  left:25% ;
+}
+.numero{
+  font-family: "Poppins",sans-serif;
+  font-weight: 600;
+  font-size: 57.25px;
+}
+.title{
+  font-family: "Poppins",sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  text-align: left;
+
+}
+.description{
+  font-family: 'Inter',sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: left;
+}
+.expertises__part2{
+  display: flex;
+}
+.expertises__website {
+  position: relative;
+  overflow: hidden;
+}
+
+.expertises__website::before {
+  content: "";  
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-image: url("images/background.jpg");
+  background-size: cover;
+  background-position: 50% 22%;
+  opacity: 0.2;
+  border-radius: 20px;
+
+  z-index: 0;
+}
+
+.expertises__website > * {
+  position: relative;
+  z-index: 1;
+}
+
 /*======== RESPONSIVE VERSION ========*/
 @media (max-width:1286px){
 .container{
