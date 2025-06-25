@@ -44,10 +44,60 @@ const swiper = new Swiper('.mySwiper', {
   centeredSlides: true,
   spaceBetween: 20,
   pagination: {
-    el: '.swiper-pagination',
+    el: '.hero-section__project-carousel .swiper-pagination',
     clickable: true,
   },
 });
 
+// Initialize mobile swiper with autoplay
+const mobileSwiper = new Swiper('.swiper-mobile .mySwiper', {
+  // Autoplay configuration
+  autoplay: {
+    delay: 3000, 
+    disableOnInteraction: false, 
+    pauseOnMouseEnter: true, 
+  },
+  
+  // Pagination
+  pagination: {
+    el: '.swiper-mobile .swiper-pagination',
+    clickable: true,
+    dynamicBullets: true, 
+  },
+  
+  
+  loop: true, 
+  speed: 800, 
+  grabCursor: true, 
+  effect: 'slide', 
+  preventClicks: false, 
+  
+  // Responsive breakpoints
+  breakpoints: {
+    768: {
+      allowTouchMove: false 
+    }
+  }
+});
+
+  const modal = document.getElementById('videoModal');
+  const openBtn = document.getElementById('openPopup');
+  const closeBtn = document.getElementById('closePopup');
+
+  openBtn.onclick = () => {
+    modal.style.display = 'flex';
+  }
+
+  closeBtn.onclick = () => {
+    modal.style.display = 'none';
+    modal.querySelector('video').pause();
+  }
+
+  window.onclick = (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+      modal.querySelector('video').pause();
+    }
+  }
 
 

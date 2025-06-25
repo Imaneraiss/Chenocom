@@ -373,7 +373,8 @@
 
 }
 .swiper-pagination{
-  position:relative;
+  position:absolute;
+  width: 100%;
 }
 
 .swiper-pagination-bullet-active {
@@ -534,7 +535,9 @@
   font-family: "Poppins",sans-serif;
   max-width: 560px;
   text-align: left;
-  margin-right: 96px;
+  min-width: 270px;
+  
+  
 }
 .expertises__why-chenocom{
   color: #DDD7D7;
@@ -543,6 +546,8 @@
   font-weight: 400;
   font-size: 22px;
   text-align: left;
+  margin-left: 90px;
+
 }
 .expertises__why-chenocom__yellow{
   color:#FFD400;
@@ -560,26 +565,40 @@
   font-family: "Poppins",sans-serif;
   font-weight: 600;
   font-size: 57.25px;
+  position: absolute;
+  top: 9%;
+  right: 7%;
 }
 .title{
   font-family: "Poppins",sans-serif;
   font-weight: 600;
   font-size: 30px;
   text-align: left;
-
+  max-width: 394px;
+  margin-bottom: 18px;
+  line-height: 39px;
 }
 .description{
   font-family: 'Inter',sans-serif;
   font-weight: 400;
   font-size: 18px;
   text-align: left;
+  color: rgb(255, 255, 255, 0.8);
+  max-width: 505px;
+  line-height: 31px;
 }
 .expertises__part2{
   display: flex;
+  gap: 22.41px;
+  max-height: 294px;
+  margin-bottom : 24px; ;
 }
 .expertises__website {
   position: relative;
   overflow: hidden;
+  flex: 2;
+  padding: 5% 6.02% 6% 4%;
+  position: relative;
 }
 
 .expertises__website::before {
@@ -589,19 +608,156 @@
   left: 0;
   width: 100%;
   height: 100%;
-
   background-image: url("images/background.jpg");
   background-size: cover;
   background-position: 50% 22%;
   opacity: 0.2;
   border-radius: 20px;
-
   z-index: 0;
 }
 
 .expertises__website > * {
   position: relative;
   z-index: 1;
+}
+.expertises__website .numero{
+  position: absolute;
+  top: 15%;
+  right: 4%;
+}
+.expertises__website .title{
+  max-width: 411px;
+}
+.expertises__website .description{
+  line-height: 26px;
+  max-width: 689px;
+}
+.expertises__logo{
+  flex: 1;
+}
+.expertises__part3{
+  display: flex;
+  gap: 20px;
+  margin-bottom: 39px;
+}
+.expertises__mobile , .expertises__digitale, .expertises__website{
+  flex:1;
+  padding: 3% 4.1% 3% 4%;
+  background-color: #151515;
+  position: relative ;
+  border-radius: 20px;
+}
+.swiper-mobile{
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+.expertises__stats{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.expertises__presentation{
+  display: flex;
+  gap: 1.4%;
+  color: #1C1A1A;
+  
+}
+
+.thumbnail {
+  position: relative;
+  flex: 2; /* 67% proportion (2/3) */
+  max-width: 67%;
+}
+
+.expertises__presentation__stats{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  background: #F5B400;
+  border-radius: 29.48px;
+  flex: 1;
+  position: relative;
+  max-width: 32.1%;
+}
+.expertises__presentation__stats__first{
+  font-family: 'Inter',sans-serif;
+  font-weight: 400;
+  font-size: 12.9px;
+  line-height: 14.74px;
+  position: absolute;
+  top: 8%;
+  left: 8%;
+  opacity: 0.7;
+  text-transform: uppercase;
+}
+.expertises__presentation__stats__second{
+  font-family: "Poppins",sans-serif;
+  font-weight: 500;
+  font-size: 92.41px;
+  position: absolute;
+  top: 62%;
+  left: 8%;
+  line-height: 0;
+}
+.expertises__presentation__stats__third{
+  font-family: 'Inter',sans-serif;
+  font-weight: 500;
+  font-size: 24.48px;
+  line-height: 33.16px;
+  max-width: 317px;
+  position: absolute;
+  left: 8%;
+  bottom: 10%;
+
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: transparent;
+  padding: 0;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 800px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 2%;
+  right: 3%;
+  color: rgb(127, 122, 122);
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#openPopup{
+  border-radius: 20px; 
+  cursor: pointer;
+  width: 100%;
+}
+.thumbnail{
+  position: relative;
+}
+.play-button{
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  width: 60px;
+  height: 60px;
+  color: white;
+  border-radius: 44.22px;
+  background: #0B0B0B33;
+  border: transparent;
 }
 
 /*======== RESPONSIVE VERSION ========*/
@@ -640,14 +796,17 @@
   }
   .statistic-section__description__body{
     font-size: 20px;
+    display: flex;
   }
   .statistic-section__description__body__right{
     max-width: 500px;
+    order: 2;
  }
   .statistic-section__description__body__left{
     font-weight: 600;
     margin-right: 20px;
     white-space: nowrap;
+    order:1 ;
   }
   .statistic-section__value span{
   font-weight: 300;
@@ -663,6 +822,54 @@
   top: 40%;
   right: 10%;
  
+}
+/* ------------Expertises Section-------------- */
+.expertises__part2{
+  max-height: 194px;
+}
+.expertises__logo{
+  width: 291px;
+  height: 194px;
+}
+.expertises__logo img {
+  width: 100%;
+  height: 100%;
+}
+.numero{
+  font-weight: 400;
+  font-size: 30.25px;
+  margin-left:1%;
+}
+.title{
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 5px;
+  line-height: 35px;
+  max-width: 270px;
+}
+.expertises__website .description{
+  line-height: 21px ;
+}
+.description{
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 21px;
+}
+/* ----------PRESENTATION-------- */
+.expertises__presentation__stats__first{
+  font-weight: 300;
+  font-size: 10.9px;
+}
+.expertises__presentation__stats__second{
+  font-weight: 300;
+  font-size: 52.41px;
+  top: 67%;
+  
+}
+  .expertises__presentation__stats__third {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 15px;
 }
 @media (max-width:768px) {
  
@@ -754,6 +961,7 @@
   .hero-section__project-carousel {
     gap: 20px;
     margin-top: 30px;
+    position: relative;
 }
 .hero-section__project-carousel .swiper-slide {
   max-width: 333px;
@@ -774,16 +982,16 @@
   margin-top: 20px;
 }
     
-  .hero-section__hero-content__description {
-    font-size: 14px;
-    max-width: 440px;
-    width: 100%;
-  }
-  .hero-section__project-carousel .swiper-slide {
-    max-width: 400px;
-    height: 340px;
-    transition: 0.3s;
-    margin: auto;
+.hero-section__hero-content__description {
+  font-size: 14px;
+  max-width: 440px;
+  width: 100%;
+}
+.hero-section__project-carousel .swiper-slide {
+  max-width: 400px;
+  height: 340px;
+  transition: 0.3s;
+  margin: auto;
 }
 .statistic-section__description__title{
   font-size: 24px;
@@ -795,6 +1003,9 @@
   display: block;
 }
 .statistic-section__description__body__left{
+  margin-bottom: 20px;
+}
+.statistic-section__description__body__right{
   margin-bottom: 20px;
 }
 .statistic-section__description{
@@ -818,6 +1029,74 @@
   font-size: 18px;
   text-align: center;
 }
+/* --------SECTIION EXPERTISES  ---------- */
+.parts-desktop{
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+.swiper-mobile{
+  max-height: 1000px;
+  overflow: visible;
+  opacity: 1;
+}
+.swiper-mobile .swiper-slide{
+  max-height: 155.4px;
+}
+
+.expertises__part1{
+  display: block;
+  margin:0;
+}
+.expertises__intro{
+  margin: 0 0 20px 0;
+  line-height: 28px;
+}
+.expertises__why-chenocom{
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 20px 0;
+  gap: 20px;
+  font-size: 14px;
+  line-height: 21px;
+
+}
+.expertises__why-chenocom__yellow{
+  margin: 0;
+}
+.numero{
+  font-weight: 600;
+  font-size: 29.6px;
+  line-height: 30.95px;
+}
+.title, .expertises__website .title{
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19.73px;
+  max-width: 217px;
+
+}
+.description,.expertises__website .description{
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 16px;
+
+}
+.expertises__why-chenocom__yellow{
+  font-weight: 700;
+  font-size: 14px;
+
+}
+.expertises__website,.expertises__digitale,.expertises__mobile{
+  padding: 5% 6.1% 5% 6%;
+  border-radius: 7.4px;
+}
+.expertises__website::before {
+  border-radius: 7.4px; 
+}
+
+/* Mobile Swiper Container */
+
 /* --------- SLOGON SECTION--------- */
 .slogon-section__list{
   font-size: 55.56px;
@@ -825,4 +1104,24 @@
 .slogon-section__white{
   -webkit-text-stroke: 1.01px white;
 }
+
+/* -------PRESENTATION--------- */
+.thumbnail {
+  max-width: 100%;
+}
+.expertises__presentation{
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+}
+#openPopup{
+  width: 100%;
+}
+
+.expertises__presentation__stats{
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
 }
