@@ -1,436 +1,786 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chenocom</title>
-  <!-- Link Swiper's CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@800&display=swap" rel="stylesheet">
-  
-  
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chenocom</title>
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
-  <header>
-    <div class="container">
-      <div class="header-container">
-        <!-- Logo -->
-        <a href="#" class="logo">
-          <img src="images/cheno.svg" alt="Logo de Chenocom" class="logo-img"/>
-        </a>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-container">
+          <!-- Logo -->
+          <a href="#" class="logo">
+            <img
+              src="images/cheno.svg"
+              alt="Logo de Chenocom"
+              class="logo-img"
+            />
+          </a>
 
-        <!-- Navigation -->
+          <!-- Navigation -->
 
-        <!-- Mobile-Version -->
-          
-          <img src="images/btn-menu.svg" alt="Bouton Menu" class="burger-menu" >
+          <!-- Mobile-Version -->
+
+          <img
+            src="images/btn-menu.svg"
+            alt="Bouton Menu"
+            class="burger-menu"
+          />
           <nav class="navbar__mobile">
             <ul class="nav-menu">
-
               <li class="has-submenu">
                 <span class="link-icon">
                   <a href="#" class="nav-link"> About Us</a>
-                  <img src="images/flèche.svg" alt="Flèche vers le bas" class="icon-arrow" />
-                  
+                  <img
+                    src="images/flèche.svg"
+                    alt="Flèche vers le bas"
+                    class="icon-arrow"
+                  />
                 </span>
                 <!-- Sous-menu  -->
                 <div class="submenu">
                   <ul>
-                    <li><a href="#" class="submenu-link">Agence Web Maroc</a></li>
-                    <li><a href="#" class="submenu-link">Agence Web Offshore</a></li>
+                    <li>
+                      <a href="#" class="submenu-link">Agence Web Maroc</a>
+                    </li>
+                    <li>
+                      <a href="#" class="submenu-link">Agence Web Offshore</a>
+                    </li>
                   </ul>
                 </div>
               </li>
               <li class="has-submenu">
-                <span class="link-icon" >
+                <span class="link-icon">
                   <a href="#" class="nav-link">Expertises</a>
-                  <img src="images/flèche.svg" alt="Flèche vers le bas" class="icon-arrow"/>
-                  
+                  <img
+                    src="images/flèche.svg"
+                    alt="Flèche vers le bas"
+                    class="icon-arrow"
+                  />
                 </span>
-                
+
                 <div class="submenu">
                   <ul>
-                    <li> <a href="#" class="submenu-link">Développement Web</a> </li>
-                    <li> <a href="#" class="submenu-link">Développement Mobile</a> </li>
-                    <li> <a href="#" class="submenu-link">Design & Expérience utilisateur</a> </li>
-                    <li> <a href="#" class="submenu-link">Référencement SEO</a> </li>
-                    <li> <a href="#" class="submenu-link">Contrôle qualité & tests</a> </li>
-                    <li> <a href="#" class="submenu-link">Maintenance & Évolutions (TMA)</a> </li>
-                    <li> <a href="#" class="submenu-link">E-learning </a> </li>
+                    <li>
+                      <a href="#" class="submenu-link">Développement Web</a>
+                    </li>
+                    <li>
+                      <a href="#" class="submenu-link">Développement Mobile</a>
+                    </li>
+                    <li>
+                      <a href="#" class="submenu-link"
+                        >Design & Expérience utilisateur</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="submenu-link">Référencement SEO</a>
+                    </li>
+                    <li>
+                      <a href="#" class="submenu-link"
+                        >Contrôle qualité & tests</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="submenu-link"
+                        >Maintenance & Évolutions (TMA)</a
+                      >
+                    </li>
+                    <li><a href="#" class="submenu-link">E-learning </a></li>
                   </ul>
                 </div>
               </li>
-              <li class="nav-item"><a href="#" class="nav-link">Réalisations</a></li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Réalisations</a>
+              </li>
               <li class="nav-item"><a href="#" class="nav-link">Blogs</a></li>
-            
+
               <li class="has-submenu">
-                
-                  <a href="#" class="nav-link">
-                    <span class="flag-selector" >
-                      <img id="current-flag-mobile" src="images/en.svg" data-lang="en" alt="Langue actuelle"  />
-                      <img src="images/flèche.svg" alt="Flèche vers le bas"  class="icon-arrow"/>
-                    </span>
-                  </a>
-              <div class="submenu">
-                <ul>
-                  <a href="#"><img id="alt-flag-mobile" src="images/fr.svg" data-lang="fr" alt="Changer la langue"  /></a>
-                </ul>
-              </div>
-              
-              <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
+                <a href="#" class="nav-link">
+                  <span class="flag-selector">
+                    <img
+                      id="current-flag-mobile"
+                      src="images/en.svg"
+                      data-lang="en"
+                      alt="Langue actuelle"
+                    />
+                    <img
+                      src="images/flèche.svg"
+                      alt="Flèche vers le bas"
+                      class="icon-arrow"
+                    />
+                  </span>
+                </a>
+                <div class="submenu">
+                  <ul>
+                    <a href="#"
+                      ><img
+                        id="alt-flag-mobile"
+                        src="images/fr.svg"
+                        data-lang="fr"
+                        alt="Changer la langue"
+                    /></a>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">Contact Us</a>
+              </li>
             </ul>
           </nav>
-      
 
-
-        <nav class="navbar">  
-          <ul class="nav-menu">
-            <li class="has-submenu">
-              <span class="link-icon">
+          <nav class="navbar">
+            <ul class="nav-menu">
+              <li class="has-submenu">
+                <span class="link-icon">
                   <a href="#" class="nav-link"> About Us</a>
-                  <img src="images/flèche.svg" alt="Flèche vers le bas" class="icon-arrow" />
-                  
-              </span>
-              <!-- Sous-menu  -->
-              <div class="submenu">
-                <ul>
-                  <li><a href="#" class="submenu-link">Agence Web Maroc</a></li>
-                  <li><a href="#" class="submenu-link">Agence Web Offshore</a></li>
-                </ul>
-              </div>
-            </li>
-            <!-- Expertises avec sous-menu colonnes -->
-            <li class="has-submenu">
-              <span class="link-icon">
-                <a href="#" class="nav-link">Expertises</a>
-                
-                <img src="images/flèche.svg" alt="Flèche vers le bas" class="icon-arrow" />
-              </span> 
-              <div class="submenu">
-                
-                    <div class="submenu-columns">
-                      
-                      <ul class="first-column">
-                        <li><img src="images/dev_web.svg" alt="Développement Web"> <a href="#" class="submenu-link">Développement Web</a> </li>
-                        <li><img src="images/dev_mob.svg" alt="Développement Mobile"> <a href="#" class="submenu-link">Développement Mobile</a> </li>
-                        <li><img src="images/design.svg" alt="Design & Expérience utilisateur"> <a href="#" class="submenu-link">Design & Expérience utilisateur</a> </li>
-                        <li><img src="images/ref.svg" alt="Référencement SEO"> <a href="#" class="submenu-link">Référencement SEO</a> </li>
-                      </ul>
-                      
-                      <ul>
-                        <li><img src="images/control.svg" alt="Contrôle qualité & tests"> <a href="#" class="submenu-link">Contrôle qualité & tests</a> </li>
-                        <li><img src="images/maint.svg" alt="Maintenance & Évolutions (TMA)"> <a href="#" class="submenu-link">Maintenance & Évolutions (TMA)</a> </li>
-                        <li><img src="images/e-learn.svg" alt="E-learning"> <a href="#" class="submenu-link">E-learning </a> </li>
-                      </ul>
-                    </div>
-              </div>
-            </li>
-            <!-- The Rest -->
-            <li class="nav-item"><a href="#" class="nav-link">Réalisations</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Blogs</a></li>
-          
-            <li class="has-submenu">
-                
-                  <a href="#" class="nav-link">
-                    <span class="flag-selector" >
-                      <img class="current-flag" src="images/en.svg" data-lang="en" alt="Langue actuelle"  />
-                      <img src="images/flèche.svg" alt="Flèche vers le bas"  class="icon-arrow"/>
-                    </span>
-                  </a>
-              <div class="submenu">
-                <ul>
-                  <a href="#"><img class="alt-flag" src="images/fr.svg" data-lang="fr" alt="Changer la langue"  /></a>
-                </ul>
-              </div>
-            </li>
+                  <img
+                    src="images/flèche.svg"
+                    alt="Flèche vers le bas"
+                    class="icon-arrow"
+                  />
+                </span>
+                <!-- Sous-menu  -->
+                <div class="submenu">
+                  <ul>
+                    <li>
+                      <a href="#" class="submenu-link">Agence Web Maroc</a>
+                    </li>
+                    <li>
+                      <a href="#" class="submenu-link">Agence Web Offshore</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <!-- Expertises avec sous-menu colonnes -->
+              <li class="has-submenu">
+                <span class="link-icon">
+                  <a href="#" class="nav-link">Expertises</a>
 
-          </ul> 
-        </nav>
+                  <img
+                    src="images/flèche.svg"
+                    alt="Flèche vers le bas"
+                    class="icon-arrow"
+                  />
+                </span>
+                <div class="submenu">
+                  <div class="submenu-columns">
+                    <ul class="first-column">
+                      <li>
+                        <img src="images/dev_web.svg" alt="Développement Web" />
+                        <a href="#" class="submenu-link">Développement Web</a>
+                      </li>
+                      <li>
+                        <img
+                          src="images/dev_mob.svg"
+                          alt="Développement Mobile"
+                        />
+                        <a href="#" class="submenu-link"
+                          >Développement Mobile</a
+                        >
+                      </li>
+                      <li>
+                        <img
+                          src="images/design.svg"
+                          alt="Design & Expérience utilisateur"
+                        />
+                        <a href="#" class="submenu-link"
+                          >Design & Expérience utilisateur</a
+                        >
+                      </li>
+                      <li>
+                        <img src="images/ref.svg" alt="Référencement SEO" />
+                        <a href="#" class="submenu-link">Référencement SEO</a>
+                      </li>
+                    </ul>
 
-      
+                    <ul>
+                      <li>
+                        <img
+                          src="images/control.svg"
+                          alt="Contrôle qualité & tests"
+                        />
+                        <a href="#" class="submenu-link"
+                          >Contrôle qualité & tests</a
+                        >
+                      </li>
+                      <li>
+                        <img
+                          src="images/maint.svg"
+                          alt="Maintenance & Évolutions (TMA)"
+                        />
+                        <a href="#" class="submenu-link"
+                          >Maintenance & Évolutions (TMA)</a
+                        >
+                      </li>
+                      <li>
+                        <img src="images/e-learn.svg" alt="E-learning" />
+                        <a href="#" class="submenu-link">E-learning </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <!-- The Rest -->
+              <li class="nav-item">
+                <a href="#" class="nav-link">Réalisations</a>
+              </li>
+              <li class="nav-item"><a href="#" class="nav-link">Blogs</a></li>
 
-        <!-- Bouton Contact -->
-        <a href="#" class="contact-botton-link">
-          <span>Contact Us</span>
-          <img src="images/pointer.svg" alt="Icône de pointeur" class="icon-pointer" />
-        </a>
+              <li class="has-submenu">
+                <a href="#" class="nav-link">
+                  <span class="flag-selector">
+                    <img
+                      class="current-flag"
+                      src="images/en.svg"
+                      data-lang="en"
+                      alt="Langue actuelle"
+                    />
+                    <img
+                      src="images/flèche.svg"
+                      alt="Flèche vers le bas"
+                      class="icon-arrow"
+                    />
+                  </span>
+                </a>
+                <div class="submenu">
+                  <ul>
+                    <a href="#"
+                      ><img
+                        class="alt-flag"
+                        src="images/fr.svg"
+                        data-lang="fr"
+                        alt="Changer la langue"
+                    /></a>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Bouton Contact -->
+          <a href="#" class="contact-botton-link">
+            <span>Contact Us</span>
+            <img
+              src="images/pointer.svg"
+              alt="Icône de pointeur"
+              class="icon-pointer"
+            />
+          </a>
+        </div>
       </div>
-    </div>
-  </header>
-  <main>
-    <section class="hero-section">
-      <div class="container section-container">
-
-        <div class="hero-section__hero-content">
-          <div class="badge badge1"  >
+    </header>
+    <main>
+      <section class="hero-section">
+        <div class="container section-container">
+          <div class="hero-section__hero-content">
+            <div class="badge badge1">
               <span>SEO Team</span>
-              <img src="images/pointer.svg" alt="icon-pointer">
-
+              <img src="images/pointer.svg" alt="icon-pointer" />
             </div>
-            
-            <div class="badge badge2" >
-              <img src="images/pointer.svg" alt="icon-pointer">
+
+            <div class="badge badge2">
+              <img src="images/pointer.svg" alt="icon-pointer" />
               <span>Design Team</span>
             </div>
-            <div class="badge badge3" >
+            <div class="badge badge3">
               <span>DevOps Team</span>
-              <img src="images/pointer.svg" alt="icon-pointer" >
+              <img src="images/pointer.svg" alt="icon-pointer" />
             </div>
             <div class="badge badge4">
-              <img src="images/pointer.svg" alt="icon-pointer" >
+              <img src="images/pointer.svg" alt="icon-pointer" />
               <span>Developers</span>
             </div>
-          <div class="hero-section__hero-content__brand">
-            <img src="images/hero-brand.svg" alt="CHENOCOM" class="hero-section__hero-content__brand__logo">
-          </div>
-          
-          <div class="hero-section__hero-content__title">
-            <p> <span class="linear-gradient">Websites</span> that get your business rolling</p>
-          </div>
-          <div class="hero-section__hero-content__description">
-            <p>
-              <span class="hero-section__hero-content__description__chenocom">Chenocom</span>
-                – Your trusted Moroccan web agency, designing powerful, tailor-made websites that attract and convert. Let’s make your project shine!
-              
-              <a href="#" class="hero-section__hero-content__description__get-in-touch">Get in touch</a>
-              <img src="images/arrow-up.svg" alt="Flèche ver le haut">
-              
-            </p>
-          </div>
-        </div>
-      
-        <div class="hero-section__project-carousel">
-          <!-- Swiper -->
-          <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide"><img src="images/slide1.jpg" alt="Slide 2"></div>         
-              <div class="swiper-slide"><img src="images/slide2.png" alt="Slide 1"></div>
-              <div class="swiper-slide"><img src="images/slide3.png" alt="Slide 3"></div>  
+            <div class="hero-section__hero-content__brand">
+              <img
+                src="images/hero-brand.svg"
+                alt="CHENOCOM"
+                class="hero-section__hero-content__brand__logo"
+              />
             </div>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
 
-      </div>
-    </section>
+            <div class="hero-section__hero-content__title">
+              <p>
+                <span class="linear-gradient">Websites</span> that get your
+                business rolling
+              </p>
+            </div>
+            <div class="hero-section__hero-content__description">
+              <p>
+                <span class="hero-section__hero-content__description__chenocom"
+                  >Chenocom</span
+                >
+                – Your trusted Moroccan web agency, designing powerful,
+                tailor-made websites that attract and convert. Let’s make your
+                project shine!
 
-    <section class="clients-section">
-      <div class="container section-container">
-        <div class="clients-section__description">
-          <span>Top 50 firms trust chenocom to improve efficiency, revenue, and client experiences.</span>
-        </div>
-        <div class="clients-section__logos">
-          <div class="clients-section__logos__slide">
-            <img src="images/logo9.png" alt="Logo 9" width="110" height="30" >
-            <img src="images/logo1.svg" alt="Logo 1" >
-            <img src="images/logo2.svg" alt="Logo 2" >
-            <img src="images/logo_1.svg" alt="Logo 3">
-            <img src="images/logo3.svg" alt="Logo 4" >
-            <img src="images/logo4.svg" alt="Logo 5" >
-            <img src="images/logo5.svg" alt="Logo 6" >
-            <img src="images/logo6.svg" alt="Logo 7" >
-            <img src="images/logo7.png" alt="Logo 8" width="79.5" height="30" >
+                <a
+                  href="#"
+                  class="hero-section__hero-content__description__get-in-touch"
+                  >Get in touch</a
+                >
+                <img src="images/arrow-up.svg" alt="Flèche ver le haut" />
+              </p>
+            </div>
           </div>
-          <div class="clients-section__logos__slide">
-            <img src="images/logo9.png" alt="Logo 9" width="110" height="30" >
-            <img src="images/logo1.svg" alt="Logo 1" >
-            <img src="images/logo2.svg" alt="Logo 2" >
-            <img src="images/logo_1.svg" alt="Logo 3">
-            <img src="images/logo3.svg" alt="Logo 4" >
-            <img src="images/logo4.svg" alt="Logo 5" >
-            <img src="images/logo5.svg" alt="Logo 6" >
-            <img src="images/logo6.svg" alt="Logo 7" >
-            <img src="images/logo7.png" alt="Logo 8" width="79.5" height="30" >
-          </div>
-          <div class="clients-section__logos__slide">
-            <img src="images/logo9.png" alt="Logo 9" width="110" height="30" >
-            <img src="images/logo1.svg" alt="Logo 1" >
-            <img src="images/logo2.svg" alt="Logo 2" >
-            <img src="images/logo_1.svg" alt="Logo 3">
-            <img src="images/logo3.svg" alt="Logo 4" >
-            <img src="images/logo4.svg" alt="Logo 5" >
-            <img src="images/logo5.svg" alt="Logo 6" >
-            <img src="images/logo6.svg" alt="Logo 7" >
-            <img src="images/logo7.png" alt="Logo 8" width="79.5" height="30" >
-          </div>
-          
-      </div>
-    </section>
 
-    <section class="statistic-section">
-      <div class="container section-container">
-        <div class="statistic-section__description">
-          <div class="statistic-section__description__title">
-            <span class="linear-gradient">Chenocom</span>
-            <span>— Building digital excellence with smart solutions, tailored for your growth.</span> 
-          </div>
-          <div class="badge badge-about-us">
-            <img src="images/pointer.svg" alt="icon-pointer">
-            <span>About Chenocom</span>
-          </div>
-          <div class="statistic-section__description__body">
-            
-            <div class="statistic-section__description__body__right">
-              <span class="statistic-section__description__body__right__yellow">Chenocom </span>
-              <img src="images/arrow-up.svg" alt="Flèche vers le haut">
-              <span>A top-tier Moroccan digital agency focused on bespoke web development, mobile apps, and data-driven UX/UI design. From startups to enterprises, we build platforms that deliver results.</span>
-            </div>
-            <div class="statistic-section__description__body__left">
-              <img src="images/icon-fire.svg" alt="Icon">
-              <span>Creativity you can rely on</span>
-            </div>
-          </div>
-        </div>
-        <div class="statistic-section__values">
-          
-          <div class="statistic-section__value">
-            <span>62+</span>
-            <p>Finalized projects</p>
-          </div>
-          <div class="statistic-section__value">
-            <span>94%</span>
-            <p>Conversion rate improvement</p>
-          </div>
-          <div class="statistic-section__value">
-            <span>11+</span>
-            <p>Years of experience</p>
-          </div>
-        </div>
-    </section>
-
-    <section class="slogon-section">
-      <div class="slogon-section__list">
-        <span class="slogon-section__white">believe  in  creativity</span>
-        <span class="slogon-section__yellow">Chenocom</span>
-      </div>
-      <div class="slogon-section__list">
-        <span class="slogon-section__white">believe  in  creativity</span>
-        <span class="slogon-section__yellow">Chenocom</span>
-      </div>
-      
-    </section>
-
-    <section class="expertises">
-      <div class="container section-container">
-        <div class="expertises__part1">
-          <div class="expertises__intro">
-            <h2> <span class="linear-gradient"> We focus</span> on three core areas to bounce your business forward</h2> 
-          
-          </div>
-          <div class="expertises__why-chenocom">
-            <span>Thanks to our skilled teams in web development, web design, natural SEO, social media management, and optimized content writing, we bring together all the expertise needed to turn .</span>
-            <span>
-              <span class="expertises__why-chenocom__yellow">Why Chenocom</span>
-              <img src="images/arrow-up.svg" alt="Flèche vers le haut">
-            </span>
-          </div>
-          <div class="badge badge-our-specialities">
-            <img src="images/pointer.svg" alt="icon-pointer">
-            <span>Our Specialities</span>
-          </div>
-        </div>
-        <div class="parts-desktop">
-          <div class="expertises__part2">
-            <div class="expertises__logo">
-              <img src="images/Chenocom.svg" alt="Logo de Chenocom">
-            </div>
-            <div class="expertises__website">
-              <span class="numero">01</span>
-              <h3 class="title">Designing responsive and dynamic websites</h3>
-              <p class="description">We deliver visually stunning, user-friendly websites that not only look beautiful but are built to perform, convert and grow your business. Hand-crafted by humans – with strategy, style and soul.</p>
-            </div>
-          </div>
-          <div class="expertises__part3">
-            <div class="expertises__mobile">
-              <span class="numero">02</span>
-              <h3 class="title">Conception et realisation d’apps mobiles</h3>
-              <p class="description">We deliver visually stunning, user-friendly websites that not only look beautiful but are built to perform, convert and grow your business. Hand-crafted by humans – with strategy, style and soul.</p>
-            </div>
-            <div class="expertises__digitale">
-              <span class="numero">03</span>
-              <h3 class="title">Communication digitale et generation de trafic</h3>
-              <p class="description">We deliver visually stunning, user-friendly websites that not only look beautiful but are built to perform, convert and grow your business. Hand-crafted by humans – with strategy, style and soul.</p>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-mobile">
-          <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="expertises__website">
-                  <span class="numero">01</span>
-                  <h3 class="title">Designing responsive and dynamic websites</h3>
-                  <p class="description">We deliver visually stunning, user-friendly websites that not only look beautiful but are built to perform, convert and grow your business. Hand-crafted by humans – with strategy, style and soul.</p>
+          <div class="hero-section__project-carousel">
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="images/slide1.jpg" alt="Slide 2" />
                 </div>
-              </div>         
-              <div class="swiper-slide">
-                <div class="expertises__mobile">
-                  <span class="numero">02</span>
-                  <h3 class="title">Conception et realisation d’apps mobiles</h3>
-                  <p class="description">We deliver visually stunning, user-friendly websites that not only look beautiful but are built to perform, convert and grow your business. Hand-crafted by humans – with strategy, style and soul.</p>
+                <div class="swiper-slide">
+                  <img src="images/slide2.png" alt="Slide 1" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/slide3.png" alt="Slide 3" />
                 </div>
               </div>
-              <div class="swiper-slide">
-                <div class="expertises__digitale">
-                  <span class="numero">03</span>
-                  <h3 class="title">Communication digitale et generation de trafic</h3>
-                  <p class="description">We deliver visually stunning, user-friendly websites that not only look beautiful but are built to perform, convert and grow your business. Hand-crafted by humans – with strategy, style and soul.</p>
-                </div>
-            
-              </div> 
-              <div class="swiper-pagination"></div>
             </div>
-            
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="clients-section">
+        <div class="container section-container">
+          <div class="clients-section__description">
+            <span
+              >Top 50 firms trust chenocom to improve efficiency, revenue, and
+              client experiences.</span
+            >
+          </div>
+          <div class="clients-section__logos">
+            <div class="clients-section__logos__slide">
+              <img
+                src="images/logo9.png"
+                alt="Logo 9"
+                width="110"
+                height="30"
+              />
+              <img src="images/logo1.svg" alt="Logo 1" />
+              <img src="images/logo2.svg" alt="Logo 2" />
+              <img src="images/logo_1.svg" alt="Logo 3" />
+              <img src="images/logo3.svg" alt="Logo 4" />
+              <img src="images/logo4.svg" alt="Logo 5" />
+              <img src="images/logo5.svg" alt="Logo 6" />
+              <img src="images/logo6.svg" alt="Logo 7" />
+              <img
+                src="images/logo7.png"
+                alt="Logo 8"
+                width="79.5"
+                height="30"
+              />
+            </div>
+            <div class="clients-section__logos__slide">
+              <img
+                src="images/logo9.png"
+                alt="Logo 9"
+                width="110"
+                height="30"
+              />
+              <img src="images/logo1.svg" alt="Logo 1" />
+              <img src="images/logo2.svg" alt="Logo 2" />
+              <img src="images/logo_1.svg" alt="Logo 3" />
+              <img src="images/logo3.svg" alt="Logo 4" />
+              <img src="images/logo4.svg" alt="Logo 5" />
+              <img src="images/logo5.svg" alt="Logo 6" />
+              <img src="images/logo6.svg" alt="Logo 7" />
+              <img
+                src="images/logo7.png"
+                alt="Logo 8"
+                width="79.5"
+                height="30"
+              />
+            </div>
+            <div class="clients-section__logos__slide">
+              <img
+                src="images/logo9.png"
+                alt="Logo 9"
+                width="110"
+                height="30"
+              />
+              <img src="images/logo1.svg" alt="Logo 1" />
+              <img src="images/logo2.svg" alt="Logo 2" />
+              <img src="images/logo_1.svg" alt="Logo 3" />
+              <img src="images/logo3.svg" alt="Logo 4" />
+              <img src="images/logo4.svg" alt="Logo 5" />
+              <img src="images/logo5.svg" alt="Logo 6" />
+              <img src="images/logo6.svg" alt="Logo 7" />
+              <img
+                src="images/logo7.png"
+                alt="Logo 8"
+                width="79.5"
+                height="30"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="statistic-section">
+        <div class="container section-container">
+          <div class="statistic-section__description">
+            <div class="statistic-section__description__title">
+              <span class="linear-gradient">Chenocom</span>
+              <span
+                >— Building digital excellence with smart solutions, tailored
+                for your growth.</span
+              > 
+            </div>
+            <div class="badge badge-about-us">
+              <img src="images/pointer.svg" alt="icon-pointer" />
+              <span>About Chenocom</span>
+            </div>
+            <div class="statistic-section__description__body">
+              <div class="statistic-section__description__body__right">
+                <span
+                  class="statistic-section__description__body__right__yellow"
+                  >Chenocom
+                </span>
+                <img src="images/arrow-up.svg" alt="Flèche vers le haut" />
+                <span
+                  >A top-tier Moroccan digital agency focused on bespoke web
+                  development, mobile apps, and data-driven UX/UI design. From
+                  startups to enterprises, we build platforms that deliver
+                  results.</span
+                >
+              </div>
+              <div class="statistic-section__description__body__left">
+                <img src="images/icon-fire.svg" alt="Icon" />
+                <span>Creativity you can rely on</span>
+              </div>
+            </div>
+          </div>
+          <div class="statistic-section__values">
+            <div class="statistic-section__value">
+              <span>62+</span>
+              <p>Finalized projects</p>
+            </div>
+            <div class="statistic-section__value">
+              <span>94%</span>
+              <p>Conversion rate improvement</p>
+            </div>
+            <div class="statistic-section__value">
+              <span>11+</span>
+              <p>Years of experience</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slogon-section">
+        <div class="slogon-section__list">
+          <span class="slogon-section__white">believe in creativity</span>
+          <span class="slogon-section__yellow">Chenocom</span>
+        </div>
+        <div class="slogon-section__list">
+          <span class="slogon-section__white">believe in creativity</span>
+          <span class="slogon-section__yellow">Chenocom</span>
+        </div>
+      </section>
+
+      <section class="expertises">
+        <div class="container section-container">
+          <div class="expertises__part1">
+            <div class="expertises__intro">
+              <h2>
+                <span class="linear-gradient"> We focus</span> on three core
+                areas to bounce your business forward
+              </h2>
+            </div>
+            <div class="expertises__why-chenocom">
+              <span
+                >Thanks to our skilled teams in web development, web design,
+                natural SEO, social media management, and optimized content
+                writing, we bring together all the expertise needed to turn
+                .</span
+              >
+              <span>
+                <span class="expertises__why-chenocom__yellow"
+                  >Why Chenocom</span
+                >
+                <img src="images/arrow-up.svg" alt="Flèche vers le haut" />
+              </span>
+            </div>
+            <div class="badge badge-our-specialities">
+              <img src="images/pointer.svg" alt="icon-pointer" />
+              <span>Our Specialities</span>
+            </div>
+          </div>
+          <div class="parts-desktop">
+            <div class="expertises__part2">
+              <div class="expertises__logo">
+                <img src="images/Chenocom.svg" alt="Logo de Chenocom" />
+              </div>
+              <div class="expertises__website">
+                <span class="numero">01</span>
+                <h3 class="title">Designing responsive and dynamic websites</h3>
+                <p class="description">
+                  We deliver visually stunning, user-friendly websites that not
+                  only look beautiful but are built to perform, convert and grow
+                  your business. Hand-crafted by humans – with strategy, style
+                  and soul.
+                </p>
+              </div>
+            </div>
+            <div class="expertises__part3">
+              <div class="expertises__mobile">
+                <span class="numero">02</span>
+                <h3 class="title">Conception et realisation d’apps mobiles</h3>
+                <p class="description">
+                  We deliver visually stunning, user-friendly websites that not
+                  only look beautiful but are built to perform, convert and grow
+                  your business. Hand-crafted by humans – with strategy, style
+                  and soul.
+                </p>
+              </div>
+              <div class="expertises__digitale">
+                <span class="numero">03</span>
+                <h3 class="title">
+                  Communication digitale et generation de trafic
+                </h3>
+                <p class="description">
+                  We deliver visually stunning, user-friendly websites that not
+                  only look beautiful but are built to perform, convert and grow
+                  your business. Hand-crafted by humans – with strategy, style
+                  and soul.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-mobile">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="expertises__website">
+                    <span class="numero">01</span>
+                    <h3 class="title">
+                      Designing responsive and dynamic websites
+                    </h3>
+                    <p class="description">
+                      We deliver visually stunning, user-friendly websites that
+                      not only look beautiful but are built to perform, convert
+                      and grow your business. Hand-crafted by humans – with
+                      strategy, style and soul.
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="expertises__mobile">
+                    <span class="numero">02</span>
+                    <h3 class="title">
+                      Conception et realisation d’apps mobiles
+                    </h3>
+                    <p class="description">
+                      We deliver visually stunning, user-friendly websites that
+                      not only look beautiful but are built to perform, convert
+                      and grow your business. Hand-crafted by humans – with
+                      strategy, style and soul.
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="expertises__digitale">
+                    <span class="numero">03</span>
+                    <h3 class="title">
+                      Communication digitale et generation de trafic
+                    </h3>
+                    <p class="description">
+                      We deliver visually stunning, user-friendly websites that
+                      not only look beautiful but are built to perform, convert
+                      and grow your business. Hand-crafted by humans – with
+                      strategy, style and soul.
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="expertises__presentation">
+            <div class="thumbnail">
+              <img
+                src="images/thumbnail.svg"
+                alt="Watch Video"
+                id="openPopup"
+              />
+              <button class="play-button">▶</button>
+            </div>
+            <div id="videoModal" class="modal">
+              <div class="modal-content">
+                <span id="closePopup" class="close">&times;</span>
+                <video controls width="100%">
+                  <source
+                    src="images/Présentation de l'agence Chenocom.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+            </div>
+            <div class="expertises__presentation__stats">
+              <span class="expertises__presentation__stats__first"
+                >Facts & numbers</span
+              >
+              <span class="expertises__presentation__stats__second">94%</span>
+              <span class="expertises__presentation__stats__third"
+                >Of customers recommend Chenocom services.</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects-showcase">
+        <div class="container section-container">
+          <div class="projects-showcase__intro">
+            <p class="projects-showcase__intro__slogon">
+              <span class="linear-gradient">Stunning</span> bespoke web design
+              that captivates & converts
+            </p>
+            <div class="badge badge-our-projects">
+              <span>Our Projects</span>
+              <img src="images/pointer.svg" alt="icon-pointer" />
+            </div>
+            <div class="badge badge-websites">
+              <span>Websites</span>
+              <img src="images/pointer.svg" alt="icon-pointer" />
+            </div>
+          </div>
+          <div class="projects-showcase__slides">
+            <div class="projects-showcase__slides__slide">
+              <div class="affiche">
+                <img
+                  src="images/elegant_morocco.png"
+                  alt="Elegant Morocco"
+                  class="background"
+                />
+                <img
+                  src="images/elegant_morocco.svg"
+                  alt="Elegant Morocco Style"
+                  class="image-style"
+                />
+              </div>
+              <span class="title">Elegant morocco</span>
+              <div class="projects-showcase__slides__slide__service-tags">
+                <span class="tag">Branding</span>
+                <span class="tag">UX/UI Design</span>
+                <span class="tag">Strategy</span>
+                <span class="tag">Building</span>
+              </div>
+            </div>
+            <div class="projects-showcase__slides__slide">
+              <div class="affiche">
+                <img
+                  src="images/opaleon.png"
+                  alt="Opaleon"
+                  class="background"
+                />
+                <img
+                  src="images/Opaleon.svg"
+                  alt="Opaleon Style"
+                  class="image-style"
+                />
+              </div>
+              <span class="title">Opaleon</span>
+              <div class="projects-showcase__slides__slide__service-tags">
+                <span class="tag">UX/UI Design</span>
+                <span class="tag">Building</span>
+                <span class="tag">Logo</span>
+              </div>
+            </div>
+            <div class="projects-showcase__slides__slide">
+              <div class="affiche">
+                <img
+                  src="images/pinarello.png"
+                  alt="Pinarello"
+                  width="598"
+                  height="675"
+                  class="background"
+                />
+                <img
+                  src="images/pinarello.svg"
+                  alt="Pinarello Style"
+                  class="image-style"
+                />
+              </div>
+              <span class="title">Pinarello App</span>
+              <div class="projects-showcase__slides__slide__service-tags">
+                <span class="tag">UX/UI Design</span>
+                <span class="tag">Building</span>
+              </div>
+            </div>
+            <div class="projects-showcase__slides__slide">
+              <div class="affiche">
+                <img
+                  src="images/cadenza.png"
+                  alt="Cadenza"
+                  class="background"
+                />
+                <img
+                  src="images/cadenza.svg"
+                  alt="Cadenza Style"
+                  class="image-style"
+                />
+              </div>
+              <span class="title">Cadenza</span>
+              <div class="projects-showcase__slides__slide__service-tags">
+                <span class="tag">UX/UI Design</span>
+                <span class="tag">Strategy</span>
+                <span class="tag">Logo</span>
+              </div>
+            </div>
+          </div>
+          <div class="view-more">
+            <span>View more work</span>
+            <img src="images/arrow-up.svg" alt="Flèche vers le haut" />
+          </div>
+        </div>
+      </section>
+
+      <section class="services">
+        <div class="container section-container">
+          <div class="services__intro">
+            <p class="services__intro__description">We offer a full suite of web design services that transform your brand story into immersive,<span>beautifully crafted digital experiences.</span> </p>
+            <h2 class="services__intro__title"><span class="linear-gradient">End-to-end</span> web design services</h2>
+            <div class="badge badge-our-technologies">
+              <img src="images/pointer.svg" alt="icon-pointer" />
+              <span>Our Technologies</span>
+            </div>
           </div>
           
         </div>
-
-        <div class="expertises__presentation">
-          <div class="thumbnail">
-            <img src="images/thumbnail.svg" alt="Watch Video" id="openPopup">
-            <button class="play-button">▶</button>
-          </div>
-          <div id="videoModal" class="modal">
-            <div class="modal-content">
-              <span id="closePopup" class="close">&times;</span>
-              <video controls width="100%">
-                <source src="images/Présentation de l'agence Chenocom.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
-          <div class="expertises__presentation__stats">
-            <span class="expertises__presentation__stats__first">Facts & numbers</span>
-            <span class="expertises__presentation__stats__second">94%</span>
-            <span class="expertises__presentation__stats__third">Of customers recommend Chenocom services.</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="projects-showcase">
-      <div class="container section-container">
-        <div class="projects-showcase__intro">
-          <p class="projects-showcase__intro__slogon"><span class="linear-gradient">Stunning</span> bespoke web design that captivates & converts</p>
-          <div class="badge badge-our-projects">
-                <span>Our Projects</span>
-                <img src="images/pointer.svg" alt="icon-pointer">
-          </div>
-          <div class="badge badge-websites"  >
-                <span>Websites</span>
-                <img src="images/pointer.svg" alt="icon-pointer">
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="script.js" defer></script>
-</body>
+      </section>
+    </main>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js" defer></script>
+  </body>
 </html>

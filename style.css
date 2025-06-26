@@ -798,11 +798,114 @@
   right: 0%;
   bottom: 0%;
 }
+.projects-showcase__slides{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
 
+.projects-showcase__slides__slide{
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+  text-align: left;
+  margin-top: 60px;
+}
+.projects-showcase__slides__slide .affiche{
+  position: relative;
+  transition: box-shadow 0.3s ease
+}
+.projects-showcase__slides__slide .affiche .background{
+  border-radius: 20px;
+  transition: transform 0.5s ease;
+}
+.projects-showcase__slides__slide .affiche .image-style{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+.projects-showcase__slides__slide .title{
+  font-family: "Poppins",sans-serif;
+  font-weight: 500;
+  font-size: 42px;
+  letter-spacing: -4%;
+  color: white;
+  white-space: nowrap;
+  margin: 0;
+  transform: color .3s ease;
+}
+
+.projects-showcase__slides__slide:hover .affiche {
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.8);
+}
+
+.projects-showcase__slides__slide:hover .background {
+  transform: scale(1.05);
+}
+
+.projects-showcase__slides__slide:hover .title {
+  color: #F5B400; 
+}
+.projects-showcase__slides__slide__service-tags{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  
+}
+.projects-showcase__slides__slide__service-tags .tag{
+  font-family: 'Inter',sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  background: #262627 ;
+  border-radius: 4px;
+  padding: 10px 12px;
+}
+.view-more{
+  color: #FFD400;
+  font-family: 'Inter',sans-serif;
+  font-weight: 700;
+  font-size: 28.24px;
+  text-align: right;
+  line-height: 0;
+  margin-top: 132px;
+}
+/* ----------------SERVICES------------- */
+.services__intro{
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  text-align: left;
+}
+.services__intro__description{
+  color: white;
+  font-family: 'Inter',sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 31.96px;
+  max-width: 560px;
+  opacity: 0.8;
+}
+.services__intro__description span{
+  opacity: 1;
+}
+.services__intro__title{
+  font-family: "Poppins",sans-serif;
+  font-weight: 600;
+  font-size: 46px;
+  line-height: 48.27px;
+  letter-spacing: -1.13px;
+  max-width: 537px;
+}
+.badge-our-technologies{
+  background-color: #B3FD9D ;
+}
 /*======== RESPONSIVE VERSION ========*/
-@media (max-width:1286px){
+@media (max-width:1288px){
 .container{
-  padding: 0 22px;
+  padding: 0 30px;
 }
   
   .navbar .nav-menu .nav-link{
@@ -909,6 +1012,38 @@
     font-weight: 500;
     font-size: 20px;
     line-height: 15px;
+}
+/* -----------------SHOWCASE PROJECTS-------------------- */
+.projects-showcase__slides{
+  flex-wrap: nowrap;
+  gap: 10px;
+  overflow: scroll;
+}
+.projects-showcase__slides::-webkit-scrollbar{
+  display: none;
+}
+.projects-showcase__slides__slide{
+  gap: 14px;
+}
+.projects-showcase__slides__slide .title{
+  font-weight: 500;
+  font-size: 20px;
+
+}
+.projects-showcase__slides__slide__service-tags .tag{
+  font-weight: 600;
+  font-size: 6px;
+  padding: 4.51px 5.42px;
+}
+.projects-showcase__slides__slide .affiche .background{
+  width: 270px;
+  height: 304px;
+  border-radius: 9.03px;
+}
+.view-more{
+  font-size: 16px;
+  margin-top: 40px;
+  text-align: center;
 }
 @media (max-width:768px) {
  
@@ -1174,4 +1309,5 @@
   line-height: 26px;
   letter-spacing: 0;
 }
+
 }
