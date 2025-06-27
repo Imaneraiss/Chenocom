@@ -878,29 +878,117 @@
   justify-content: space-between;
   color: white;
   text-align: left;
+  position: relative;
 }
 .services__intro__description{
   color: white;
   font-family: 'Inter',sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 24px;
   line-height: 31.96px;
   max-width: 560px;
-  opacity: 0.8;
-}
-.services__intro__description span{
   opacity: 1;
+
+}
+.services__intro__description .opacity-phrase{
+  opacity: 0.8;
+  font-weight: 400;
 }
 .services__intro__title{
   font-family: "Poppins",sans-serif;
   font-weight: 600;
-  font-size: 46px;
+  font-size: 43px;
   line-height: 48.27px;
   letter-spacing: -1.13px;
   max-width: 537px;
+  margin-left: 151px;
+  order: 1;
 }
 .badge-our-technologies{
   background-color: #B3FD9D ;
+  position: absolute;
+  left: 43%;
+  bottom: -31%;
+}
+.services__techniques{
+  margin-top: 80px;
+  display: flex;
+  gap:20px;
+  width: 1219px;
+}
+.services__techniques-wrapper{
+  overflow: scroll;
+  width: 100%;
+}
+.services__techniques-wrapper::-webkit-scrollbar{
+  display: none;
+}
+.services__techniques__technique{
+  background-color: black;
+  border-radius: 20px;
+  border: 1px solid #202020;
+  width: 24%;
+  padding: 39px 0;
+}
+.services__techniques__technique:hover{
+  background-color: #202020;
+  cursor: pointer;
+}
+/* -----------TESTIMONIALS------------ */
+.testimonials{
+  position: relative;
+}
+.badge-testimonial{
+  background-color: #F16A6A;
+  top: -3%;
+  right: 39%;
+}
+.testimonials__title{
+  font-family: "Poppins",sans-serif;
+  font-weight: 700;
+  font-size: 66px;
+  line-height: 77px;
+  letter-spacing: -4%;
+  color: white;
+  text-align: left;
+  margin-bottom: 70px;
+}
+.testimonials__body{
+  display: flex;
+}
+.testimonial-slide{
+  display: block;
+}
+
+.testimonial-quote{
+  font-family: 'Inter',sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 31.96px;
+  color: white;
+}
+testimonial-author{
+  display: flex;
+  color: white;
+}
+.testimonial-author__properties{
+  display: block;
+}
+.testimonial-author__properties__name{
+  font-family: "Poppins",sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: white;
+  white-space: nowrap;
+
+}
+.testimonial-author__properties__title{
+  font-family: "Poppins",sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  opacity: 0.5;
+  color: white;
+  white-space: nowrap;
 }
 /*======== RESPONSIVE VERSION ========*/
 @media (max-width:1288px){
@@ -1044,6 +1132,23 @@
   font-size: 16px;
   margin-top: 40px;
   text-align: center;
+}
+.services__intro__title{
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 28.27px;
+  margin-left: 20px;
+}
+.badge-our-technologies{
+  bottom: -33.7%;
+  left: 50%;
+}
+.services__techniques{
+  gap: 5px;
+}
+.services__techniques__technique{
+  padding: 30px 0;
+}
 }
 @media (max-width:768px) {
  
@@ -1274,6 +1379,7 @@
 /* --------- SLOGON SECTION--------- */
 .slogon-section__list{
   font-size: 55.56px;
+  
 }
 .slogon-section__white{
   -webkit-text-stroke: 1.01px white;
@@ -1303,11 +1409,46 @@
   overflow: hidden;
 }
 /* -----------PROJECT SHOWCASES------------ */
+.projects-showcase__intro {
+    padding-bottom: 0;
+}
 .projects-showcase__intro__slogon{
   font-weight: 570;
   font-size: 24px;
   line-height: 26px;
   letter-spacing: 0;
 }
+/* ----------- SERVICES ------------------- */
+.services__intro{
+  display: block;
+  text-align: left;
+}
+.services__intro__title{
+  margin-left: 0;
+  margin-bottom: 10px;
+  font-family: "Poppins",sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.5px;
 
+}
+.services__intro__description{
+ 
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+.services__techniques{
+  margin-top: 20px;
+}
+.services__techniques__technique {
+  padding: 19.44px 0;
+  width: 150px;
+  border-radius: 10.08px;
+}
+.services__techniques__technique img{
+  width:35.29px ;
+  height:35.29px ;
+}
 }
