@@ -855,7 +855,7 @@
   color: white;
   
 }
-.projects-showcase__slides__slide__service-tags .tag{
+.tag{
   font-family: 'Inter',sans-serif;
   font-weight: 600;
   font-size: 12px;
@@ -990,6 +990,79 @@ testimonial-author{
   color: white;
   white-space: nowrap;
 }
+/* ---------------INSIGHTS------------- */
+.insights-container{
+   text-align: center;
+    margin: 116px auto;
+}
+.insights__intro{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 63px;
+  margin-bottom: 70px;
+  position:relative;
+}
+.insights__intro__title{
+  font-family: "Poppins",sans-serif;
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 64px;
+  color: white;
+}
+.insights__intro__view-all-articles{
+  font-family: 'Inter',sans-serif;
+  font-weight: 700;
+  font-size: 28.24px;
+  line-height: 40px;
+  text-align: right;
+  color: #FFD400;
+}
+.badge-our-blogs{
+  background-color: #9DE0FD;
+  top: -50%;
+  right: 40%;
+}
+.insights__body{
+  display: flex;
+}
+.insights__body__slide{
+  display: block;
+}
+.insights__body__slide__tags-time{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 13px;
+  margin-bottom: 24px;
+}
+.insights__body__slide__tags{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+.insights__body__slide__time{
+  font-family: 'Inter',sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 34px;
+  background: #FFFFFFB2;
+  opacity: 0.7;
+}
+.insights__body__slide__title{
+  font-family: "Poppins",sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 100%;  
+}
+.insights__body__slide__description{
+  font-family: 'Inter',sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  opacity: 0.7;
+}
 /*======== RESPONSIVE VERSION ========*/
 @media (max-width:1288px){
 .container{
@@ -1116,9 +1189,8 @@ testimonial-author{
 .projects-showcase__slides__slide .title{
   font-weight: 500;
   font-size: 20px;
-
 }
-.projects-showcase__slides__slide__service-tags .tag{
+.tag{
   font-weight: 600;
   font-size: 6px;
   padding: 4.51px 5.42px;
