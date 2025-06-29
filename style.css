@@ -364,25 +364,26 @@
   width: 50%;
 }
 
-.swiper-pagination-bullet {
+/* .swiper-pagination-bullet {
   width: 18px;
   height: 10px;
   border-radius: 10px;
   background-color:rgba(255, 255, 255, 0.6);
   opacity: 1;
+} */
 
-}
 .swiper-pagination{
-  position:absolute;
+  position: static;
   width: 100%;
+  background-color: rgb(255, 255, 133);
 }
 
-.swiper-pagination-bullet-active {
+/* .swiper-pagination-bullet-active {
   width: 72px;
   height: 10px;
   border-radius: 10px;
   background-color: rgb(255, 255, 255);
-}
+} */
 
 /* ------------ CLIENTS SECTION  */
 .clients-section__description{
@@ -1151,7 +1152,7 @@ footer{
   text-align: center; 
   border-radius: 4px;
 }
-.footer__bottom {
+.footer__bottom__desktop {
   display: flex;
   justify-content: space-between;
   font-family: 'Inter',sans-serif;
@@ -1160,6 +1161,11 @@ footer{
   line-height: 100%;
   text-transform: capitalize;
   color: #FFFFFF;
+}
+.footer__bottom__mobile{
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
 }
 /*======== RESPONSIVE VERSION ========*/
 @media (max-width:1288px){
@@ -1338,6 +1344,12 @@ footer{
 }
 footer{
   padding: 0 15px;
+}
+.footer__column__title{
+  font-size: 15px;
+}
+.footer__column ul li, .footer__column li a{
+  font-size: 11px;
 }
 }
 @media (max-width:768px){
@@ -1719,25 +1731,57 @@ footer{
   height: 11.08px;
 }
 /* -----------------Footer------------ */
+.footer__bottom__desktop{
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+.footer__bottom__mobile{
+  max-height: 1000px;
+  overflow: visible;
+  opacity: 1;
+}
 .footer__column__title{
   font-weight: 600;
   font-size: 16px;
-  line-height: 150%;
+  margin-bottom: 0;
 }
 .footer__column{
   margin-bottom: 20px;
   margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 .footer__column ul li, .footer__column li a{
   font-weight: 400;
   font-size: 12px;
   line-height: 150%;
-  
+}
+.newsletter-form{
+  text-align: center;
+  margin: auto;
 }
 .footer__content{
   display: block;
   text-align: center;
-  
+  margin-bottom: 40px;
 }
-
+.footer__bottom__mobile{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  font-family: 'Inter',sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: white;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+.footer__bottom__mobile__security{
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
 } 

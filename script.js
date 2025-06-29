@@ -44,8 +44,9 @@ const swiper = new Swiper('.mySwiper', {
   centeredSlides: true,
   spaceBetween: 20,
   pagination: {
-    el: '.hero-section__project-carousel .swiper-pagination',
+    el: '.swiper-pagination-hero-section',
     clickable: true,
+    
   },
 });
 
@@ -60,7 +61,7 @@ const mobileSwiper = new Swiper('.swiper-mobile .mySwiper', {
   
   // Pagination
   pagination: {
-    el: '.swiper-mobile .swiper-pagination',
+    el: '.swiper-pagination-mobile',
     clickable: true,
     dynamicBullets: true, 
   },
