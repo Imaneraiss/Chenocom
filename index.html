@@ -350,7 +350,7 @@
 
           <div class="hero-section__project-carousel">
             <!-- Swiper -->
-            <div class="swiper mySwiper">
+            <div class="swiper hero-section-swiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <img src="images/slide1.jpg" alt="Slide 2" />
@@ -576,7 +576,7 @@
             </div>
           </div>
           <div class="swiper-mobile">
-            <div class="swiper mySwiper">
+            <div class="swiper swiper-mobile-swiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <div class="expertises__website">
@@ -620,8 +620,8 @@
                     </p>
                   </div>
                 </div>
-                <div class="swiper-pagination-mobile swiper-pagination"></div>
               </div>
+              <div class="swiper-pagination-mobile swiper-pagination"></div>
             </div>
           </div>
 
@@ -822,10 +822,8 @@
           </h2>
           <div class="testimonials__body">
             <span><img src="images/leonidas.png" alt="Leonidas" /></span>
-            <div class="testimonial-swiper">
-              <!-- Slider container -->
+            <div class="swiper testimonial-swiper">
               <div class="swiper-wrapper">
-                <!-- Slide 1 -->
                 <div class="swiper-slide testimonial-slide">
                   <blockquote class="testimonial-quote">
                     “I had an outstanding experience with Luca and the Fourth
@@ -834,7 +832,31 @@
                     exceptional expertise.”
                   </blockquote>
                   <div class="testimonial-author">
-                    <!-- <span class="testimonial-author__photo"><img src="images/phil_carriras.png" alt="Phil Carirras" ></span> -->
+                    <span class="testimonial-author__photo">
+                      <img src="images/phil_carriras.jpg" alt="Phil Carirras" />
+                    </span>
+                    <div class="testimonial-author__properties">
+                      <p class="testimonial-author__properties__name">
+                        Phil Carirras
+                      </p>
+                      <p class="testimonial-author__properties__title">
+                        CEO @Leonidas
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide testimonial-slide">
+                  <blockquote class="testimonial-quote">
+                    “I had an outstanding experience with Luca and the Fourth
+                    Floor design team. They supported my entire website and
+                    collateral creation process—from design to development—with
+                    exceptional expertise.”
+                  </blockquote>
+                  <div class="testimonial-author">
+                    <span class="testimonial-author__photo">
+                      <img src="images/phil_carriras.jpg" alt="Phil Carirras" />
+                    </span>
                     <div class="testimonial-author__properties">
                       <p class="testimonial-author__properties__name">
                         Phil Carirras
@@ -849,6 +871,7 @@
 
               <!-- Custom Navigation -->
             </div>
+            <div class="swiper-pagination-testimonial swiper-pagination"></div>
           </div>
         </div>
       </section>
@@ -932,41 +955,36 @@
         </div>
       </section>
       <section class="pre-footer">
-          <div class="pre-footer__container">
+        <div class="pre-footer__container">
+          <img
+            src="images/cheno.svg"
+            alt="Logo de Chenocom"
+            class="logo-img pre-footer__logo"
+          />
+          <div class="pre-footer__container__social-media">
             <img
-              src="images/cheno.svg"
-              alt="Logo de Chenocom"
-              class="logo-img pre-footer__logo"
+              src="images/insta.svg"
+              alt="Instagram"
+              class="pre-footer__icon"
             />
-            <div class="pre-footer__container__social-media">
-              <img
-                src="images/insta.svg"
-                alt="Instagram"
-                class="pre-footer__icon"
-              />
-              <img
-                src="images/face.svg"
-                alt="Facebook"
-                class="pre-footer__icon"
-              />
-              <img
-                src="images/yout.svg"
-                alt="Youtube"
-                class="pre-footer__icon"
-              />
-              <img
-                src="images/whats.svg"
-                alt="Whatsapp"
-                class="pre-footer__icon"
-              />
-            </div>
+            <img
+              src="images/face.svg"
+              alt="Facebook"
+              class="pre-footer__icon"
+            />
+            <img src="images/yout.svg" alt="Youtube" class="pre-footer__icon" />
+            <img
+              src="images/whats.svg"
+              alt="Whatsapp"
+              class="pre-footer__icon"
+            />
           </div>
-
+        </div>
+        <div class="gradient-line"></div>
       </section>
     </main>
     <footer>
       <div class="footer__content">
-
         <div class="footer__column">
           <span class="footer__column__title">Company</span>
           <ul>
@@ -998,9 +1016,13 @@
 
         <div class="footer__column">
           <span class="footer__column__title">Subscribe newsletter</span>
-          <form class="newsletter-form">
-            <input class="newsletter-form__email" placeholder="Email address" required />
-            <a href="#" class="newsletter-form__send">Send</a>
+          <form class="newsletter-form" action="" method="get">
+            <input
+              class="newsletter-form__email"
+              placeholder="Email address"
+              required
+            />
+            <input type="button" value="Send" class="newsletter-form__send" />
           </form>
         </div>
       </div>

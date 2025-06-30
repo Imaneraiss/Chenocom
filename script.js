@@ -1,104 +1,72 @@
 // Burger Menu
-const burgerMenu = document.querySelector ('.burger-menu');
-const mobileMenu =document.querySelector ('.nav-menu')
-burgerMenu.addEventListener('click',()=>{
-    burgerMenu.classList.toggle('active');
-    mobileMenu.classList.toggle('active');
-})
-
-// Language Selector 
-
-
-function setupLanguageSelector(currentFlagSelector, altFlagSelector) {
-  const currentFlag = document.querySelector(currentFlagSelector);
-  const altFlag = document.querySelector(altFlagSelector);
-
-  if (!currentFlag || !altFlag) return; // Protection
-
-  altFlag.addEventListener('click', (e) => {
-    e.preventDefault();
-
-    const currentSrc = currentFlag.getAttribute('src');
-    const currentLang = currentFlag.getAttribute('data-lang');
-
-    const altSrc = altFlag.getAttribute('src');
-    const altLang = altFlag.getAttribute('data-lang');
-
-
-    currentFlag.setAttribute('src', altSrc);
-    currentFlag.setAttribute('data-lang', altLang);
-
-    altFlag.setAttribute('src', currentSrc);
-    altFlag.setAttribute('data-lang', currentLang);
-  });
-}
-
-
-setupLanguageSelector('#current-flag-mobile','#alt-flag-mobile');
-setupLanguageSelector('.current-flag','.alt-flag');
+const burgerMenu = document.querySelector(".burger-menu");
+const mobileMenu = document.querySelector(".nav-menu");
+burgerMenu.addEventListener("click", () => {
+  burgerMenu.classList.toggle("active");
+  mobileMenu.classList.toggle("active");
+});
 
 //Initialize Swiper
- 
-const swiper = new Swiper('.mySwiper', {
-  slidesPerView: 'auto',
+
+const swiper = new Swiper(".hero-section-swiper", {
+  slidesPerView: "auto",
   centeredSlides: true,
   spaceBetween: 20,
   pagination: {
-    el: '.swiper-pagination-hero-section',
+    el: ".swiper-pagination-hero-section",
     clickable: true,
-    
   },
 });
 
+
 // Initialize mobile swiper with autoplay
-const mobileSwiper = new Swiper('.swiper-mobile .mySwiper', {
+const mobileSwiper = new Swiper(".swiper-mobile-swiper", {
   // Autoplay configuration
   autoplay: {
-    delay: 3000, 
-    disableOnInteraction: false, 
-    pauseOnMouseEnter: true, 
+    delay: 3000,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
   },
-  
+
   // Pagination
   pagination: {
-    el: '.swiper-pagination-mobile',
+    el: ".swiper-pagination-mobile",
     clickable: true,
-    dynamicBullets: true, 
   },
-  
-  
-  loop: true, 
-  speed: 800, 
-  grabCursor: true, 
-  effect: 'slide', 
-  preventClicks: false, 
-  
+
+  loop: true,
+  speed: 3000,
+  /*  effect: 'slide',  */
+  preventClicks: false,
+
   // Responsive breakpoints
   breakpoints: {
     768: {
-      allowTouchMove: false 
-    }
-  }
+      allowTouchMove: false,
+    },
+  },
 });
 
-  const modal = document.getElementById('videoModal');
-  const openBtn = document.getElementById('openPopup');
-  const closeBtn = document.getElementById('closePopup');
+const modal = document.getElementById("videoModal");
+const openBtn = document.getElementById("openPopup");
+const closeBtn = document.getElementById("closePopup");
+function close_video() {
+  modal.style.display = "none";
+  modal.querySelector("video").pause();
+}
 
-  openBtn.onclick = () => {
-    modal.style.display = 'flex';
+function open_video() {
+  modal.style.display = "flex";
+  modal.querySelector("video").currentTime = 0,
+  modal.querySelector("video").play();
+}
+
+openBtn.onclick = open_video;
+
+closeBtn.onclick = close_video;
+
+window.onclick = (e) => {
+  if (e.target === modal) {
+  close_video()
   }
-
-  closeBtn.onclick = () => {
-    modal.style.display = 'none';
-    modal.querySelector('video').pause();
-  }
-
-  window.onclick = (e) => {
-    if (e.target === modal) {
-      modal.style.display = 'none';
-      modal.querySelector('video').pause();
-    }
-  }
-
-
+};

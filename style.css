@@ -19,6 +19,12 @@
     width: 100%;
     position: relative;
     z-index: 1000;
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    padding: 13px 0;
+    background-color: #0E0E0E;
+    border-bottom: 2px solid #B2B2B212;
   }
   
   .container {
@@ -30,7 +36,7 @@
   .header-container{
     display: flex;
     justify-content: space-between;
-    margin: 13px auto;
+    margin: 0 auto;
     
   }
   
@@ -303,6 +309,7 @@
   font-size: 14px;
   gap: 8px;
   animation: floatUpandDown 2s ease-in-out infinite;
+  z-index: -1;
 }
 
 .badge1{
@@ -324,6 +331,8 @@
   bottom: 2%;
   left: 0;
   animation-delay: 1s;
+  bottom: -12%;
+  z-index: -1;
 
 }
 .badge4{
@@ -331,6 +340,9 @@
   bottom: 0;
   right: 0;
   animation-delay: 1.5s ;
+  bottom: -14%;
+  z-index: -1;
+
 }
 
 /* =============== hero-content project-caroussel ================ */
@@ -364,26 +376,26 @@
   width: 50%;
 }
 
-/* .swiper-pagination-bullet {
+.swiper-pagination-bullet {
   width: 18px;
   height: 10px;
   border-radius: 10px;
   background-color:rgba(255, 255, 255, 0.6);
   opacity: 1;
-} */
+  transition: .5s all ease;
+}
 
 .swiper-pagination{
   position: static;
   width: 100%;
-  background-color: rgb(255, 255, 133);
 }
 
-/* .swiper-pagination-bullet-active {
+.swiper-pagination-bullet-active {
   width: 72px;
   height: 10px;
   border-radius: 10px;
   background-color: rgb(255, 255, 255);
-} */
+}
 
 /* ------------ CLIENTS SECTION  */
 .clients-section__description{
@@ -741,6 +753,7 @@
   font-size: 28px;
   font-weight: bold;
   cursor: pointer;
+  z-index: 1;
 }
 #openPopup{
   border-radius: 20px; 
@@ -911,6 +924,8 @@
   position: absolute;
   left: 43%;
   bottom: -31%;
+  z-index: -1;
+  
 }
 .services__techniques{
   margin-top: 80px;
@@ -960,6 +975,8 @@
 }
 .testimonial-slide{
   display: block;
+  position: relative;
+  padding: 40px 50px 0 50px;
 }
 
 .testimonial-quote{
@@ -968,10 +985,17 @@
   font-size: 24px;
   line-height: 31.96px;
   color: white;
+  text-align: left;
 }
-testimonial-author{
+.testimonial-author{
   display: flex;
   color: white;
+  position: absolute;
+  bottom: 40px;
+}
+.testimonial-author__photo{
+  max-width: 64.67px;
+  max-height: 67px;
 }
 .testimonial-author__properties{
   display: block;
@@ -1094,6 +1118,12 @@ testimonial-author{
   justify-content: space-between;
   gap: 26px;
 }
+.gradient-line {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(245, 180, 0, 0.4) 50%, rgba(0, 0, 0, 0) 100%);
+}
+
 /* -----------FOOTER------------ */
 footer{
   max-width: 1292px;
@@ -1130,6 +1160,8 @@ footer{
   border: 1px solid #2F2F2F;
   display: flex;
   align-items: center;
+  margin-top: 20px;
+  width: 100%;
 }
 .newsletter-form__email{
   background-color: #131313;
@@ -1139,6 +1171,7 @@ footer{
   font-size: 18px;
   line-height: 51px;
   padding-left: 20px;
+  width: 74%;
 }
 .newsletter-form__send{
   background-color: #F5B400;
@@ -1148,9 +1181,10 @@ footer{
   color: black;
   text-decoration: none;
   line-height: 51px;
-  width: 90px;
   text-align: center; 
   border-radius: 4px;
+  padding: 0 20px;
+  border: 0;
 }
 .footer__bottom__desktop {
   display: flex;
@@ -1161,6 +1195,8 @@ footer{
   line-height: 100%;
   text-transform: capitalize;
   color: #FFFFFF;
+  padding: 30px 0;
+  border-top: 2px solid #B2B2B212;
 }
 .footer__bottom__mobile{
   max-height: 0;
@@ -1177,7 +1213,7 @@ footer{
     font-size: 14px;
   }
   .submenu ul{
-    padding: 20px 30px 0 20px;
+    padding: 20px 30px;
   }
   .submenu-link{
     font-weight: 300;
@@ -1319,6 +1355,7 @@ footer{
 .badge-our-technologies{
   bottom: -33.7%;
   left: 50%;
+  z-index: -1;
 }
 .services__techniques{
   gap: 5px;
@@ -1350,6 +1387,7 @@ footer{
 }
 .footer__column ul li, .footer__column li a{
   font-size: 11px;
+  line-height: 230%;
 }
 }
 @media (max-width:768px){
@@ -1735,6 +1773,7 @@ footer{
   max-height: 0;
   overflow: hidden;
   opacity: 0;
+  padding: 0;
 }
 .footer__bottom__mobile{
   max-height: 1000px;
@@ -1756,16 +1795,20 @@ footer{
 .footer__column ul li, .footer__column li a{
   font-weight: 400;
   font-size: 12px;
-  line-height: 150%;
+  line-height: 190%;
 }
 .newsletter-form{
-  text-align: center;
   margin: auto;
+  max-width: 80%;
+  justify-content: space-between;
+}
+.newsletter-form__email{
+  width: 85%;
 }
 .footer__content{
   display: block;
   text-align: center;
-  margin-bottom: 40px;
+  margin: 40px auto;
 }
 .footer__bottom__mobile{
   display: flex;
@@ -1776,12 +1819,13 @@ footer{
   font-weight: 400;
   font-size: 12px;
   color: white;
-  margin-top: 40px;
-  margin-bottom: 50px;
+  padding: 40px 0 50px 0;
+  border-top: 2px solid #B2B2B212;
 }
 .footer__bottom__mobile__security{
   display: flex;
   flex-direction: column;
   gap: 9px;
+  text-align: center;
 }
 } 
