@@ -97,6 +97,9 @@
     content: url("images/flèche_jaune.svg");
     cursor: pointer;
   }
+  .link-icon:hover .nav-link{
+    color: #F5B400;
+  }
   .link-icon,.flag-selector{
     display: flex;
     color: white;
@@ -199,7 +202,7 @@
     color: #F5B400;
     
   }
-  .has-submenu:hover .submenu,.has-submenu .submenu:hover {
+  .navbar .has-submenu:hover .submenu, .navbar .has-submenu .submenu:hover {
     max-height: 1000px;
     opacity: 1;
     overflow: visible;
@@ -223,7 +226,7 @@
   li .has-submenu::marker {
     display: none;
     padding: 0;
-    margin: 0;
+    margin: 0;  
   }
   
 .navbar__mobile{
@@ -952,9 +955,16 @@
   cursor: pointer;
 }
 /* -----------TESTIMONIALS------------ */
-.testimonials{
-  position: relative;
+
+.testimonials {
+  color: white;
 }
+
+.testimonial-author__photo{
+  max-width: 64.67px;
+  max-height: 67px;
+}
+
 .badge-testimonial{
   background-color: #F16A6A;
   top: -3%;
@@ -970,11 +980,8 @@
   text-align: left;
   margin-bottom: 70px;
 }
-.testimonials__body{
-  display: flex;
-}
+
 .testimonial-slide{
-  display: block;
   position: relative;
   padding: 40px 50px 0 50px;
 }
@@ -990,8 +997,7 @@
 .testimonial-author{
   display: flex;
   color: white;
-  position: absolute;
-  bottom: 40px;
+
 }
 .testimonial-author__photo{
   max-width: 64.67px;
@@ -1224,8 +1230,8 @@ footer{
     padding:13px 12px ;
   }
   .submenu-columns ul li img{
-    width: 15px;
-    height: 15px;
+    width: 30px;
+    height: 30px;
   }
   .hero-section__hero-content__title{
     
@@ -1441,6 +1447,12 @@ footer{
     margin-top: 0;
     
    }
+
+   .navbar__mobile .has-submenu.has-submenu--active .submenu {
+    max-height: 1000px;
+    opacity: 1;
+    overflow: visible;
+  }
   
   .navbar__mobile .nav-menu .nav-link {
     text-decoration: none;
@@ -1482,6 +1494,8 @@ footer{
     margin-top: 30px;
     position: relative;
 }
+
+
 .hero-section__project-carousel .swiper-slide {
   max-width: 333px;
   height: 287.5px;
@@ -1690,6 +1704,11 @@ footer{
 .services__techniques__technique img{
   width:35.29px ;
   height:35.29px ;
+}
+.testimonials__image{
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
 }
 /* -------------INSIGHTS------------- */
 .insights-container{

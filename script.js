@@ -5,10 +5,17 @@ burgerMenu.addEventListener("click", () => {
   burgerMenu.classList.toggle("active");
   mobileMenu.classList.toggle("active");
 });
+const items_mobile = document.querySelectorAll(".navbar__mobile .has-submenu")
+
+items_mobile.forEach(item => {
+  item.onclick = () => {
+    item.classList.toggle("has-submenu--active")
+  }
+});
 
 //Initialize Swiper
 
-const swiper = new Swiper(".hero-section-swiper", {
+var swiper = new Swiper(".hero-section-swiper", {
   slidesPerView: "auto",
   centeredSlides: true,
   spaceBetween: 20,
@@ -20,7 +27,7 @@ const swiper = new Swiper(".hero-section-swiper", {
 
 
 // Initialize mobile swiper with autoplay
-const mobileSwiper = new Swiper(".swiper-mobile-swiper", {
+var mobileSwiper = new Swiper(".swiper-mobile-swiper", {
   // Autoplay configuration
   autoplay: {
     delay: 3000,
@@ -70,3 +77,16 @@ window.onclick = (e) => {
   close_video()
   }
 };
+
+var testimonial_swiper = new Swiper(".testimonial-swiper", {
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination-testimonial",
+        clickable: true,
+      },
+    });
+
+
+
+
+
