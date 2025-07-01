@@ -376,7 +376,6 @@
   max-width: 561px;
   height: 446px;
   transition: all .3s ease;
-  width: 50%;
 }
 
 .swiper-pagination-bullet {
@@ -1418,7 +1417,6 @@ footer{
     
   }
   .navbar__mobile .nav-menu{
-    
     background: #2d2d2d;
     width: 100vw;
     position: absolute;
@@ -1431,9 +1429,9 @@ footer{
     flex-direction: column;
     gap: 30px;
     overflow: hidden;
+    max-height: 0;
     opacity: 0;   
-   transition: opacity .4s ease;
-
+    transition: opacity .4s ease;
   }
   .navbar__mobile .nav-menu.active{
     max-height: 1000px;
@@ -1621,7 +1619,7 @@ footer{
 
 }
 .expertises__website,.expertises__digitale,.expertises__mobile{
-  padding: 5% 6.1% 5% 6%;
+  padding: 5% 6%;
   border-radius: 7.4px;
 }
 .expertises__website::before {

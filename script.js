@@ -19,6 +19,7 @@ var swiper = new Swiper(".hero-section-swiper", {
   slidesPerView: "auto",
   centeredSlides: true,
   spaceBetween: 20,
+  loop: true,
   pagination: {
     el: ".swiper-pagination-hero-section",
     clickable: true,
