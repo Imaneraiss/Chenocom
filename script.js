@@ -81,6 +81,7 @@ window.onclick = (e) => {
 
 var testimonial_swiper = new Swiper(".testimonial-swiper", {
       spaceBetween: 30,
+      loop: true,
       pagination: {
         el: ".swiper-pagination-testimonial",
         clickable: true,
