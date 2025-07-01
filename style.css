@@ -238,7 +238,8 @@
 /*=============MAIN==============*/
 .section-container{
     text-align: center;
-    margin: 100px auto;
+    padding: 100px 0;
+    margin: 0 auto;
   }
 
 .hero-section__hero-content{
@@ -248,7 +249,7 @@
   flex-direction: column;
   gap: 28px;
   align-items: center;
-  margin: 0 auto;
+  margin: 100px auto 80px auto;
   position: relative;
 }
 .hero-section__hero-content__brand__logo{
@@ -519,10 +520,10 @@
 .slogon-section__list{
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 800;
-  font-size: 121.11px;  
+  font-size: 116px;  
   text-transform: uppercase;
   white-space:nowrap;
-  animation: 15s slogonscroll infinite linear;
+  animation: 20s slogonscroll infinite linear;
   display: inline-block;
 }
 .slogon-section__white{
@@ -943,7 +944,7 @@
   display: none;
 }
 .services__techniques__technique{
-  background-color: black;
+  background-color: #0D0D0D;
   border-radius: 20px;
   border: 1px solid #202020;
   width: 24%;
@@ -990,13 +991,13 @@
 
 .badge-testimonial{
   background-color: #F16A6A;
-  top: 1.5%;
-  right: 39%;
+  top: 13.5%;
+  right: 44%;
 }
 .testimonials__title{
   font-family: "Poppins",sans-serif;
   font-weight: 700;
-  font-size: 66px;
+  font-size: 56px;
   line-height: 77px;
   letter-spacing: 0;
   color: white;
@@ -1069,7 +1070,8 @@
 /* ---------------INSIGHTS------------- */
 .insights-container{
   text-align: center;
-  margin: 116px auto;
+  padding: 116px 0;
+  margin: 0 auto;
   max-width: 1240px;
 }
 .insights__intro{
@@ -1161,7 +1163,8 @@
   justify-content: space-between;
   align-items: center;
   max-width: 1292px;
-  margin: 55px auto;
+  padding: 55px 0;
+  margin: 0 auto;
 }
 .pre-footer__container__social-media{
   display: flex;
@@ -1257,6 +1260,7 @@ footer{
 @media (max-width:1288px){
 .container{
   padding: 0 30px;
+  margin: auto 0;
 }
   
   .navbar .nav-menu .nav-link{
@@ -1525,7 +1529,8 @@ footer{
   
   .section-container{
     text-align: center;
-    margin: 50px auto;
+    padding: 50px 0;
+    margin: 0 auto;
   }
   .hero-section__hero-content{
     gap: 20px;
@@ -1755,7 +1760,8 @@ footer{
 }
 /* -------------INSIGHTS------------- */
 .insights-container{
- margin: 32px auto;
+ padding: 32px 0;
+  margin: 0 auto;
 }
 .insights__intro{
   margin-bottom: 30px;
