@@ -15,14 +15,13 @@
   
   /* HEADER */
   header {
-    
     width: 100%;
     position: relative;
     z-index: 1000;
     position: sticky;
     z-index: 1000;
     top: 0;
-    padding: 13px 0;
+    padding: 13.5px 0;
     background-color: #0E0E0E;
     border-bottom: 2px solid #B2B2B212;
   }
@@ -93,7 +92,10 @@
   .navbar .nav-link:hover{
     color: #F5B400;
   }
-  
+  .flag-selector--btn-contact{
+    display: flex;
+    gap: 20px;
+  }
   
   .link-icon:hover .icon-arrow, .flag-selector:hover .icon-arrow {
     content: url("images/flèche_jaune.svg");
@@ -115,7 +117,7 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 19px 18px;
+    padding: 16px 28px;
     background: #F5B400;
     color: #1C1A1A;
     text-decoration: none;
@@ -204,7 +206,7 @@
     color: #F5B400;
     
   }
-  .navbar .has-submenu:hover .submenu, .navbar .has-submenu .submenu:hover {
+  .navbar .has-submenu:hover .submenu, .navbar .has-submenu .submenu:hover ,.has-submenu:hover .submenu{
     max-height: 1000px;
     opacity: 1;
     overflow: visible;
@@ -241,7 +243,8 @@
 .section-container{
     text-align: center;
     margin: 0 auto;
-    padding: 100px 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 .hero-section{
   padding: 100px 0;
@@ -451,7 +454,9 @@
 .statistic-section{
   position: relative;
 }
+
 .statistic-section__description{
+  padding-bottom: 30px;
   color: #FFFFFF;
 }
 .statistic-section__description__title{
@@ -461,7 +466,7 @@
   text-align: left;
   max-width: 920px;
   margin-bottom: 92px;
-  line-height: 30px;
+  line-height: 64px;
 }
 
 .statistic-section__description__body__right__yellow img {
@@ -480,11 +485,14 @@
   font-family: 'Inter',sans-serif;
   font-weight: 400;
   font-size: 24px;
+  padding-bottom: 100px;
 }
 .statistic-section__description__body__right{
   max-width: 729px;
   text-align: left;
   color: rgb(255, 255, 255, 0.7);
+  order: 2;
+  line-height: 36px;
 }
 .statistic-section__description__body__right__yellow{
   color: #FFD400;
@@ -513,6 +521,7 @@
   font-size: 146px;
   margin: 0;
   padding: 0;
+  line-height: 84px;
 }
 .statistic-section__value p{
   text-align: left;
@@ -564,15 +573,18 @@
   display: flex;
   justify-content: space-between;
   position: relative;
-  margin-bottom: 60px;
 }
 .expertises__intro{
   font-family: "Poppins",sans-serif;
   max-width: 560px;
   text-align: left;
   min-width: 270px;
-  
-  
+}
+.expertises__intro h2{
+  font-family: "Poppins",sans-serif;
+  font-weight: 600;
+  font-size: 46px;
+  line-height: 52px;
 }
 .expertises__why-chenocom{
   color: #DDD7D7;
@@ -582,6 +594,7 @@
   font-size: 22px;
   text-align: left;
   margin-left: 90px;
+  line-height: 39px;
 
 }
 .expertises__why-chenocom__yellow{
@@ -593,8 +606,8 @@
 .badge-our-specialities{
   background-color: #FF9A26;
   position: absolute;
-  bottom: -15%;
-  left:25% ;
+  bottom: -25%;
+  left: 33%;
 }
 .numero{
   font-family: "Poppins",sans-serif;
@@ -625,8 +638,8 @@
 .expertises__part2{
   display: flex;
   gap: 22.41px;
-  max-height: 294px;
-  margin-bottom : 24px; ;
+  margin-bottom : 24px; 
+  padding-top: 90px;
 }
 .expertises__website {
   position: relative;
@@ -669,6 +682,11 @@
 }
 .expertises__logo{
   flex: 1;
+  max-height: 234px;
+}
+.expertises__logo img{
+  width: 100%;
+  height: 100%;
 }
 .expertises__part3{
   display: flex;
@@ -681,6 +699,10 @@
   background-color: #151515;
   position: relative ;
   border-radius: 20px;
+  border: 1px solid #2D2D2D
+}
+.parts-desktop .expertises__part2 .expertises__website{
+ flex:2
 }
 .swiper-mobile{
   max-height: 0;
@@ -954,7 +976,6 @@
   margin-top: 80px;
   display: flex;
   gap:20px;
-  width: 200%;
 }
 .services__techniques-wrapper{
   overflow: scroll;
@@ -967,7 +988,7 @@
   background-color: black;
   border-radius: 20px;
   border: 1px solid #202020;
-  width: 24%;
+  min-width: 297.5px;
   padding: 39px 0;
 }
 .services__techniques__technique:hover{
@@ -983,9 +1004,15 @@
 .testimonials__body{
   position: relative;
 }
-.swiper-pagination-testimonial{
+.testimonials__body__swiper{
   position: relative;
-  top: 5%;
+}
+
+.swiper-pagination-testimonial.swiper-pagination-bullets.swiper-pagination-horizontal{
+  position: absolute;
+  top: 7%;
+  left: -10%;
+  max-height: 20px;
 }
 .testimonial-author{
   align-items: center;
@@ -1011,17 +1038,19 @@
 
 .badge-testimonial{
   background-color: #F16A6A;
-  top: 1.5%;
-  right: 39%;
+  top: 13.5%;
+  right: 36%;
 }
 .testimonials__title{
   font-family: "Poppins",sans-serif;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 66px;
   line-height: 77px;
   letter-spacing: 0.5px;
   color: white;
   text-align: left;
+  padding-top: 46px;
+  padding-bottom: 70px;
 }
 .testimonials__view-all-articles{
   font-family: 'Inter',sans-serif;
@@ -1029,6 +1058,9 @@
   font-size: 28.24px;
   text-align: left;
   color: #FFD400;
+  max-height:0 ;
+  overflow: hidden;
+  opacity: 0;
 }
 .testimonial-slide{
   position: relative;
@@ -1099,8 +1131,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 63px;
-  margin-bottom: 70px;
+  padding-top: 46px;
+  padding-bottom: 70px;
   position:relative;
 }
 .insights__intro__title{
@@ -1120,8 +1152,8 @@
 }
 .badge-our-blogs{
   background-color: #9DE0FD;
-  top: -50%;
-  right: 40%;
+  top: 5%;
+  right: 39%;
 }
 .insights__body{
   display: flex;
@@ -1279,9 +1311,12 @@ footer{
 /*======== RESPONSIVE VERSION ========*/
 @media (max-width:1288px){
 .container{
-  padding: 0 30px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
-  
+  .navbar .nav-menu{
+    gap: 10px;
+  }
   .navbar .nav-menu .nav-link{
     font-size: 14px;
   }
@@ -1300,6 +1335,10 @@ footer{
     width: 30px;
     height: 30px;
   }
+  .flag-selector--btn-contact{
+    gap: 10px;
+  }
+  /* -----------------HERO-SECTION-------------- */
   .hero-section__hero-content__title{
     font-weight: 500;
     font-size: 46px;
@@ -1345,13 +1384,7 @@ footer{
   right: 5%;
 }
 /* ------------Expertises Section-------------- */
-.expertises__part2{
-  max-height: 194px;
-}
-.expertises__logo{
-  width: 291px;
-  height: 194px;
-}
+
 .expertises__logo img {
   width: 100%;
   height: 100%;
@@ -1476,7 +1509,7 @@ footer{
   .navbar{
     display: none;
   }
-  .contact-botton-link{
+  .flag-selector--btn-contact{
     display: none;
   }
   .badge{
@@ -1630,21 +1663,22 @@ footer{
   font-size: 24px;
   font-weight: 500;
   margin-bottom: 20px;
+  line-height: 30px;
 }
 .statistic-section__description__body{
-  font-size: 14px; ;
+  font-size: 14px; 
   display: block;
+  padding-bottom: 0;
 }
 .statistic-section__description__body__right{
   margin-bottom: 20px;
+  line-height: 21px;
 }
-.statistic-section__description{
-  padding-bottom: 30px;
-}
+
 .statistic-section__values{
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 35px;
 }
 .statistic-section__value{
   gap: 0;
@@ -1683,7 +1717,12 @@ footer{
 }
 .expertises__intro{
   margin: 0 0 20px 0;
+}
+.expertises__intro h2{
+  font-weight: 600;
+  font-size: 24px;
   line-height: 28px;
+
 }
 .expertises__why-chenocom{
   display: flex;
@@ -1807,6 +1846,7 @@ footer{
   padding: 19.44px 0;
   width: 150px;
   border-radius: 10.08px;
+  min-width: 150px;
 }
 .services__techniques__technique img{
   width:35.29px ;
@@ -1823,11 +1863,18 @@ footer{
 }
 .testimonials__title{
   line-height: 0;
-  padding-bottom: 22px;
+  padding-bottom: 10px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 27px;
+  padding-top: 0;
 }
 .testimonials__view-all-articles{
   font-size: 13.33px;
   line-height: 0;
+  max-height:1000px ;
+  overflow: visible;
+  opacity: 1;
 }
 .testimonials__view-all-articles img{
   width: 10px;
@@ -1842,8 +1889,9 @@ footer{
 }
 .testimonial_quote-author{
   gap: 13.97px;
-  padding: 15.6px 16.6px;    
+  padding: 35px 19.6px 15.6px 19.6px;  
   margin-left: 0;
+  border-radius: 5.48px;
 }
 .testimonial-quote{
   font-size: 12px;
@@ -1863,15 +1911,14 @@ height: 23.5px;
 border-radius: 0.78px;
 
 }
-}
 /* -------------INSIGHTS------------- */
 .insights-container{
   padding: 32px 30px;
   margin: 0 ;
 }
 .insights__intro{
-  margin-bottom: 30px;
-  margin-top: 0;
+  padding-bottom: 30px;
+  padding-top: 0;
   display: block;
 }
 .insights__intro__title{

@@ -59,7 +59,7 @@
             <ul class="nav-menu">
               <li class="has-submenu">
                 <span class="link-icon">
-                  <a href="#" class="nav-link"> About Us</a>
+                  <a href="#" class="nav-link">Qui sommes-nous</a>
                   <img
                     src="images/flèche.svg"
                     alt="Flèche vers le bas"
@@ -171,7 +171,7 @@
             <ul class="nav-menu">
               <li class="has-submenu">
                 <span class="link-icon">
-                  <a href="#" class="nav-link"> About Us</a>
+                  <a href="#" class="nav-link"> Qui sommes-nous</a>
                   <img
                     src="images/flèche.svg"
                     alt="Flèche vers le bas"
@@ -265,40 +265,47 @@
               </li>
               <li class="nav-item"><a href="#" class="nav-link">Blogs</a></li>
               <li class="nav-item"><a href="#" class="nav-link">FAQ</a></li>
-              <li class="has-submenu">
-                <span class="link-icon">
-                  <a href="#" class="nav-link">Langue</a>
-
-                  <img
-                    src="images/flèche.svg"
-                    alt="Flèche vers le bas"
-                    class="icon-arrow"
-                  />
-                </span>
-
-                <div class="submenu">
-                  <ul>
-                    <li>
-                      <a href="#" class="submenu-link">Anglais</a>
-                    </li>
-                    <li>
-                      <a href="#" class="submenu-link">Francais</a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
             </ul>
           </nav>
 
-          <!-- Bouton Contact -->
-          <a href="#" class="contact-botton-link">
-            <span>Contact Us</span>
-            <img
-              src="images/pointer.svg"
-              alt="Icône de pointeur"
-              class="icon-pointer"
-            />
-          </a>
+          <!-- Flag & Bouton Contact -->
+          <div class="flag-selector--btn-contact">
+            <li class="has-submenu ">
+              <span class="link-icon flag">
+                <img
+                    id="current-flag-mobile"
+                    src="images/en.svg"
+                    data-lang="en"
+                    alt="Langue actuelle"
+                  />
+
+                <img
+                  src="images/flèche.svg"
+                  alt="Flèche vers le bas"
+                  class="icon-arrow"
+                />
+              </span>
+
+              <div class="submenu">
+                <ul>
+                  <li>
+                    <a href="#" class="submenu-link">Anglais</a>
+                  </li>
+                  <li>
+                    <a href="#" class="submenu-link">Francais</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <a href="#" class="contact-botton-link">
+              <span>Contact Us</span>
+              <img
+                src="images/pointer.svg"
+                alt="Icône de pointeur"
+                class="icon-pointer"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </header>
@@ -557,7 +564,7 @@
           <div class="parts-desktop">
             <div class="expertises__part2">
               <div class="expertises__logo">
-                <img src="images/Chenocom.svg" alt="Logo de Chenocom" />
+                <img src="images/Chenocom.png" alt="Logo de Chenocom" />
               </div>
               <div class="expertises__website">
                 <span class="numero">01</span>
@@ -805,18 +812,18 @@
           </div>
           <div class="services__techniques-wrapper">
             <div class="services__techniques">
-              <span class="services__techniques__technique"
+              <div class="services__techniques__technique"
                 ><img src="images/js.svg" alt="JavaScript"
-              /></span>
-              <span class="services__techniques__technique"
+              /></div>
+              <div class="services__techniques__technique"
                 ><img src="images/w.svg" alt="W"
-              /></span>
-              <span class="services__techniques__technique"
+              /></div>
+              <div class="services__techniques__technique"
                 ><img src="images/prestashop.svg" alt="Prestashop"
-              /></span>
-              <span class="services__techniques__technique"
+              /></div>
+              <div class="services__techniques__technique"
                 ><img src="images/s.svg" alt="S"
-              /></span>
+              /></div>
             </div>
           </div>
         </div>
@@ -847,7 +854,7 @@
           <div class="testimonials__body">
             <div class="testimonials__body__swiper">
               <div
-                class="swiper-pagination-testimonial swiper-pagination"
+                class="swiper-pagination-testimonial swiper-pagination " 
               ></div>
               <div class="swiper testimonial-swiper">
                 <div class="swiper-wrapper">
