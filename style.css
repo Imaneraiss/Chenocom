@@ -682,7 +682,6 @@
 }
 .expertises__logo{
   flex: 1;
-  max-height: 234px;
 }
 .expertises__logo img{
   width: 100%;
