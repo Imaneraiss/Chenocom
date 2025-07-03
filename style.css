@@ -96,7 +96,9 @@
     display: flex;
     gap: 20px;
   }
-  
+  .flag-selector--btn-contact .submenu{
+    margin-top: 5px;
+  }
   .link-icon:hover .icon-arrow, .flag-selector:hover .icon-arrow {
     content: url("images/flèche_jaune.svg");
     cursor: pointer;
