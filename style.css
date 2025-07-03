@@ -341,7 +341,9 @@
   background-color: #FF9A26;
   top: 1%;
   left: 14%;
- 
+}
+.badge1 img{
+  transform: rotate(68deg);
 }
 .badge2{
   background-color: #FFDE6A;
@@ -349,6 +351,9 @@
   right: 12%;
   animation-delay: .5s;
 
+}
+.badge2 img{
+  transform: rotate(196deg);
 }
 .badge3{
   background-color: #FF8C78;
@@ -358,6 +363,9 @@
   z-index: -1;
 
 }
+.badge3 img{
+  transform: rotate(9deg);
+}
 .badge4{
   background-color: #D9D9D9;
   right: 1%;
@@ -366,7 +374,11 @@
   z-index: -1;
 
 }
+.badge4 img{
+  
+  transform: rotate(255deg);
 
+}
 /* =============== hero-content project-caroussel ================ */
     
 .swiper-slide img {
@@ -479,6 +491,10 @@
   right: 29%;
  
 }
+.badge-about-us img{
+  transform: rotate(180deg)
+}
+
 .statistic-section__description__body{
   display: flex;
   justify-content: space-between;
@@ -608,6 +624,9 @@
   position: absolute;
   bottom: -25%;
   left: 33%;
+}
+badge-our-specialities img {
+  transform: rotate(257deg);
 }
 .numero{
   font-family: "Poppins",sans-serif;
@@ -856,6 +875,9 @@
   right: 0%;
   bottom: 0%;
 }
+.badge-websites img{
+      transform: rotate(180deg);
+}
 .projects-showcase__slides{
   display: flex;
   flex-wrap: wrap;
@@ -969,7 +991,9 @@
   left: 43%;
   bottom: -31%;
   z-index: -1;
-  
+}
+.badge-our-technologies img{
+  transform: rotate(255deg);
 }
 .services__techniques{
   margin-top: 80px;
@@ -1039,6 +1063,9 @@
   background-color: #F16A6A;
   top: 13.5%;
   right: 36%;
+}
+.badge-testimonial img {
+  transform: rotate(183deg);
 }
 .testimonials__title{
   font-family: "Poppins",sans-serif;
@@ -1153,6 +1180,9 @@
   background-color: #9DE0FD;
   top: 5%;
   right: 39%;
+}
+.badge-our-blogs img{
+  transform: rotate(183deg);
 }
 .insights__body{
   display: flex;
