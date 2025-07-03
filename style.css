@@ -218,8 +218,6 @@
     transition: 0.3s ease;
   }
   
-  
-  /* Hover couleur */
   .has-submenu .submenu li:hover,.has-submenu .submenu li a:hover {
     color: #F5B400;
     cursor: pointer;
@@ -393,7 +391,7 @@
 .hero-section__project-carousel{
   display: flex;
   flex-direction: column;
-  gap: 70px;
+  gap: 64px;
 }
 .hero-section__project-carousel .swiper {
   display: flex;
@@ -454,7 +452,7 @@
 }
 .clients-section__logos__slide{
   display: inline-block;
-  animation: 30s scroll infinite linear;
+  animation: 35s scroll infinite linear;
  
 } 
 .clients-section__logos img{
@@ -611,7 +609,6 @@
   text-align: left;
   margin-left: 90px;
   line-height: 39px;
-
 }
 .expertises__why-chenocom__yellow{
   color:#FFD400;
@@ -626,7 +623,7 @@
   left: 33%;
 }
 badge-our-specialities img {
-  transform: rotate(257deg);
+  transform: rotate(263deg);
 }
 .numero{
   font-family: "Poppins",sans-serif;
@@ -1575,19 +1572,24 @@ footer{
     max-height: 1000px;
     overflow: visible;
     opacity: 1;
+    height: 100vh;
+    overflow-y: auto;
   }
-
   .has-submenu .submenu{
     position:static;
     background: none ;
-    margin-top: 0;
-    
+    margin-top: 0; 
    }
 
    .navbar__mobile .has-submenu.has-submenu--active .submenu {
     max-height: 1000px;
     opacity: 1;
     overflow: visible;
+  }
+  .navbar__mobile .has-submenu .submenu {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
   }
   
   .navbar__mobile .nav-menu .nav-link {

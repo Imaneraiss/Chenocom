@@ -5,8 +5,8 @@ burgerMenu.addEventListener("click", () => {
   burgerMenu.classList.toggle("active");
   mobileMenu.classList.toggle("active");
 });
-const items_mobile = document.querySelectorAll(".navbar__mobile .has-submenu")
 
+const items_mobile = document.querySelectorAll(".navbar__mobile .has-submenu")
 items_mobile.forEach(item => {
   item.onclick = () => {
     item.classList.toggle("has-submenu--active")
