@@ -6,9 +6,13 @@ burgerMenu.addEventListener("click", () => {
   mobileMenu.classList.toggle("active");
 });
 
-const items_mobile = document.querySelectorAll(".navbar__mobile .has-submenu")
+const items_mobile = document.querySelectorAll(".navbar__mobile .has-submenu, .navbar__mobile .nav-item")
 items_mobile.forEach(item => {
+
   item.onclick = () => {
+    items_mobile.forEach(i =>{
+      if (i!== item) i.classList.remove("has-submenu--active");
+    });
     item.classList.toggle("has-submenu--active")
   }
 });

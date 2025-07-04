@@ -99,11 +99,11 @@
   .flag-selector--btn-contact .submenu{
     margin-top: 5px;
   }
-  .link-icon:hover .icon-arrow, .flag-selector:hover .icon-arrow {
+  .navbar .link-icon:hover .icon-arrow, .flag-selector:hover .icon-arrow,.flag-selector--btn-contact:hover .icon-arrow {
     content: url("images/flèche_jaune.svg");
     cursor: pointer;
   }
-  .link-icon:hover .nav-link{
+  .navbar .link-icon:hover .nav-link{
     color: #F5B400;
   }
   .link-icon,.flag-selector{
@@ -208,19 +208,19 @@
     color: #F5B400;
     
   }
-  .navbar .has-submenu:hover .submenu, .navbar .has-submenu .submenu:hover ,.has-submenu:hover .submenu{
+  .navbar .has-submenu:hover .submenu, .navbar .has-submenu .submenu:hover ,.flag-selector--btn-contact .has-submenu:hover .submenu, .flag-selector--btn-contact .has-submenu .submenu:hover{
     max-height: 1000px;
     opacity: 1;
     overflow: visible;
   }
 
   
-  .has-submenu:hover .icon-arrow {
+  .navbar .has-submenu:hover .icon-arrow,.flag-selector--btn-contact .has-submenu:hover .icon-arrow {
     transform: rotate(180deg);
     transition: 0.3s ease;
   }
   
-  .has-submenu .submenu li:hover,.has-submenu .submenu li a:hover {
+  .navbar.has-submenu .submenu li:hover,.navbar .has-submenu .submenu li a:hover, .flag-selector--btn-contact .has-submenu .submenu li:hover,.flag-selector--btn-contact .has-submenu .submenu li a:hover{
     color: #F5B400;
     cursor: pointer;
   }
@@ -1305,6 +1305,7 @@ footer{
   line-height: 51px;
   padding-left: 20px;
   width: 74%;
+  color: whitesmoke;
 }
 .newsletter-form__send{
   background-color: #F5B400;
@@ -1349,7 +1350,7 @@ footer{
     font-size: 14px;
   }
   .submenu ul{
-    padding: 20px 30px;
+    padding: 10px 30px;
   }
   .submenu-link{
     font-weight: 300;
@@ -1537,6 +1538,9 @@ footer{
   .navbar{
     display: none;
   }
+  .submenu ul{
+    gap: 15px;
+  }
   .flag-selector--btn-contact{
     display: none;
   }
@@ -1564,7 +1568,7 @@ footer{
     padding: 20px 0 20px 20px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 15px;
     overflow: hidden;
     max-height: 0;
     opacity: 0;   
@@ -1583,6 +1587,14 @@ footer{
     margin-top: 0; 
    }
 
+   .navbar__mobile .has-submenu.has-submenu--active .nav-link,.navbar__mobile .nav-item.has-submenu--active .nav-link{
+    color: #F5B400;
+  }
+   .navbar__mobile .has-submenu.has-submenu--active .icon-arrow {
+    content: url("images/flèche_jaune.svg");
+    transform: rotate(180deg);
+    transition: 0.3s ease;
+  }  
    .navbar__mobile .has-submenu.has-submenu--active .submenu {
     max-height: 1000px;
     opacity: 1;
@@ -1597,16 +1609,7 @@ footer{
   .navbar__mobile .nav-menu .nav-link {
     text-decoration: none;
     color: #ffffff;
-  }
-   .navbar__mobile .nav-link:hover{
-    color: #F5B400;
-  }
-  
-  
-  .navbar__mobile .has-submenu .nav-link:hover .icon-arrow {
-    content: url("images/flèche_jaune.svg");
-  }
-  
+  } 
   .burger-menu{
     display: flex;
     align-items: center;
