@@ -23,6 +23,7 @@ var swiper = new Swiper(".hero-section-swiper", {
   slidesPerView: "auto",
   centeredSlides: true,
   spaceBetween: 20,
+  speed: 2000,
   loop: true,
   pagination: {
     el: ".swiper-pagination-hero-section",
@@ -85,6 +86,7 @@ window.onclick = (e) => {
 
 var testimonial_swiper = new Swiper(".testimonial-swiper", {
       spaceBetween: 30,
+      speed: 2000,
       loop: true,
       pagination: {
         el: ".swiper-pagination-testimonial",
