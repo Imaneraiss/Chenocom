@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Chenocom</title>
+
+    <!-- favicon icon -->
+
+    <link
+      rel="icon"
+      href="https://chenocom.com/wp-content/uploads/2025/03/Fav-icon.png"
+      sizes="32x32"
+    />
+
+    <!-- Google fonts API's -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Linking general CSS styles to contact html page -->
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Linking specific CSS styles to contact html page -->
+
+    <link rel="stylesheet" href="style_devis.css" />
+  </head>
+
+  <body>
+    <header>
+      
+      <div class="header-container">
+          <!-- Logo -->
+          <a href="#" class="logo">
+            <img
+              src="images/cheno.svg"
+              alt="Logo de Chenocom"
+              class="logo-img"
+            />
+          </a>
+
+          <!-- Navigation -->
+
+          <!-- Mobile-Version -->
+
+          <img
+            src="images/btn-menu.svg"
+            alt="Bouton Menu"
+            class="burger-menu"
+          />
+          <nav class="navbar__mobile">
+            <ul class="nav-menu">
+              <li class="has-submenu">
+                <span class="link-icon">
+                  <a href="#" class="nav-link">Qui sommes-nous</a>
+                  <img
+                    src="images/flèche.svg"
+                    alt="Flèche vers le bas"
+                    class="icon-arrow"
+                  />
+                </span>
+                <!-- Sous-menu  -->
+                <div class="submenu">
+                  <ul>
+                    <li>
+                      <a href="#" class="submenu-link">Agence Web Maroc</a>
+                    </li>
+                    <li>
+                      <a href="#" class="submenu-link">Agence Web Offshore</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="has-submenu">
+                <span class="link-icon">
+                  <a href="#" class="nav-link">Expertises</a>
+                  <img
+                    src="images/flèche.svg"
+                    alt="Flèche vers le bas"
+                    class="icon-arrow"
+                  />
+                </span>
+
+                <div class="submenu">
+                  <ul>
+                    <li>
+                      <a href="#" class="submenu-link">Développement Web</a>
+                    </li>
+                    <li>
+                      <a href="#" class="submenu-link">Développement Mobile</a>
+                    </li>
+                    <li>
+                      <a href="#" class="submenu-link"
+                        >Design & Expérience utilisateur</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="submenu-link">Référencement SEO</a>
+                    </li>
+                    <li>
+                      <a href="#" class="submenu-link"
+                        >Contrôle qualité & tests</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="submenu-link"
+                        >Maintenance & Évolutions (TMA)</a
+                      >
+                    </li>
+                    <li><a href="#" class="submenu-link">E-learning </a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Réalisations</a>
+              </li>
+              <li class="nav-item"><a href="#" class="nav-link">Blogs</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">FAQ</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Demande de devis</a></li>
+              
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">Contact Us</a>
+              </li>
+              <li class="has-submenu">
+                <a href="#" class="nav-link">
+                  <span id="flag-selector">
+                    <img
+                      id="current-flag"
+                      src="images/en.svg"
+                      data-lang="en"
+                      alt="USA Flag"
+                    />
+                  </span>
+                </a>
+                
+              </li>
+            </ul>
+          </nav>
+
+          <nav class="navbar">
+            <ul class="nav-menu">
+              <li class="has-submenu">
+                <span class="link-icon">
+                  <a href="#" class="nav-link"> Qui sommes-nous</a>
+                  <img
+                    src="images/flèche.svg"
+                    alt="Flèche vers le bas"
+                    class="icon-arrow"
+                  />
+                </span>
+                <!-- Sous-menu  -->
+                <div class="submenu">
+                  <ul>
+                    <li>
+                      <a href="#" class="submenu-link">Agence Web Maroc</a>
+                    </li>
+                    <li>
+                      <a href="#" class="submenu-link">Agence Web Offshore</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <!-- Expertises avec sous-menu colonnes -->
+              <li class="has-submenu">
+                <span class="link-icon">
+                  <a href="#" class="nav-link">Expertises</a>
+
+                  <img
+                    src="images/flèche.svg"
+                    alt="Flèche vers le bas"
+                    class="icon-arrow"
+                  />
+                </span>
+                <div class="submenu">
+                  <div class="submenu-columns">
+                    <ul class="first-column">
+                      <li>
+                        <img src="images/dev_web.svg" alt="Développement Web" />
+                        <a href="#" class="submenu-link">Développement Web</a>
+                      </li>
+                      <li>
+                        <img
+                          src="images/dev_mob.svg"
+                          alt="Développement Mobile"
+                        />
+                        <a href="#" class="submenu-link"
+                          >Développement Mobile</a
+                        >
+                      </li>
+                      <li>
+                        <img
+                          src="images/design.svg"
+                          alt="Design & Expérience utilisateur"
+                        />
+                        <a href="#" class="submenu-link"
+                          >Design & Expérience utilisateur</a
+                        >
+                      </li>
+                      <li>
+                        <img src="images/ref.svg" alt="Référencement SEO" />
+                        <a href="#" class="submenu-link">Référencement SEO</a>
+                      </li>
+                    </ul>
+
+                    <ul>
+                      <li>
+                        <img
+                          src="images/control.svg"
+                          alt="Contrôle qualité & tests"
+                        />
+                        <a href="#" class="submenu-link"
+                          >Contrôle qualité & tests</a
+                        >
+                      </li>
+                      <li>
+                        <img
+                          src="images/maint.svg"
+                          alt="Maintenance & Évolutions (TMA)"
+                        />
+                        <a href="#" class="submenu-link"
+                          >Maintenance & Évolutions (TMA)</a
+                        >
+                      </li>
+                      <li>
+                        <img src="images/e-learn.svg" alt="E-learning" />
+                        <a href="#" class="submenu-link">E-learning </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <!-- The Rest -->
+              <li class="nav-item">
+                <a href="#" class="nav-link">Réalisations</a>
+              </li>
+              <li class="nav-item"><a href="#" class="nav-link">Blogs</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">FAQ</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Demande de devis</a></li>
+            </ul>
+          </nav>
+
+          <!-- Flag & Bouton Contact -->
+          <div class="flag-selector--btn-contact">
+            <span class="link-icon flag" id="flag-selector" >
+              <img
+                  id="current-flag"
+                  src="images/en.svg"
+                  data-lang="en"
+                  alt="USA Flag"
+                />
+            </span>
+              
+            <a href="#" class="contact-botton-link">
+              <span>Contact Us</span>
+              <img
+                src="images/pointer.svg"
+                alt="Icône de pointeur"
+                class="icon-pointer"
+              />
+            </a>
+        </div>
+      
+    </header>
+
+    <main>
+      <section class="hero-section">
+        <div>
+          <div class="hero-section__hero-content">
+            <div class="badge badge1">
+              <span>SEO Team</span>
+              <img src="images/pointer.svg" alt="icon-pointer" />
+            </div>
+
+            <div class="badge badge2">
+              <img src="images/pointer.svg" alt="icon-pointer" />
+              <span>Design Team</span>
+            </div>
+            <div class="badge badge3">
+              <span>DevOps Team</span>
+              <img src="images/pointer.svg" alt="icon-pointer" />
+            </div>
+            <div class="badge badge4">
+              <img src="images/pointer.svg" alt="icon-pointer" />
+              <span>Developers</span>
+            </div>
+            <div class="hero-section__hero-content__brand">
+              
+            </div>
+
+            <div class="hero-section__hero-content__title">
+              <p>
+                <span class="linear-gradient">Inspired </span> by You.
+                 Designed by Us. 
+              </p>
+            </div>
+            <div class="hero-section__hero-content__description">
+              <p>
+                <span
+                  class="hero-section__hero-content__description__paragraph"
+                >
+                  Have a project in mind? Don’t wait any longer — request your free, personalized quote today and let us help turn your ideas into reality
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- prefooter section -->
+
+      <section class="pre-footer">
+        <div class="pre-footer__container">
+          <a href="/"
+            ><img
+              src="images/cheno.svg"
+              alt="Logo de Chenocom"
+              class="logo-img pre-footer__logo"
+          /></a>
+          <div class="pre-footer__container__social-media">
+            <a href="https://www.instagram.com/2c_solution/" target="_blank">
+              <img
+                src="images/insta.svg"
+                alt="Instagram"
+                class="pre-footer__icon"
+              />
+            </a>
+            <a
+              href="https://web.facebook.com/2CSolution/?_rdc=1&_rdr#"
+              target="_blank"
+            >
+              <img
+                src="images/face.svg"
+                alt="Facebook"
+                class="pre-footer__icon"
+              />
+            </a>
+            <a href="https://www.youtube.com/@Chenocom-2024" target="_blank">
+              <img
+                src="images/yout.svg"
+                alt="Youtube"
+                class="pre-footer__icon"
+              />
+            </a>
+            <a
+              href="https://api.whatsapp.com/send/?phone=212776377844&text&type=phone_number&app_absent=0"
+              target="_blank"
+            >
+              <img
+                src="images/whats.svg"
+                alt="Whatsapp"
+                class="pre-footer__icon"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="gradient-line"></div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer__content">
+        <div class="footer__column">
+          <span class="footer__column__title">Company</span>
+          <ul>
+            <li><a href="#">Why chenocom?</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Our services</a></li>
+            <li><a href="#">Our team</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__column">
+          <span class="footer__column__title">Working time</span>
+          <ul>
+            <li>Mon-Fri: 9:00AM - 18:00 PM</li>
+            <li>Mon-Fri: 9:00AM - 18:00 PM</li>
+            <li>Sunday Closed</li>
+          </ul>
+        </div>
+
+        <div class="footer__column">
+          <span class="footer__column__title">Contact us</span>
+          <ul>
+            <li>contact@chenocom.com</li>
+            <li>0808576507</li>
+            <li>N° 1095 3ème étage Apt n°4,</li>
+            <li>Amal 5 Massira CYM Rabat</li>
+          </ul>
+        </div>
+
+        <div class="footer__column">
+          <span class="footer__column__title">Subscribe newsletter</span>
+          <form class="newsletter-form" action="" method="get">
+            <input
+              class="newsletter-form__email"
+              placeholder="Email address"
+              required
+            />
+            <input
+              onclick="sendButton()"
+              type="button"
+              value="Send"
+              class="newsletter-form__send"
+            />
+          </form>
+        </div>
+      </div>
+
+      <div class="footer__bottom__desktop">
+        <p>Securit / Privacy Cookie Policy / Terms Of Services</p>
+        <p>©Chenocom 2024. All Rights Reserved</p>
+      </div>
+    </footer>
+
+    <!-- to associate our external Js file -->
+    <script src="script.js" defer></script>
+  </body>
+</html>

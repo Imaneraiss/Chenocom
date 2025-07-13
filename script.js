@@ -17,6 +17,20 @@ items_mobile.forEach(item => {
   }
 });
 
+const flagImage = document.getElementById("current-flag") ;
+let currentLang ="en"
+document.getElementById("flag-selector").onclick = function(){
+  if (currentLang === "en"){
+    flagImage.src ="images/fr.svg";
+    flagImage.alt = "French Flag";
+    currentLang = "fr";
+  }
+  else{
+    flagImage.src ="images/en.svg";
+    flagImage.alt = "USA Flag";
+    currentLang = "en";
+  }
+};
 //Initialize Swiper
 
 var swiper = new Swiper(".hero-section-swiper", {

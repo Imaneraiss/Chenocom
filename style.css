@@ -36,6 +36,7 @@
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
+    max-width: 1292px;
     
   }
   
@@ -110,7 +111,9 @@
     display: flex;
     color: white;
   }
-  
+  .link-icon{
+    cursor:pointer;
+  }
 
 
   /* ---- CONTACT BOTTON ----*/
@@ -136,6 +139,7 @@
 
   .has-submenu {
     position: relative;
+    cursor: pointer;
   }
 
   .submenu {
@@ -406,6 +410,7 @@
   max-width: 561px;
   height: 446px;
   transition: all .3s ease;
+  cursor: pointer;
 }
 
 .swiper-pagination-bullet {
@@ -889,6 +894,7 @@ badge-our-specialities img {
   gap: 31px;
   text-align: left;
   padding-top: 40px;
+  cursor: pointer;
 }
 .projects-showcase__slides__slide .affiche{
   position: relative;
@@ -918,7 +924,7 @@ badge-our-specialities img {
 }
 
 .projects-showcase__slides__slide:hover .affiche, .insights__body__slide:hover .insights__body__slide__image {
-  box-shadow: 2px 10px 10px 4px rgba(65, 65, 65, 0.8);
+  box-shadow: 2px 10px 10px 4px rgba(0, 0, 0, 0.8);
 }
 
 .projects-showcase__slides__slide:hover .background {
@@ -1032,8 +1038,8 @@ badge-our-specialities img {
 
 .swiper-pagination-testimonial.swiper-pagination-bullets.swiper-pagination-horizontal{
   position: absolute;
-  top: 7%;
-  left: -10%;
+  top: -8%;
+  left: -12%;
   max-height: 20px;
 }
 .testimonial-author{
@@ -1090,6 +1096,7 @@ badge-our-specialities img {
 .testimonial-slide{
   position: relative;
   display: flex;
+  cursor: pointer;
 }
 .testimonial__image {
   max-width: 346px;
@@ -1186,6 +1193,7 @@ badge-our-specialities img {
 .insights__body{
   display: flex;
   gap: 40px;
+  cursor: pointer;
 }
 .insights__body__slide{
   display: block;
@@ -1250,6 +1258,9 @@ badge-our-specialities img {
   display: flex;
   justify-content: space-between;
   gap: 26px;
+}
+.pre-footer__icon{
+  cursor: pointer;
 }
 .gradient-line {
   height: 1px;
@@ -1366,6 +1377,7 @@ footer{
   }
   .flag-selector--btn-contact{
     gap: 10px;
+    cursor: pointer;
   }
   /* -----------------HERO-SECTION-------------- */
   .hero-section__hero-content__title{
@@ -1540,6 +1552,9 @@ footer{
   }
   .submenu ul{
     gap: 15px;
+  }
+  .flag-selector{
+    margin-top: 7%;
   }
   .flag-selector--btn-contact{
     display: none;
