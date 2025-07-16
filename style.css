@@ -96,6 +96,7 @@
   .flag-selector--btn-contact{
     display: flex;
     gap: 20px;
+    align-items: center;
   }
   .flag-selector--btn-contact .submenu{
     margin-top: 5px;
@@ -106,6 +107,10 @@
   }
   .navbar .link-icon:hover .nav-link{
     color: #F5B400;
+  }
+  #flag-selector{
+    width: 21px;
+    height: 19px;
   }
   .link-icon,.flag-selector{
     display: flex;
