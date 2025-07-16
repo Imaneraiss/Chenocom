@@ -1,0 +1,14 @@
+{
+  "pages": [
+    { "min": 1, "max": 5, "price": 4000 },
+    { "min": 6, "max": 10, "price": 10000 },
+    { "min": 11, "max": 20, "price": 20000 }
+  ],
+  "features": {
+    "contact": 500,
+    "recrutement": 500,
+    "carte interactive": 600,
+    "blog": 700,
+    "portfolio": 800
+  }
+}

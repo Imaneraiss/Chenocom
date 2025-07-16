@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demande de devis- Chenocom</title>
+
+    <!-- favicon icon -->
+    <link
+      rel="icon"
+      href="https://chenocom.com/wp-content/uploads/2025/03/Fav-icon.png"
+      sizes="32x32"
+    />
+
+    <!-- Google fonts API's -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_devis.css') }}" />
+  </head>
+
+  <body>
+    <header>
+      <div class="header-container">
+        <!-- Logo -->
+        <a href="#" class="logo">
+          <img
+            src="{{ url_for('static', filename='images/cheno.svg') }}"
+            alt="Logo de Chenocom"
+            class="logo-img"
+          />
+        </a>
+
+        <!-- Mobile Menu -->
+        <img
+          src="{{ url_for('static', filename='images/btn-menu.svg') }}"
+          alt="Bouton Menu"
+          class="burger-menu"
+        />
+
+          <nav class="navbar__mobile">
+            <ul class="nav-menu">
+              <li class="has-submenu">
+                <span class="link-icon">
+                  <a href="#" class="nav-link">À propos</a>
+                  <img
+                    src="{{ url_for('static', filename='images/flèche.svg') }}"
+                    alt="Flèche vers le bas"
+                    class="icon-arrow"
+                  />
+                </span>
+                <!-- Submenu -->
+                <div class="submenu">
+                  <ul>
+                    <li>
+                      <a href="#" class="submenu-link">Agence Web Maroc</a>
+                    </li>
+                    <li>
+                      <a href="#" class="submenu-link">Agence Web Offshore</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="has-submenu">
+                <span class="link-icon">
+                  <a href="#" class="nav-link">Expertise</a>
+                  <img
+                    src="{{ url_for('static', filename='images/flèche.svg') }}"
+                    alt="Flèche vers le bas"
+                    class="icon-arrow"
+                  />
+                </span>
+
+                <div class="submenu">
+                  <ul>
+                    <li>
+                      <a href="#" class="submenu-link">Développement Web</a>
+                    </li>
+                    <li>
+                      <a href="#" class="submenu-link">Développement Mobile</a>
+                    </li>
+                    <li>
+                      <a href="#" class="submenu-link">Design UX & UI</a>
+                    </li>
+                    <li>
+                      <a href="#" class="submenu-link">Optimisation SEO</a>
+                    </li>
+                    <li>
+                      <a href="#" class="submenu-link">Assurance Qualité & Tests</a>
+                    </li>
+                    <li>
+                      <a href="#" class="submenu-link">Maintenance & Mises à jour (TMA)</a>
+                    </li>
+                    <li><a href="#" class="submenu-link">E-learning</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Nos Réalisations</a>
+              </li>
+              <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">FAQ</a></li>
+              <li class="nav-item">
+                <a href="{{ url_for('demande_de_devis') }}" target="_blank" class="nav-link">Demander un devis</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Contactez-nous</a>
+              </li>
+              <li class="has-submenu">
+                <a href="#" class="nav-link" id="flag-selector-mobile">
+                  <span>
+                    <img
+                      id="current-flag-mobile"
+                      src="{{ url_for('static', filename='images/fr.svg') }}"
+                      data-lang="en"
+                      alt="Drapeau Français"
+                    />
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+
+          <nav class="navbar">
+            <ul class="nav-menu">
+              <li class="has-submenu">
+                <span class="link-icon">
+                  <a href="#" class="nav-link">Qui sommes-nous</a>
+                  <img
+                    src="{{ url_for('static', filename='images/flèche.svg') }}"
+                    alt="Flèche vers le bas"
+                    class="icon-arrow"
+                  />
+                </span>
+                <!-- Submenu -->
+                <div class="submenu">
+                  <ul>
+                    <li>
+                      <a href="#" class="submenu-link">Agence Web Maroc</a>
+                    </li>
+                    <li>
+                      <a href="#" class="submenu-link">Agence Web Offshore</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <!-- Expertise with submenu columns -->
+              <li class="has-submenu">
+                <span class="link-icon">
+                  <a href="#" class="nav-link">Expertise</a>
+                  <img
+                    src="{{ url_for('static', filename='images/flèche.svg') }}"
+                    alt="Flèche vers le bas"
+                    class="icon-arrow"
+                  />
+                </span>
+                <div class="submenu">
+                  <div class="submenu-columns">
+                    <ul class="first-column">
+                      <li>
+                        <img src="{{ url_for('static', filename='images/dev_web.svg') }}" alt="Développement Web" />
+                        <a href="#" class="submenu-link">Développement Web</a>
+                      </li>
+                      <li>
+                        <img src="{{ url_for('static', filename='images/dev_mob.svg') }}" alt="Développement Mobile" />
+                        <a href="#" class="submenu-link">Développement Mobile</a>
+                      </li>
+                      <li>
+                        <img src="{{ url_for('static', filename='images/design.svg') }}" alt="UI & UX Design" />
+                        <a href="#" class="submenu-link">UI & UX Design</a>
+                      </li>
+                      <li>
+                        <img src="{{ url_for('static', filename='images/ref.svg') }}" alt="Optimisation SEO" />
+                        <a href="#" class="submenu-link">Optimisation SEO</a>
+                      </li>
+                    </ul>
+
+                    <ul>
+                      <li>
+                        <img src="{{ url_for('static', filename='images/control.svg') }}" alt="Assurance Qualité & Tests" />
+                        <a href="#" class="submenu-link">Assurance Qualité & Tests</a>
+                      </li>
+                      <li>
+                        <img src="{{ url_for('static', filename='images/maint.svg') }}" alt="Maintenance & Mises à jour (TMA)" />
+                        <a href="#" class="submenu-link">Maintenance & Mises à jour (TMA)</a>
+                      </li>
+                      <li>
+                        <img src="{{ url_for('static', filename='images/e-learn.svg') }}" alt="E-learning" />
+                        <a href="#" class="submenu-link">E-learning</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <!-- The Rest -->
+              <li class="nav-item">
+                <a href="#" class="nav-link">Nos Réalisations</a>
+              </li>
+              <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">FAQ</a></li>
+              <li class="nav-item">
+                <a href="{{ url_for('demande_de_devis') }}" target="_blank" class="nav-link">Demander un devis</a>
+              </li>
+            </ul>
+          </nav>
+
+        <div class="flag-selector--btn-contact">
+            <a href="#" class="nav-link"  id="flag-selector">
+              <span class="link-icon flag" >
+                <img
+                    id="current-flag"
+                    src="{{ url_for('static', filename='images/fr.svg') }}"
+                    data-lang="en"
+                    alt="Drapeau Français"
+                  />
+              </span>
+            </a>
+              
+            <a href="#" class="contact-botton-link">
+              <span>Contactez-nous</span>
+              <img
+                src="{{ url_for('static', filename='images/pointer.svg') }}"
+                alt="Icône de pointeur"
+                class="icon-pointer"
+              />
+            </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-section">
+        <div class="hero-section__hero-content">
+          <div class="badge badge1">
+            <span>Équipe SEO</span>
+            <img src="{{ url_for('static', filename='images/pointer.svg') }}" alt="icône pointeur" />
+          </div>
+          <div class="badge badge2">
+            <img src="{{ url_for('static', filename='images/pointer.svg') }}" alt="icône pointeur" />
+            <span>Équipe Design</span>
+          </div>
+          <div class="badge badge3">
+            <span>Équipe DevOps</span>
+            <img src="{{ url_for('static', filename='images/pointer.svg') }}" alt="icône pointeur" />
+          </div>
+          <div class="badge badge4">
+            <img src="{{ url_for('static', filename='images/pointer.svg') }}" alt="icône pointeur" />
+            <span>Développeurs</span>
+          </div>
+
+          <div class="hero-section__hero-content__title">
+            <p><span class="linear-gradient">Inspirés</span> par Vous. Conçus par Nous.</p>
+          </div>
+
+          <div class="hero-section__hero-content__description">
+            <p>
+              <span class="hero-section__hero-content__description__paragraph">
+                Vous avez un projet en tête ? N'attendez plus - demandez votre devis personnalisé gratuit dès aujourd'hui et laissez-nous vous aider à transformer vos idées en réalité.
+              </span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="upload_quote">
+        <div class="container upload-container" >
+          <h1><span class="linear-gradient">Demandez </span>votre devis spontanément</h1>
+          
+          <p>Une idée, un clic, une réalité.</p>
+          <p>Demandez votre devis et donnez vie à votre vision.</p>
+          <h2>Sélectionnez un fichier à télécharger</h2>
+          <form id="uploadForm" enctype="multipart/form-data">
+            <input type="file" name="file" id="file" required style="display: none;"/>
+            <div class="input-file">
+              <label for="file" class="custom-file-label">Choisissez votre fichier</label>
+              <span id="file-name">Aucun fichier sélectionné</span>
+            </div>
+            <button type="submit" id="submit">
+              <span>Envoyer</span>
+              <img
+              src="{{ url_for('static', filename='images/pointer.svg') }}"
+              alt="Icône de pointeur"
+              class="icon-pointer"
+            />
+            </button>
+          </form>
+          <div id="loadingMessage" >
+              Votre devis est en préparation... Un instant s'il vous plaît!...
+              <span class="loader"></span>
+          </div>
+          <pre id="output"></pre>
+        </div>
+      </section>
+
+      <section class="pre-footer">
+        <div class="pre-footer__container">
+          <a href="/">
+            <img
+              src="{{ url_for('static', filename='images/cheno.svg') }}"
+              alt="Logo de Chenocom"
+              class="logo-img pre-footer__logo"
+            />
+          </a>
+          <div class="pre-footer__container__social-media">
+            <a href="https://www.instagram.com/2c_solution/" target="_blank">
+              <img src="{{ url_for('static', filename='images/insta.svg') }}" alt="Instagram" class="pre-footer__icon" />
+            </a>
+            <a href="https://web.facebook.com/2CSolution/" target="_blank">
+              <img src="{{ url_for('static', filename='images/face.svg') }}" alt="Facebook" class="pre-footer__icon" />
+            </a>
+            <a href="https://www.youtube.com/@Chenocom-2024" target="_blank">
+              <img src="{{ url_for('static', filename='images/yout.svg') }}" alt="YouTube" class="pre-footer__icon" />
+            </a>
+            <a href="https://api.whatsapp.com/send/?phone=212776377844" target="_blank">
+              <img src="{{ url_for('static', filename='images/whats.svg') }}" alt="Whatsapp" class="pre-footer__icon" />
+            </a>
+          </div>
+        </div>
+        <div class="gradient-line"></div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer__content">
+        <div class="footer__column">
+          <span class="footer__column__title">Entreprise</span>
+          <ul>
+            <li><a href="#">Pourquoi Chenocom?</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Nos services</a></li>
+            <li><a href="#">Notre équipe</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <span class="footer__column__title">Heures d'ouverture</span>
+          <ul>
+            <li>Lun-Ven: 9h00 - 18h00</li>
+            <li>Sam: 9h00 - 18h00</li>
+            <li>Dimanche Fermé</li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <span class="footer__column__title">Contactez-nous</span>
+          <ul>
+            <li>contact@chenocom.com</li>
+            <li>0808576507</li>
+            <li>N° 1095 3ème étage Apt n°4,</li>
+            <li>Amal 5 Massira CYM Rabat</li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <span class="footer__column__title">Abonnez-vous à notre newsletter</span>
+          <form class="newsletter-form" action="" method="get">
+            <input class="newsletter-form__email" placeholder="Adresse email" required />
+            <input onclick="sendButton()" type="button" value="Envoyer" class="newsletter-form__send" />
+          </form>
+        </div>
+      </div>
+      <div class="footer__bottom__desktop">
+        <p>Sécurité / Confidentialité / Politique des cookies / Conditions d'utilisation</p>
+        <p>©Chenocom 2024. Tous droits réservés</p>
+      </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+    <script>
+      const form = document.getElementById('uploadForm');
+      const loadingMessage = document.getElementById('loadingMessage'); // NEW
+
+      form.onsubmit = async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        const output = document.getElementById('output');
+
+        output.textContent = '';
+        const oldBtn = document.getElementById('downloadButton');
+        if (oldBtn) oldBtn.remove();
+
+        // Show the loading message
+        loadingMessage.style.display = 'block';
+
+        const response = await fetch('/upload', {
+          method: 'POST',
+          body: formData
+        });
+
+        const data = await response.json();
+
+        // Hide the loading message after generation
+        loadingMessage.style.display = 'none';
+
+        if (response.ok) {
+          output.textContent = data.message || "Votre devis est prêt !";
+
+          const downloadButton = document.createElement('button');
+          downloadButton.id = 'downloadButton';
+          downloadButton.textContent = 'Télécharger votre devis';
+          downloadButton.style.marginTop = '1em';
+
+          downloadButton.onclick = () => {
+            window.location.href = `/download?filename=${encodeURIComponent(data.pdf_filename)}`;
+          };
+
+          output.appendChild(downloadButton);
+        } else {
+          output.textContent = 'Error : ' + (data.error || 'Erreur.');
+        }
+      };
+      document.getElementById("file").addEventListener("change", function () {
+        const fileName = this.files[0]?.name || "Aucun fichier sélectionné";
+        document.getElementById("file-name").textContent = fileName;
+      });
+
+
+
+    // Changing language 
+    const flagImage = document.getElementById("current-flag");
+    const currentLang = flagImage.dataset.lang || "en";
+
+    document.getElementById("flag-selector")?.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    if (currentLang === "en") {
+        
+        flagImage.dataset.lang = "fr";
+        window.location.href = "/demande_de_devis_fr";
+    } else {
+        
+        flagImage.dataset.lang = "en";
+        window.location.href = "/demande_de_devis";
+    }
+    });
+
+    const flagImageMobile = document.getElementById("current-flag-mobile");
+    const currentLangMobile = flagImage.dataset.lang || "en";
+    document.getElementById("flag-selector-mobile")?.addEventListener("click", function (e) {
+      e.preventDefault();
+      
+      if (currentLangMobile === "en") {
+        
+        flagImageMobile.dataset.lang = "fr";
+        window.location.href = "/demande_de_devis_fr";
+      } else {
+        
+        flagImageMobile.dataset.lang = "en";
+        window.location.href = "/demande_de_devis";
+      }
+    });
+    </script>
+
+  </body>
+</html>

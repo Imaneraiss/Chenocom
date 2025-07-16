@@ -1,0 +1,155 @@
+.header-container{
+  padding: 0 15px;
+}
+.flag-selector--btn-contact{
+  align-items: center;
+}
+#flag-selector {
+  width: 21px;
+  height: 15px;
+}
+.badge3{
+    left: 14%;
+    bottom: 12%;
+}
+.badge4 {
+    right: 15%;
+    bottom: 14%;
+}
+.badge1 {
+    top: -2%;
+}
+.upload-container{
+    padding: 50px 30px 150px 30px;
+}
+#uploadForm{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 35px;
+    padding-left: 22%;
+    gap: 10%;
+}
+.upload_quote .section-container{
+    text-align: left;
+}
+.upload_quote {
+  display: flex;
+  color: white;
+  text-align: left;
+}
+.upload_quote p {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.upload_quote h1 {
+  font-size: 64px;
+  font-family: "Poppins",sans-serif;
+  font-weight: 500;
+  margin-bottom: 35px;
+  line-height: 1.1;
+}
+
+.upload_quote h2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  color: #fffafa;
+  margin-top: 90px;
+}
+#file{
+  display: block;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #2D2D2D;
+  cursor: pointer;
+}
+#file-upload-button{
+    background-color: #ff1d1d;
+    padding-right: 30px;
+    cursor: pointer;
+}
+.input-file{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #2d2d2d;
+    color: white;
+    font-size: 18px;
+    border-radius: 6px;
+    padding-right: 20px;
+}
+.custom-file-label{
+  background-color: #2D2D2D;
+  padding: 13px;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 12px;
+  transition: background 0.3s;
+}
+
+#submit {
+  background-color: #F5B400;
+  color: rgb(0, 0, 0);
+  border: 1px solid #2D2D2D;
+  padding: 12px 28px;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#submit:hover {
+  background-color: #fad777;
+}
+#loadingMessage{
+    display: none; 
+    color: white;
+    margin-top: 90px;
+    font-size: 22px
+}
+.loader {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 3px solid #ffffff; 
+  border-top: 3px solid #ffc21b;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#output {
+    display: flex;
+    flex-direction: column;
+    margin-top: 90px;
+    padding: 0;
+    border-radius: 8px;
+    font-size: 23px;
+    white-space: pre-wrap;
+    overflow-y: auto;
+    gap: 11px;
+    
+}
+
+#downloadButton {
+    background-color: #2D2D2D;
+    color: white;
+    font-size: 18px;
+    border: 1px solid #2d2d2d;
+    max-width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 13px;
+    cursor: pointer;
+    border-radius: 6px;
+    margin: 0 auto;
+}
