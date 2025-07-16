@@ -1,6 +1,0 @@
-Flask
-pdfplumber
-python-docx
-pytesseract
-Pillow
-google-cloud-dialogflow==2.24.0
