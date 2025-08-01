@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "monprojetdialogflow-465522",
+  "private_key_id": "a83c086db8d771f355058ff976a2e4465d5f1015",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCn9DZ0nXVkPfK2\nJlJEydIkqUohRGdb112dMED4AJfMoz3+Bz+57faWSXhVaqKju2mYfRo3IMQUnaQH\naM5qZIAVpYAyIn6+JWTX+/DzhfGhfDeuvjPNEzJhin/DHtrZMbOKyrhz1RNIbkSJ\ncBp3fOGlRkqQhkNChCJa4bSaOPbAd7KzX7vWFWb3bEHGTyzpgLWGfESYWnFWOOgr\nmSv0ZG/pCAQyFWk5UZTS1qbocc2s4owlknqoqxX0NcX978M3LPw0xbXnXxUv88tj\nWNwLhec5y6s/JigjRDIaZGMQuLxjIA6bN3W0e1hO+xBFl6F8Zrr2r2K8JjXftXtm\njYGZs40dAgMBAAECggEAAaemnLYLeNIicNiGUX6ylyFi5VqE8TL5TWnzDe6FkGLg\nYr8kCds2JYtyR9ct5JKdav76keX9AJ4ABoGqHQLB/1Sa44OS/6EjMfydxmyAscBl\nVQ+zN3dTtQHWGfBVJDQ46mpucFe+YaWSf88ut5Qvrf74D53/Din6o64bJzTd+43+\nRJ0SkRjMmjMfYYvgM4rxdSJ1D0v7eUfGSZpzY9tysZDr7dp1SdPnTjawpT+NwcGA\n+BTdLB1DhGkWKusygc8PqMkshBgBzWAInCFTTnxqeYGphH9AEUjv5zj7LKZUV4CT\nUdK2cA2VIZ6SRTTsvZ8HjK5FvP4iKpXnlgwiScZfUQKBgQDnbjWkLWJ2Dzr0ufAF\n43zZOSqmIr7twPNJijwmtMwJReaH3is9tziiNc40GIzhKtN+QsMoxVvCthWZQqLc\nbFPUPnKk9ZJN8LHhOpbqhnSuCxTtIKlR0cQWPXzCiH1bOKKoge7No838QTLrSvgz\nV8ueq9wfiO8oJRYtbBt+6mJkEQKBgQC5yNhaycFuYVB9DKqTYe5z6KhDRukCcDSl\nHvCY5hCAZm4ZaBQi3xXSjfhZdun59puAnvxpyC3fg0NT4Lfewxc2GK641EGSEm0I\nhVoAqMHzigni01sD5RKeB5FX7pxP43YJRfgs3aCzF1CpejLTtkn4oOxFLR8BjQD1\nZLPiaUg0TQKBgCtN5P2mfGEI8ogubqo7afYfi0pw//bu/tcI5b58YB1wFfXgbYjr\nys4XcVEwMtRDNjXO+kObwlLJzXrTDDRglMMHOF6DkO/ClRZG50xVAmo6qpzAWs5z\niNR8hubDsWkrTMxpG60g9H86F/QNICpDSFeVYugHsHB7mA3Bx9dUtjpxAoGAN9qp\nKQpVDBFXuHCxa6Pao6BDzg4oiWIgga/+l4k7Vs70tNC0lRNKpUWnb4Yvq8W3VID3\n0/mpyPPWrwX1YZR3ivz6snilyfueKhylRWN3A/fxJu9yAobBBR+zU6NZ/S6eUwVl\nKl/rK0yMJJenZjz8mjIPNnDtTHMO4bfH2P7cBVUCgYEAjPJOwadnEBhtjdUCGIo1\nvFJzBHBjqxeFopRzvpwZZGxbNTLimsugdp4sfwFgthCkaqOkOJHzw4YVTNpu0KZi\nJw//RJlmYgBTXycE+uG+GNynxx8K1lWT4ZD/xc3udwdoUlaRNO/wW+DAolmmKJoX\nFjqa5XUk6NLS7orL9xGhN0U=\n-----END PRIVATE KEY-----\n",
+  "client_email": "dialogflow-agent-access@monprojetdialogflow-465522.iam.gserviceaccount.com",
+  "client_id": "108051160828195705847",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/dialogflow-agent-access%40monprojetdialogflow-465522.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

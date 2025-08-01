@@ -287,22 +287,25 @@
           
           <p>An idea, a click, a reality. </p>
           <p>Request your quote and bring your vision to life.</p>
-          <h2>Select a file to upload</h2>
-          <form id="uploadForm" enctype="multipart/form-data">
-            <input type="file" name="file" id="file" required style="display: none;"/>
-            <div class="input-file">
-              <label for="file" class="custom-file-label">Choose your file</label>
-              <span id="file-name">No file chosen</span>
-            </div>
-            <button type="submit" id="submit">
-              <span>Send</span>
-              <img
-              src="{{ url_for('static', filename='images/pointer.svg') }}"
-              alt="Icône de pointeur"
-              class="icon-pointer"
-            />
-            </button>
-          </form>
+          <div id="selection">
+            <h2>Select a file to upload</h2>
+            <form id="uploadForm" enctype="multipart/form-data">
+              <input type="file" name="file" id="file" required style="display: none;"/>
+              <div class="input-file">
+                <label for="file" class="custom-file-label">Choose your file</label>
+                <span id="file-name">No file chosen</span>
+              </div>
+              <button type="submit" id="submit">
+                <span>Send</span>
+                <img
+                src="{{ url_for('static', filename='images/pointer.svg') }}"
+                alt="Icône de pointeur"
+                class="icon-pointer"
+              />
+              </button>
+            </form>
+          </div>
+          
           <div id="loadingMessage" >
               Your quote is cooking… Just a moment more!...
               <span class="loader"></span>
@@ -384,91 +387,120 @@
     <script src="{{ url_for('static', filename='script.js') }}" defer></script>
     <script>
       const form = document.getElementById('uploadForm');
-      const loadingMessage = document.getElementById('loadingMessage'); // NEW
+      const loadingMessage = document.getElementById('loadingMessage'); 
+      const output = document.getElementById('output');
 
       form.onsubmit = async (e) => {
         e.preventDefault();
-
-        const formData = new FormData(form);
-        const output = document.getElementById('output');
-
+        
         output.textContent = '';
-        const oldBtn = document.getElementById('downloadButton');
-        if (oldBtn) oldBtn.remove();
-
-        // Show the loading message
         loadingMessage.style.display = 'block';
 
-        const response = await fetch('/upload', {
-          method: 'POST',
-          body: formData
-        });
+        const formData = new FormData(form);
+        const currentLang = document.getElementById("current-flag")?.dataset.lang || "fr";
+        formData.append("site_language", currentLang);
 
+        const response = await fetch('/upload', { method: 'POST', body: formData });
         const data = await response.json();
 
-        // Hide the loading message after generation
         loadingMessage.style.display = 'none';
 
-        if (response.ok) {
-          output.textContent = data.message || "Your quote is ready !";
+        if (!response.ok) {
+          output.textContent = 'Error: ' + (data.erreur || data.error || 'Unknown error');
+          return;
+        }
 
-          const downloadButton = document.createElement('button');
-          downloadButton.id = 'downloadButton';
-          downloadButton.textContent = 'Download your quote';
-          downloadButton.style.marginTop = '1em';
+        document.getElementById('selection')?.classList.add('hidden');
 
-          downloadButton.onclick = () => {
-            window.location.href = `/download?filename=${encodeURIComponent(data.pdf_filename)}`;
+        // Affichage du résumé + boutons de confirmation
+        output.innerHTML = `
+          <p><strong>CLIENT:</strong> ${data.CLIENT}</p>
+          <p><strong>CHENOCOM:</strong> ${data.CHENOCOM}</p>
+
+          <div class="confirm">
+            <button id="confirmYes">Yes</button>
+            <button id="confirmNo">No</button>
+          </div>
+        `;
+
+        document.getElementById('confirmYes').onclick = async () => {
+          const confirmData = {
+            confirmation: 'oui',
+            CLIENT: data.CLIENT,
+            FEATURES: data.FEATURES,
+            number_of_pages: data.number_of_pages,
+            TYPE_SITE: data.TYPE_SITE,
           };
 
-          output.appendChild(downloadButton);
-        } else {
-          output.textContent = 'Error : ' + (data.error || 'Error.');
-        }
+          output.textContent = 'Confirmation en cours...';
+
+          const confirmResponse = await fetch('/confirm', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(confirmData),
+          });
+
+          const confirmResult = await confirmResponse.json();
+
+          if (!confirmResponse.ok) {
+            output.textContent = 'Confirmation Error: ' + (confirmResult.error || 'Unknown error');
+            return;
+          }
+
+          output.innerHTML = `
+            <p>${confirmResult.message}</p>
+            <button id="downloadButton">Download your quote</button>
+          `;
+
+          document.getElementById('downloadButton').onclick = () => {
+            window.location.href = confirmResult.download_url;
+          };
+        };
+
+        document.getElementById('confirmNo').onclick = () => {
+          output.textContent = "Please reformulate your request and try again.";
+          document.getElementById('selection')?.classList.remove('hidden');
+        };
       };
+
       document.getElementById("file").addEventListener("change", function () {
         const fileName = this.files[0]?.name || "No file chosen";
         document.getElementById("file-name").textContent = fileName;
       });
 
+      //  Langue actuelle (desktop)
+      const flagImage = document.getElementById("current-flag");
 
+      document.getElementById("flag-selector")?.addEventListener("click", function (e) {
+        e.preventDefault();
 
+        const currentLang = flagImage.dataset.lang || "en";
+        if (currentLang === "en") {
+          flagImage.dataset.lang = "fr";
+          window.location.href = "/demande_de_devis_fr";
+        } else {
+          flagImage.dataset.lang = "en";
+          window.location.href = "/demande_de_devis";
+        }
+      });
 
-      
-    const flagImage = document.getElementById("current-flag");
-    const currentLang = flagImage.dataset.lang || "en";
+      //  Langue actuelle (mobile)
+      const flagImageMobile = document.getElementById("current-flag-mobile");
 
-    document.getElementById("flag-selector")?.addEventListener("click", function (e) {
-      e.preventDefault();
+      document.getElementById("flag-selector-mobile")?.addEventListener("click", function (e) {
+        e.preventDefault();
 
-      if (currentLang === "en") {
-        
-        flagImage.dataset.lang = "fr";
-        window.location.href = "/demande_de_devis_fr";
-      } else {
-        
-        flagImage.dataset.lang = "en";
-        window.location.href = "/demande_de_devis";
-      }
-    });
-
-    const flagImageMobile = document.getElementById("current-flag-mobile");
-    const currentLangMobile = flagImage.dataset.lang || "en";
-    document.getElementById("flag-selector-mobile")?.addEventListener("click", function (e) {
-      e.preventDefault();
-      
-      if (currentLangMobile === "en") {
-        
-        flagImageMobile.dataset.lang = "fr";
-        window.location.href = "/demande_de_devis_fr";
-      } else {
-        
-        flagImageMobile.dataset.lang = "en";
-        window.location.href = "/demande_de_devis";
-      }
-    });
-
+        const currentLangMobile = flagImageMobile.dataset.lang || "en";
+        if (currentLangMobile === "en") {
+          flagImageMobile.dataset.lang = "fr";
+          window.location.href = "/demande_de_devis_fr";
+        } else {
+          flagImageMobile.dataset.lang = "en";
+          window.location.href = "/demande_de_devis";
+        }
+      });
     </script>
+
 
 
 

@@ -1,6 +1,5 @@
-.header-container{
-  padding: 0 15px;
-}
+
+
 .flag-selector--btn-contact{
   align-items: center;
 }
@@ -151,5 +150,42 @@
     padding: 13px;
     cursor: pointer;
     border-radius: 6px;
-    margin: 0 auto;
 }
+.confirm {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 40px;
+  overflow: hidden;
+}
+
+#confirmYes, #confirmNo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#confirmYes {
+  background: linear-gradient(145deg, #4caf50, #43a047);
+  color: white;
+}
+
+#confirmNo {
+  background: linear-gradient(145deg, #f44336, #e53935);
+  color: white;
+}
+
+#confirmYes:hover {
+  box-shadow: 0 8px 28px rgba(163, 218, 165, 0.5);
+}
+
+
+.hidden {
+  display: none !important;
+}
+

@@ -5,10 +5,20 @@
     { "min": 11, "max": 20, "price": 20000 }
   ],
   "features": {
-    "contact": 500,
+    "formulaire de contact": 500,
     "recrutement": 500,
     "carte interactive": 600,
     "blog": 700,
-    "portfolio": 800
+    "portfolio": 800,
+    "page d'accueil": 1000,
+    "page à propos": 700,
+    "page services": 900,
+    "page produits": 1200,
+    "faq": 600,
+    "témoignages": 600,
+    "pages légales": 400,
+    "réseaux sociaux": 500,
+    "responsive design": 1200,
+    "sécurité et performance": 1000
   }
 }
