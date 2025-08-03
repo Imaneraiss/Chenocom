@@ -19,7 +19,7 @@ EstimateurWeb permet aux clients de **téléverser un fichier (PDF, DOCX, image)
 
 ---
 
-## 🖼️ Aperçu du flux utilisateur
+##  Aperçu du flux utilisateur
 
 1. L'utilisateur arrive sur le site vitrine de **Chenocom**.
 2. Il clique sur **"Demande de devis"**.
@@ -30,9 +30,9 @@ EstimateurWeb permet aux clients de **téléverser un fichier (PDF, DOCX, image)
 
 ---
 
-## 📁 Structure du projet
+##  Structure du projet
 
-estimateurweb/
+chenocom/
 │
 ├── app.py # Application principale Flask
 ├── prices.json # Grille tarifaire pages + fonctionnalités
@@ -52,7 +52,7 @@ estimateurweb/
 ** Créer et activer un environnement virtuel **
 python -m venv venv
 venv\Scripts\activate  # Sur Windows
-# ou
+ou
 source venv/bin/activate  # Sur Mac/Linux
 
 
